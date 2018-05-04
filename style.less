@@ -15,7 +15,7 @@
 @primary-hr-color: fade(@secondary-background, 80%);
 @secondary-hr-color: fade(@secondary-color, 10%);
 
-@primary-hover: @primary-hr-color;
+@primary-hover: lighten(@primary-background, 10%);
 @secondary-hover: @secondary-hr-color;
 
 /* The base of everything */
@@ -87,6 +87,17 @@ hr,
 .c-message_actions__button {
     color: inherit;
     border-color: @primary-background;
+}
+
+/* fade on expandable attachments */
+.c-file_container--gradient::after {
+    background: linear-gradient(180deg,hsla(0,0%,100%,0),@primary-background);
+}
+/* message hover */
+.c-message--focus:not(.c-message--highlight):not(.c-message--standalone):not(.c-message--pinned):not(.c-message--ephemeral):not(.c-message--custom_response):not(.c-message--starred):not(.c-message--sli_highlight) .c-file_container--gradient::after,
+.c-message--hover:not(.c-message--highlight):not(.c-message--standalone):not(.c-message--pinned):not(.c-message--ephemeral):not(.c-message--custom_response):not(.c-message--starred):not(.c-message--sli_highlight) .c-file_container--gradient::after,
+.c-message:hover:not(.c-message--highlight):not(.c-message--standalone):not(.c-message--pinned):not(.c-message--ephemeral):not(.c-message--custom_response):not(.c-message--starred):not(.c-message--sli_highlight) .c-file_container--gradient::after {
+    background: linear-gradient(180deg,hsla(0,0%,100%,0),@primary-hover);
 }
 
 /* 
