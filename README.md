@@ -33,15 +33,13 @@ At the very bottom, add
 ```js
 document.addEventListener('DOMContentLoaded', function() {
   $.ajax({
-    url: 'https://gist.githubusercontent.com/deathau/09b01fa78656b03745636b0dca9b55c2/raw/darkTheme.css',
+    url: 'https://raw.githubusercontent.com/deathau/slack-dark-redux/master/style.css',
     success: function(css) {
       $("<style></style>").appendTo('head').html(css);
     }
   });
 });
 ```
-
-> Note: This currently points to the old gist, I'll update it to point to the repo when I work it out.
 
 That's it! Restart Slack and see how well it works.
 
