@@ -84,3 +84,187 @@ pre,
   border-color: transparent;
   color: inherit;
 }
+/* add border to code block margin adter it's removed by the previous fix */
+.c-snippet__code .CodeMirror-code > div::before {
+  border-color: rgba(29, 30, 32, 0.8);
+}
+/* Code syntax highlighting */
+/*
+ * code syntax highlighting
+ */
+code {
+  background-color: #1d1f21;
+  border: 1px solid #282a2e;
+  color: #e0e0e0;
+}
+.file_list_item.snippet .snippet_preview {
+  background: #1d1f21;
+}
+.snippet_preview,
+.snippet_body {
+  background: #1d1f21;
+}
+.snippet_preview pre,
+.snippet_body pre {
+  color: #e0e0e0 !important;
+}
+.file_container .CodeMirror .CodeMirror-code > div::before,
+.file_container .CodeMirror .sssh-line::before,
+.file_container .sssh-code .CodeMirror-code > div::before,
+.file_container .sssh-code .sssh-line::before {
+  background-color: #282a2e;
+  border-right: 1px solid #282a2e;
+  color: #81a2be;
+}
+.c-snippet__code .CodeMirror {
+  background: #1d1f21;
+  border: 1px solid #282a2e;
+  color: #e0e0e0;
+}
+.c-snippet__code .CodeMirror pre {
+  background: transparent !important;
+}
+.c-snippet__code .CodeMirror div.CodeMirror-cursor {
+  border-left: 1px solid #e0e0e0;
+}
+.c-snippet__code .CodeMirror.cm-fat-cursor div.CodeMirror-cursor {
+  background: #e0e0e0;
+}
+.c-snippet__code .CodeMirror .CodeMirror-gutters {
+  background-color: #282a2e;
+  border-right: 1px solid #282a2e;
+}
+.CodeMirror-gutter-filler,
+.CodeMirror-scrollbar-filler {
+  background-color: #282a2e;
+}
+.CodeMirror-linenumber {
+  color: #81a2be !important;
+}
+.CodeMirror-guttermarker {
+  color: #81a2be;
+}
+.CodeMirror-guttermarker-subtle {
+  color: #81a2be;
+}
+.CodeMirror-ruler {
+  border-left: 1px solid #969896;
+}
+.cm-s-default .cm-keyword,
+.sssh-keyword {
+  color: #569cd6;
+}
+.cm-s-default .cm-atom,
+.sssh-atom {
+  color: #9fa8da;
+}
+.cm-s-default .cm-number,
+.sssh-number {
+  color: #b5cea8;
+}
+.cm-s-default .cm-def,
+.sssh-def {
+  color: #569cd6;
+}
+.cm-s-default .cm-variable,
+.sssh-variable {
+  color: #9cdcfe;
+}
+.cm-s-default .cm-variable-2,
+.sssh-variable-2 {
+  color: #4ec9b0;
+}
+.cm-s-default .cm-variable-3,
+.sssh-variable-3 {
+  color: #d7ba7d;
+}
+.sssh-operator {
+  color: #c586c0;
+}
+.sssh-property {
+  color: #9cdcfe;
+}
+.cm-s-default .cm-comment,
+.sssh-comment {
+  color: #505050;
+}
+.cm-s-default .cm-string,
+.sssh-string {
+  color: #ce9178;
+}
+.cm-s-default .cm-string-2,
+.sssh-string-2 {
+  color: #ce9178;
+}
+.cm-s-default .cm-meta,
+.sssh-meta {
+  color: #e0e0e0;
+}
+.cm-s-default .cm-qualifier,
+.sssh-qualifier {
+  color: #e0e0e0;
+}
+.cm-s-default .cm-builtin,
+.sssh-builtin {
+  color: #e0e0e0;
+}
+.cm-s-default .cm-bracket,
+.sssh-bracket {
+  color: #e0e0e0;
+}
+.cm-s-default .cm-tag,
+.sssh-tag {
+  color: #569cd6;
+}
+.cm-s-default .cm-attribute,
+.sssh-attribute {
+  color: #4ec9b0;
+}
+.cm-s-default .cm-header,
+.sssh-header {
+  color: #569cd6;
+}
+.cm-s-default .cm-quote,
+.sssh-quote {
+  color: #608b4e;
+}
+.cm-s-default .cm-hr,
+.sssh-hr {
+  color: #e0e0e0;
+}
+.cm-s-default .cm-link,
+.sssh-link {
+  color: #569cd6;
+}
+.cm-negative {
+  color: #bf360c;
+}
+.cm-positive {
+  color: #0c95bf;
+}
+.cm-invalidchar,
+.cm-s-default .cm-error,
+.sssh-error {
+  color: #bf360c;
+}
+.c-snippet__code div.CodeMirror span.CodeMirror-matchingbracket {
+  color: #0c95bf;
+}
+.c-snippet__code div.CodeMirror span.CodeMirror-nonmatchingbracket {
+  color: #bf360c;
+}
+.CodeMirror-matchingtag {
+  background: #1d1f21;
+}
+.CodeMirror-activeline-background {
+  background: #969896;
+}
+.CodeMirror-selected {
+  background: #969896;
+}
+.CodeMirror-focused .CodeMirror-selected {
+  background: #969896;
+}
+.cm-searching {
+  background: #969896;
+}

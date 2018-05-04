@@ -115,3 +115,12 @@ pre,
     border-color: transparent;
     color: inherit;
 }
+
+/* add border to code block margin adter it's removed by the previous fix */
+.c-snippet__code .CodeMirror-code > div::before,
+{
+    border-color: @primary-hr-color;
+}
+
+/* Code syntax highlighting */
+@import "code.less";

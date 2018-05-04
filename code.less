@@ -1,0 +1,81 @@
+/*
+ * code syntax highlighting
+ */
+@background: #1d1f21;
+@border: #282a2e;
+@color: #e0e0e0;
+@gutter: #81a2be;
+@focus: #969896;
+@negative: #bf360c;
+@positive: #0c95bf;
+
+@keyword:    #569cd6;
+@atom:       #9fa8da;
+@number:     #b5cea8;
+@def:        #569cd6;
+@variable:   #9cdcfe;
+@variable-2: #4ec9b0;
+@variable-3: #d7ba7d;
+@operator:   #c586c0;
+@property:   #9cdcfe;
+@comment:    #505050;
+@string:     #ce9178;
+@string-2:   #ce9178;
+@meta:       #e0e0e0;
+@qualifier:  #e0e0e0;
+@builtin:    #e0e0e0;
+@bracket:    #e0e0e0;
+@tag:        #569cd6;
+@attribute:  #4ec9b0;
+@header:     #569cd6;
+@quote:      #608b4e;
+@hr:         #e0e0e0;
+@link:       #569cd6;
+
+code { background-color: @background; border: 1px solid @border; color: @color; }
+.file_list_item.snippet .snippet_preview { background: @background; }
+.snippet_preview, .snippet_body { background: @background; }
+.snippet_preview pre, .snippet_body pre { color: @color !important; }
+.file_container .CodeMirror .CodeMirror-code > div::before, .file_container .CodeMirror .sssh-line::before, .file_container .sssh-code .CodeMirror-code > div::before, .file_container .sssh-code .sssh-line::before { background-color: @border; border-right: 1px solid @border; color: @gutter; }
+.c-snippet__code .CodeMirror { background: @background; border: 1px solid @border; color: @color; }
+.c-snippet__code .CodeMirror pre { background: transparent !important; }
+.c-snippet__code .CodeMirror div.CodeMirror-cursor { border-left: 1px solid @color; }
+.c-snippet__code .CodeMirror.cm-fat-cursor div.CodeMirror-cursor { background: @color; }
+.c-snippet__code .CodeMirror .CodeMirror-gutters { background-color: @border; border-right: 1px solid @border; }
+.CodeMirror-gutter-filler, .CodeMirror-scrollbar-filler { background-color: @border; }
+.CodeMirror-linenumber { color: @gutter !important; }
+.CodeMirror-guttermarker { color: @gutter; }
+.CodeMirror-guttermarker-subtle { color: @gutter; }
+.CodeMirror-ruler { border-left: 1px solid @focus; }
+.cm-s-default .cm-keyword, .sssh-keyword { color: @keyword; }
+.cm-s-default .cm-atom, .sssh-atom { color: @atom; }
+.cm-s-default .cm-number, .sssh-number { color: @number; }
+.cm-s-default .cm-def, .sssh-def { color: @def; }
+.cm-s-default .cm-variable, .sssh-variable { color: @variable; }
+.cm-s-default .cm-variable-2, .sssh-variable-2 { color: @variable-2; }
+.cm-s-default .cm-variable-3, .sssh-variable-3 { color: @variable-3; }
+.sssh-operator { color: @operator; }
+.sssh-property { color: @property; }
+.cm-s-default .cm-comment, .sssh-comment { color: @comment; }
+.cm-s-default .cm-string, .sssh-string { color: @string; }
+.cm-s-default .cm-string-2, .sssh-string-2 { color: @string-2; }
+.cm-s-default .cm-meta, .sssh-meta { color: @meta; }
+.cm-s-default .cm-qualifier, .sssh-qualifier { color: @qualifier; }
+.cm-s-default .cm-builtin, .sssh-builtin { color: @builtin; }
+.cm-s-default .cm-bracket, .sssh-bracket { color: @bracket; }
+.cm-s-default .cm-tag, .sssh-tag { color: @tag; }
+.cm-s-default .cm-attribute, .sssh-attribute  { color: @attribute; }
+.cm-s-default .cm-header, .sssh-header { color: @header; }
+.cm-s-default .cm-quote, .sssh-quote { color: @quote; }
+.cm-s-default .cm-hr, .sssh-hr { color: @hr; }
+.cm-s-default .cm-link, .sssh-link { color: @link; }
+.cm-negative { color: @negative; }
+.cm-positive { color: @positive; }
+.cm-invalidchar, .cm-s-default .cm-error, .sssh-error { color: @negative; }
+.c-snippet__code div.CodeMirror span.CodeMirror-matchingbracket { color: @positive; }
+.c-snippet__code div.CodeMirror span.CodeMirror-nonmatchingbracket { color: @negative; }
+.CodeMirror-matchingtag { background: @background; }
+.CodeMirror-activeline-background { background: @focus; }
+.CodeMirror-selected { background: @focus; }
+.CodeMirror-focused .CodeMirror-selected { background: @focus; }
+.cm-searching { background: @focus; }
