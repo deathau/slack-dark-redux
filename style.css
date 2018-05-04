@@ -3,20 +3,87 @@ body {
   background-color: #0d0d0f;
   color: #e0e0e0;
 }
+/* 
+ * fixing font and background colours in some places
+ * These are places that have colours defined in slack's css, but really should just inherit
+ */
+.c-message__body,
+.c-message_attachment__image,
+#footer,
+#footer.footer_msg_input,
+#col_messages,
+.p-message_pane,
+.p-message_pane .c-message_list:not(.c-virtual_list--scrollbar),
+.p-message_pane .c-message_list.c-virtual_list--scrollbar > .c-scrollbar__hider,
+.channel_header_info_item:not(:empty) ~ .channel_header_info_item:not(:first-child)::before,
+#edit_topic_inner:not(.unable_to_post)::before,
+.channel_header_info button,
+.messages_header,
+.c-message_attachment,
+.texty_legacy.texty_single_line_input,
+.texty_legacy .ql-placeholder,
+.c-file_container,
+pre,
+.c-snippet__code .CodeMirror-code > div::before,
+.c-menu_item__button,
+.c-menu_item__button:link,
+.c-menu_item__button:visited,
+.menu ul li a,
+.p-degraded_list__loading,
+.p-emoji_picker__preview_text,
+.popover_menu .content,
+#autocomplete_menu.search_menu.unified .query_header,
+#chat_input_tab_ui.search_menu.unified .query_header,
+#autocomplete_menu,
+#chat_input_tab_ui.search_menu,
+#autocomplete_menu.search_menu .result_item_btn,
+#chat_input_tab_ui.search_menu .result_item_btn,
+#autocomplete_menu.search_menu .results.unified .unified_autocomplete_item .text,
+#autocomplete_menu.search_menu .results.unified .unified_autocomplete_item .icon,
+#autocomplete_menu.search_menu .results.unified .unified_autocomplete_item .action {
+  background-color: transparent;
+  background-image: none;
+  box-shadow: none;
+  border-color: transparent;
+  color: inherit;
+}
 /* Primary color sections */
 .p-emoji_picker__input_container,
 .p-emoji_picker__list_container,
 .p-emoji_picker__group_tab--active,
 .p-emoji_picker__skintone_options,
 .p-emoji_picker__content:hover .p-emoji_picker__skintone_btn_container,
-.tab_complete_ui {
+.tab_complete_ui,
+.popover_menu {
   background-color: #0d0d0f;
   color: #e0e0e0;
   border-color: transparent;
 }
+/* secondary color sections (headers and panels) */
+.channel_header,
+#client_body:not(.onboarding):before,
+.c-message_list__day_divider__label__pill,
+.p-message_pane .c-message_list.c-virtual_list--scrollbar > .c-scrollbar__hider::before,
+.p-message_pane .c-message_list:not(.c-virtual_list--scrollbar)::before,
+.c-message_actions__container,
+.c-menu,
+.menu,
+.menu #monkey_scroll_wrapper_for_menu_items_scroller,
+.menu .section_header .header_label,
+.menu.p-emoji_picker,
+.p-emoji_picker__footer,
+.p-emoji_picker__heading,
+.tab_complete_ui .tab_complete_ui_header,
+#autocomplete_menu.search_menu footer.unified,
+#autocomplete_menu.search_menu .results.unified .unified_autocomplete_item .text .token {
+  background: #313138;
+  color: #e0e0e0;
+  box-shadow: none;
+}
 /* borders for popups */
 .menu.p-emoji_picker,
-.tab_complete_ui {
+.tab_complete_ui,
+.popover_menu {
   border: 1px solid rgba(49, 49, 56, 0.8);
 }
 /* message hover */
@@ -31,25 +98,6 @@ body {
 }
 .c-message--light:not(.c-message--adjacent) {
   margin-top: 9px;
-}
-/* headers and panels */
-.channel_header,
-#client_body:not(.onboarding):before,
-.c-message_list__day_divider__label__pill,
-.p-message_pane .c-message_list.c-virtual_list--scrollbar > .c-scrollbar__hider::before,
-.p-message_pane .c-message_list:not(.c-virtual_list--scrollbar)::before,
-.c-message_actions__container,
-.c-menu,
-.menu,
-.menu #monkey_scroll_wrapper_for_menu_items_scroller,
-.menu .section_header .header_label,
-.menu.p-emoji_picker,
-.p-emoji_picker__footer,
-.p-emoji_picker__heading,
-.tab_complete_ui .tab_complete_ui_header {
-  background: #313138;
-  color: #e0e0e0;
-  box-shadow: none;
 }
 /* hr, day divider */
 hr,
@@ -91,7 +139,9 @@ textarea {
 .c-member__display-name,
 .c-team__display-name,
 .c-usergroup__handle,
-.tab_complete_ui ul.type_members .unify_broadcast {
+.tab_complete_ui ul.type_members .unify_broadcast,
+#autocomplete_menu.search_menu.unified .query_header,
+#chat_input_tab_ui.search_menu.unified .query_header {
   color: #ffffff;
 }
 /* buttons for message actions */
@@ -108,40 +158,6 @@ textarea {
 .c-message--hover:not(.c-message--highlight):not(.c-message--standalone):not(.c-message--pinned):not(.c-message--ephemeral):not(.c-message--custom_response):not(.c-message--starred):not(.c-message--sli_highlight) .c-file_container--gradient::after,
 .c-message:hover:not(.c-message--highlight):not(.c-message--standalone):not(.c-message--pinned):not(.c-message--ephemeral):not(.c-message--custom_response):not(.c-message--starred):not(.c-message--sli_highlight) .c-file_container--gradient::after {
   background: linear-gradient(180deg, rgba(255, 255, 255, 0), rgba(49, 49, 56, 0.75));
-}
-/* 
- * fixing font and background colours in some places
- * These are places that have colours defined in slack's css, but really should just inherit
- */
-.c-message__body,
-.c-message_attachment__image,
-#footer,
-#footer.footer_msg_input,
-#col_messages,
-.p-message_pane,
-.p-message_pane .c-message_list:not(.c-virtual_list--scrollbar),
-.p-message_pane .c-message_list.c-virtual_list--scrollbar > .c-scrollbar__hider,
-.channel_header_info_item:not(:empty) ~ .channel_header_info_item:not(:first-child)::before,
-#edit_topic_inner:not(.unable_to_post)::before,
-.channel_header_info button,
-.messages_header,
-.c-message_attachment,
-.texty_legacy.texty_single_line_input,
-.texty_legacy .ql-placeholder,
-.c-file_container,
-pre,
-.c-snippet__code .CodeMirror-code > div::before,
-.c-menu_item__button,
-.c-menu_item__button:link,
-.c-menu_item__button:visited,
-.menu ul li a,
-.p-degraded_list__loading,
-.p-emoji_picker__preview_text {
-  background-color: transparent;
-  background-image: none;
-  box-shadow: none;
-  border-color: transparent;
-  color: inherit;
 }
 /* add border to code block margin adter it's removed by the previous fix */
 .c-snippet__code .CodeMirror-code > div::before {
