@@ -1,17 +1,17 @@
 /* The base of everything */
 body {
-  background-color: #0e0f0f;
+  background-color: #0d0d0f;
   color: #e0e0e0;
 }
 /* message hover */
 .c-message--focus:not(.c-message--highlight):not(.c-message--standalone):not(.c-message--pinned):not(.c-message--ephemeral):not(.c-message--custom_response):not(.c-message--starred):not(.c-message--sli_highlight),
 .c-message--hover:not(.c-message--highlight):not(.c-message--standalone):not(.c-message--pinned):not(.c-message--ephemeral):not(.c-message--custom_response):not(.c-message--starred):not(.c-message--sli_highlight),
 .c-message:hover:not(.c-message--highlight):not(.c-message--standalone):not(.c-message--pinned):not(.c-message--ephemeral):not(.c-message--custom_response):not(.c-message--starred):not(.c-message--sli_highlight) {
-  background: #272929;
+  background: rgba(49, 49, 56, 0.75);
 }
 /* additions to space the content out better and put some seperators */
 .c-message--light:not(.c-message--adjacent) .c-message__content::before {
-  border-bottom: 0.5px solid rgba(29, 30, 32, 0.8);
+  border-bottom: 0.5px solid rgba(49, 49, 56, 0.8);
 }
 .c-message--light:not(.c-message--adjacent) {
   margin-top: 9px;
@@ -27,24 +27,24 @@ body {
 .menu,
 .menu #monkey_scroll_wrapper_for_menu_items_scroller,
 .menu .section_header .header_label {
-  background: #1d1e20;
+  background: #313138;
   color: #e0e0e0;
   box-shadow: none;
 }
 /* hr, day divider */
 hr,
 .c-message_list__day_divider__line {
-  border-color: rgba(29, 30, 32, 0.8);
+  border-color: rgba(49, 49, 56, 0.8);
 }
 /* secondary hr */
 .menu hr {
-  border-color: rgba(224, 224, 224, 0.1);
+  border-color: rgba(85, 85, 97, 0.1);
 }
 /* message input box */
 #msg_input,
 #primary_file_button,
 #msg_input + #primary_file_button:not(:hover):not(.active) {
-  background-color: #373b41;
+  background-color: #313138;
   color: #e0e0e0;
   border-color: #717274;
 }
@@ -56,17 +56,17 @@ hr,
 /* buttons for message actions */
 .c-message_actions__button {
   color: inherit;
-  border-color: #0e0f0f;
+  border-color: #0d0d0f;
 }
 /* fade on expandable attachments */
 .c-file_container--gradient::after {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0), #0e0f0f);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0), #0d0d0f);
 }
 /* message hover */
 .c-message--focus:not(.c-message--highlight):not(.c-message--standalone):not(.c-message--pinned):not(.c-message--ephemeral):not(.c-message--custom_response):not(.c-message--starred):not(.c-message--sli_highlight) .c-file_container--gradient::after,
 .c-message--hover:not(.c-message--highlight):not(.c-message--standalone):not(.c-message--pinned):not(.c-message--ephemeral):not(.c-message--custom_response):not(.c-message--starred):not(.c-message--sli_highlight) .c-file_container--gradient::after,
 .c-message:hover:not(.c-message--highlight):not(.c-message--standalone):not(.c-message--pinned):not(.c-message--ephemeral):not(.c-message--custom_response):not(.c-message--starred):not(.c-message--sli_highlight) .c-file_container--gradient::after {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0), #272929);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0), rgba(49, 49, 56, 0.75));
 }
 /* 
  * fixing font and background colours in some places
@@ -103,7 +103,7 @@ pre,
 }
 /* add border to code block margin adter it's removed by the previous fix */
 .c-snippet__code .CodeMirror-code > div::before {
-  border-color: rgba(29, 30, 32, 0.8);
+  border-color: rgba(49, 49, 56, 0.8);
 }
 /* Code syntax highlighting */
 /*

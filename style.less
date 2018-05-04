@@ -1,22 +1,22 @@
 // Defined colours //
-@primary-background: #0e0f0f;
+@primary-background: #0d0d0f;
 @primary-color: #e0e0e0;
 
-@secondary-background: #1d1e20;
+@secondary-background: #313138;
 @secondary-color: #e0e0e0;
 
-@input-background: #373b41;
+@input-background: #313138;
 @input-color: @secondary-color;
 @input-border: #717274;
 
 @title-color: #ffffff;
 @link-color: #2d9ee0;
 
-@primary-hr-color: fade(@secondary-background, 80%);
-@secondary-hr-color: fade(@secondary-color, 10%);
+@primary-hover: fade(lighten(@primary-background, 15%), 75%);
+@secondary-hover: fade(lighten(@secondary-background, 15%), 75%);
 
-@primary-hover: lighten(@primary-background, 10%);
-@secondary-hover: @secondary-hr-color;
+@primary-hr-color: fade(@primary-hover, 80%);
+@secondary-hr-color: fade(@secondary-hover, 10%);
 
 /* The base of everything */
 body {
