@@ -1,0 +1,68 @@
+/* The base of everything */
+body {
+  background-color: #0e0f0f;
+  color: #e0e0e0;
+}
+/* message hover */
+.c-message--focus:not(.c-message--highlight):not(.c-message--standalone):not(.c-message--pinned):not(.c-message--ephemeral):not(.c-message--custom_response):not(.c-message--starred):not(.c-message--sli_highlight),
+.c-message--hover:not(.c-message--highlight):not(.c-message--standalone):not(.c-message--pinned):not(.c-message--ephemeral):not(.c-message--custom_response):not(.c-message--starred):not(.c-message--sli_highlight),
+.c-message:hover:not(.c-message--highlight):not(.c-message--standalone):not(.c-message--pinned):not(.c-message--ephemeral):not(.c-message--custom_response):not(.c-message--starred):not(.c-message--sli_highlight) {
+  background: rgba(29, 30, 32, 0.8);
+}
+/* additions to space the content out better and put some seperators */
+.c-message--light:not(.c-message--adjacent) .c-message__content::before {
+  border-bottom: 0.5px solid rgba(29, 30, 32, 0.8);
+}
+.c-message--light:not(.c-message--adjacent) {
+  margin-top: 9px;
+}
+/* headers and panels */
+.channel_header,
+#client_body:not(.onboarding):before,
+.c-message_list__day_divider__label__pill,
+.p-message_pane .c-message_list.c-virtual_list--scrollbar > .c-scrollbar__hider::before,
+.p-message_pane .c-message_list:not(.c-virtual_list--scrollbar)::before {
+  background: #1d1e20;
+  color: #e0e0e0;
+  box-shadow: none;
+}
+/* day divider */
+.c-message_list__day_divider__line {
+  border-color: rgba(29, 30, 32, 0.8);
+}
+/* message input box */
+#msg_input,
+#primary_file_button,
+#msg_input + #primary_file_button:not(:hover):not(.active) {
+  background-color: #373b41;
+  color: #e0e0e0;
+  border-color: #717274;
+}
+/* 
+ * fixing font and background colours in some places
+ * These are places that have colours defined in slack's css, but really should just inherit
+ */
+.c-message__body,
+.c-message_attachment__image,
+#footer,
+#footer.footer_msg_input,
+#col_messages,
+.p-message_pane,
+.p-message_pane .c-message_list:not(.c-virtual_list--scrollbar),
+.p-message_pane .c-message_list.c-virtual_list--scrollbar > .c-scrollbar__hider,
+.channel_header_info_item:not(:empty) ~ .channel_header_info_item:not(:first-child)::before,
+#edit_topic_inner:not(.unable_to_post)::before,
+.channel_header_info button,
+.messages_header,
+.c-message_attachment,
+.texty_legacy.texty_single_line_input,
+.texty_legacy .ql-placeholder,
+.c-file_container,
+pre,
+.c-snippet__code .CodeMirror-code > div::before {
+  background-color: transparent;
+  background-image: none;
+  box-shadow: none;
+  border-color: transparent;
+  color: inherit;
+}
