@@ -63,6 +63,10 @@ pre,
 #autocomplete_menu.search_menu .results.unified .unified_autocomplete_item .text,
 #autocomplete_menu.search_menu .results.unified .unified_autocomplete_item .icon,
 #autocomplete_menu.search_menu .results.unified .unified_autocomplete_item .action,
+#details_tab .channel_page_section,
+#details_tab .feature_sli_channel_insights .channel_created_section .creator_link,
+#details_tab .feature_sli_channel_insights .channel_purpose_section .channel_purpose_text,
+.pinned_item,
  {
     background-color: transparent;
     background-image: none;
@@ -79,6 +83,8 @@ pre,
 .p-emoji_picker__content:hover .p-emoji_picker__skintone_btn_container,
 .tab_complete_ui,
 .popover_menu,
+#col_flex,
+.active .tab_container .file_list_item,
  {
     background-color: @primary-background;
     color: @primary-color;
@@ -105,16 +111,36 @@ pre,
 .c-file__action_button,
 .c-file__action_button:link,
 .c-file__action_button:visited,
+.c-channel_insights__date_heading span,
+.c-channel_insights__message ts-message.standalone:not(.for_mention_display):not(.for_search_display):not(.for_top_results_search_display):not(.for_star_display),
+.c-app_label,
+.tab_container .file_comment_item .actions .btn_icon,
+.tab_container .file_comment_item .actions .star_jump,
+.tab_container .file_list_item .actions .btn_icon,
+.tab_container .file_list_item .actions .star_jump,
+.tab_container .star_item .message .actions .btn_icon,
+.tab_container .star_item .message .actions .star_jump,
+.tab_container .star_item ts-message .actions .btn_icon,
+.tab_container .star_item ts-message .actions .star_jump,
+#flex_contents .heading
  {
     background: @secondary-background;
     color: @secondary-color;
     box-shadow: none;
+}
+.btn_outline {
+    color: @secondary-color !important;
+    background-color:transparent;
 }
 
 /* borders for popups */
 .menu.p-emoji_picker,
 .tab_complete_ui,
 .popover_menu,
+.flex_pane_showing #col_flex,
+.c-channel_insights__message ts-message.standalone:not(.for_mention_display):not(.for_search_display):not(.for_top_results_search_display):not(.for_star_display),
+.c-app_label,
+#client-ui .file_list_item.file_list_item--redesign,
  {
     border: 1px solid @primary-hr-color;
 }
@@ -122,8 +148,12 @@ pre,
 /* message hover */
 .c-message--focus:not(.c-message--highlight):not(.c-message--standalone):not(.c-message--pinned):not(.c-message--ephemeral):not(.c-message--custom_response):not(.c-message--starred):not(.c-message--sli_highlight),
 .c-message--hover:not(.c-message--highlight):not(.c-message--standalone):not(.c-message--pinned):not(.c-message--ephemeral):not(.c-message--custom_response):not(.c-message--starred):not(.c-message--sli_highlight),
-.c-message:hover:not(.c-message--highlight):not(.c-message--standalone):not(.c-message--pinned):not(.c-message--ephemeral):not(.c-message--custom_response):not(.c-message--starred):not(.c-message--sli_highlight) {
+.c-message:hover:not(.c-message--highlight):not(.c-message--standalone):not(.c-message--pinned):not(.c-message--ephemeral):not(.c-message--custom_response):not(.c-message--starred):not(.c-message--sli_highlight),
+.channel_page_member_row:hover,
+.tab_container .file_list_item:focus,
+.tab_container .file_list_item:hover,{
     background: @primary-hover;
+    border-color:transparent;
 }
 
 /* additions to space the content out better and put some seperators */
@@ -138,6 +168,15 @@ pre,
 hr,
 .c-message_list__day_divider__line {
     border-color: @primary-hr-color;
+}
+.c-channel_insights__date_heading::before {
+    background-color: @primary-hr-color;
+}
+
+/* fix channel highlights date heading to match other date pills */
+.c-channel_insights__date_heading span {
+    padding: .25rem .75rem;
+    border-radius: 24px;
 }
 
 /* secondary hr */
@@ -171,8 +210,11 @@ textarea {
 }
 
 /* titles */
+h1, h2, h3, h4,
 .channel_title .channel_name,
 .c-message--light .c-message__sender .c-message__sender_link,
+.bot_message .message_sender,
+.bot_message .message_sender a,
 .p-emoji_picker__heading,
 .c-member__display-name,
 .c-team__display-name,
@@ -180,8 +222,15 @@ textarea {
 .tab_complete_ui ul.type_members .unify_broadcast,
 #autocomplete_menu.search_menu.unified .query_header, 
 #chat_input_tab_ui.search_menu.unified .query_header,
+#details_tab .channel_page_section .section_title,
+#flex_contents .heading_text,
  {
     color: @title-color;
+}
+.light_theme ts-message .message_content .message_sender,
+.pinned_item .pin_member_name a,
+{
+    color: @title-color !important;
 }
 
 /* buttons for message actions */
@@ -199,6 +248,14 @@ textarea {
 .c-message--hover:not(.c-message--highlight):not(.c-message--standalone):not(.c-message--pinned):not(.c-message--ephemeral):not(.c-message--custom_response):not(.c-message--starred):not(.c-message--sli_highlight) .c-file_container--gradient::after,
 .c-message:hover:not(.c-message--highlight):not(.c-message--standalone):not(.c-message--pinned):not(.c-message--ephemeral):not(.c-message--custom_response):not(.c-message--starred):not(.c-message--sli_highlight) .c-file_container--gradient::after {
     background: linear-gradient(180deg,hsla(0,0%,100%,0),@primary-hover);
+}
+
+/* seperators for sidebar menu items */
+#details_tab .channel_page_section {
+    border-bottom: 1px solid @primary-hr-color;
+}
+#flex_contents .heading{
+    border-bottom: 1px solid @secondary-hr-color;
 }
 
 /* add border to code block margin adter it's removed by the previous fix */
