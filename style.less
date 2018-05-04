@@ -24,6 +24,26 @@ body {
     color: @primary-color;
 }
 
+/* Primary color sections */
+.p-emoji_picker__input_container,
+.p-emoji_picker__list_container,
+.p-emoji_picker__group_tab--active,
+.p-emoji_picker__skintone_options,
+.p-emoji_picker__content:hover .p-emoji_picker__skintone_btn_container,
+.tab_complete_ui,
+ {
+    background-color: @primary-background;
+    color: @primary-color;
+    border-color: transparent;
+}
+
+/* borders for popups */
+.menu.p-emoji_picker,
+.tab_complete_ui,
+ {
+    border: 1px solid @primary-hr-color;
+}
+
 /* message hover */
 .c-message--focus:not(.c-message--highlight):not(.c-message--standalone):not(.c-message--pinned):not(.c-message--ephemeral):not(.c-message--custom_response):not(.c-message--starred):not(.c-message--sli_highlight),
 .c-message--hover:not(.c-message--highlight):not(.c-message--standalone):not(.c-message--pinned):not(.c-message--ephemeral):not(.c-message--custom_response):not(.c-message--starred):not(.c-message--sli_highlight),
@@ -50,6 +70,10 @@ body {
 .menu,
 .menu #monkey_scroll_wrapper_for_menu_items_scroller,
 .menu .section_header .header_label,
+.menu.p-emoji_picker,
+.p-emoji_picker__footer,
+.p-emoji_picker__heading,
+.tab_complete_ui .tab_complete_ui_header,
  {
     background: @secondary-background;
     color: @secondary-color;
@@ -67,10 +91,26 @@ hr,
     border-color: @secondary-hr-color;
 }
 
-/* message input box */
+/* message, input boxes */
 #msg_input,
 #primary_file_button,
-#msg_input + #primary_file_button:not(:hover):not(.active) {
+#msg_input + #primary_file_button:not(:hover):not(.active),
+.uneditable-input,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="tel"],
+input[type="color"],
+input[type="search"],
+textarea {
     background-color: @input-background;
     color: @input-color;
     border-color: @input-border;
@@ -79,6 +119,11 @@ hr,
 /* titles */
 .channel_title .channel_name,
 .c-message--light .c-message__sender .c-message__sender_link,
+.p-emoji_picker__heading,
+.c-member__display-name,
+.c-team__display-name,
+.c-usergroup__handle,
+.tab_complete_ui ul.type_members .unify_broadcast,
  {
     color: @title-color;
 }
@@ -127,6 +172,7 @@ pre,
 .c-menu_item__button:visited,
 .menu ul li a,
 .p-degraded_list__loading,
+.p-emoji_picker__preview_text,
  {
     background-color: transparent;
     background-image: none;
@@ -137,7 +183,7 @@ pre,
 
 /* add border to code block margin adter it's removed by the previous fix */
 .c-snippet__code .CodeMirror-code > div::before,
-{
+ {
     border-color: @primary-hr-color;
 }
 
