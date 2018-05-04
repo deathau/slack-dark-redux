@@ -25,14 +25,20 @@ body {
 .c-message_actions__container,
 .c-menu,
 .menu,
-.menu #monkey_scroll_wrapper_for_menu_items_scroller {
+.menu #monkey_scroll_wrapper_for_menu_items_scroller,
+.menu .section_header .header_label {
   background: #1d1e20;
   color: #e0e0e0;
   box-shadow: none;
 }
-/* day divider */
+/* hr, day divider */
+hr,
 .c-message_list__day_divider__line {
   border-color: rgba(29, 30, 32, 0.8);
+}
+/* secondary hr */
+.menu hr {
+  border-color: rgba(224, 224, 224, 0.1);
 }
 /* message input box */
 #msg_input,
@@ -77,7 +83,8 @@ pre,
 .c-menu_item__button,
 .c-menu_item__button:link,
 .c-menu_item__button:visited,
-.menu ul li a {
+.menu ul li a,
+.p-degraded_list__loading {
   background-color: transparent;
   background-image: none;
   box-shadow: none;
