@@ -98,7 +98,8 @@ pre,
 .tab_container .star_item ts-message .actions .star_jump,
 #flex_contents .heading,
 .c-reaction,
-.c-reaction_add {
+.c-reaction_add,
+.pinned_item {
   background: #313138;
   color: #e0e0e0;
   box-shadow: none;
@@ -112,7 +113,6 @@ pre,
 .tab_complete_ui,
 .popover_menu,
 .flex_pane_showing #col_flex,
-.c-channel_insights__message ts-message.standalone:not(.for_mention_display):not(.for_search_display):not(.for_top_results_search_display):not(.for_star_display),
 .c-app_label,
 #client-ui .file_list_item.file_list_item--redesign,
 .c-reaction,
@@ -189,6 +189,7 @@ h4,
 .p-emoji_picker__heading,
 .c-member__display-name,
 .c-team__display-name,
+.c-unified_member__display-name,
 .c-usergroup__handle,
 .tab_complete_ui ul.type_members .unify_broadcast,
 #autocomplete_menu.search_menu.unified .query_header,
@@ -206,9 +207,19 @@ h4,
   color: inherit;
   border-color: #0d0d0f;
 }
-/* fade on expandable attachments */
-.c-file_container--gradient::after {
+/* fade on expandable attachments / messages */
+.c-file_container--gradient::after,
+.c-channel_insights__message--truncate::before {
   background: linear-gradient(180deg, rgba(255, 255, 255, 0), #0d0d0f);
+}
+/* fix for channel insights messages */
+.c-channel_insights__message ts-message.standalone:not(.for_mention_display):not(.for_search_display):not(.for_top_results_search_display):not(.for_star_display) {
+  border: none;
+}
+.c-channel_insights__message--truncate::before {
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 /* message hover */
 .c-message--focus:not(.c-message--highlight):not(.c-message--standalone):not(.c-message--pinned):not(.c-message--ephemeral):not(.c-message--custom_response):not(.c-message--starred):not(.c-message--sli_highlight) .c-file_container--gradient::after,
