@@ -45,7 +45,9 @@ pre,
 #details_tab .feature_sli_channel_insights .channel_created_section .creator_link,
 #details_tab .feature_sli_channel_insights .channel_purpose_section .channel_purpose_text,
 .pinned_item,
-.c-message_attachment__pretext {
+.c-message_attachment__pretext,
+ts-message,
+#member_mentions h3 a {
   background-color: transparent;
   background-image: none;
   box-shadow: none;
@@ -100,7 +102,11 @@ pre,
 #flex_contents .heading,
 .c-reaction,
 .c-reaction_add,
-.pinned_item {
+.rxn,
+.pinned_item,
+.app_preview_link_slug,
+.internal_member_link,
+.internal_user_group_link {
   background: #313138;
   color: #e0e0e0;
   box-shadow: none;
@@ -122,7 +128,8 @@ pre,
 .c-app_label,
 #client-ui .file_list_item.file_list_item--redesign,
 .c-reaction,
-.c-reaction_add {
+.c-reaction_add,
+.rxn {
   border: 1px solid rgba(49, 49, 56, 0.8);
 }
 /* message hover */
@@ -201,7 +208,10 @@ h4,
 #autocomplete_menu.search_menu.unified .query_header,
 #chat_input_tab_ui.search_menu.unified .query_header,
 #details_tab .channel_page_section .section_title,
-#flex_contents .heading_text {
+#flex_contents .heading_text,
+.mention_rxn .mention_rxn_summary .app_preview_link,
+.mention_rxn .mention_rxn_summary .member_preview_link,
+.mention_rxn .mention_rxn_summary .mention_rxn_summary_members {
   color: #ffffff;
 }
 .light_theme ts-message .message_content .message_sender,

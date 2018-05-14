@@ -70,7 +70,9 @@ pre,
 #details_tab .feature_sli_channel_insights .channel_purpose_section .channel_purpose_text,
 .pinned_item,
 .c-message_attachment__pretext,
- {
+ts-message,
+#member_mentions h3 a,
+{
     background-color: transparent;
     background-image: none;
     box-shadow: none;
@@ -128,13 +130,18 @@ pre,
 #flex_contents .heading,
 .c-reaction,
 .c-reaction_add,
+.rxn,
 .pinned_item,
+.app_preview_link_slug,
+.internal_member_link,
+.internal_user_group_link
 {
     background: @secondary-background;
     color: @secondary-color;
     box-shadow: none;
 }
-.btn_outline {
+.btn_outline
+{
     color: @secondary-color !important;
     background-color:transparent;
 }
@@ -154,6 +161,7 @@ pre,
 #client-ui .file_list_item.file_list_item--redesign,
 .c-reaction,
 .c-reaction_add,
+.rxn,
 {
     border: 1px solid @primary-hr-color;
 }
@@ -239,7 +247,10 @@ h1, h2, h3, h4,
 #chat_input_tab_ui.search_menu.unified .query_header,
 #details_tab .channel_page_section .section_title,
 #flex_contents .heading_text,
- {
+.mention_rxn .mention_rxn_summary .app_preview_link,
+.mention_rxn .mention_rxn_summary .member_preview_link,
+.mention_rxn .mention_rxn_summary .mention_rxn_summary_members,
+{
     color: @title-color;
 }
 .light_theme ts-message .message_content .message_sender,
