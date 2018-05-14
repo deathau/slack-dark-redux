@@ -44,7 +44,8 @@ pre,
 #details_tab .channel_page_section,
 #details_tab .feature_sli_channel_insights .channel_created_section .creator_link,
 #details_tab .feature_sli_channel_insights .channel_purpose_section .channel_purpose_text,
-.pinned_item {
+.pinned_item,
+.c-message_attachment__pretext {
   background-color: transparent;
   background-image: none;
   box-shadow: none;
@@ -107,6 +108,11 @@ pre,
 .btn_outline {
   color: #e0e0e0 !important;
   background-color: transparent;
+}
+/* greigh */
+.greigh,
+.c-unified_member__title--large {
+  color: #717274 !important;
 }
 /* borders for popups */
 .menu.p-emoji_picker,
