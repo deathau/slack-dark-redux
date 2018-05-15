@@ -47,7 +47,16 @@ pre,
 .pinned_item,
 .c-message_attachment__pretext,
 ts-message,
-#member_mentions h3 a {
+#member_mentions h3 a,
+#flex_contents .heading a,
+.feature_sli_file_search #search_results.files,
+.feature_sli_file_search #search_results_loading,
+.feature_sli_file_search #search_results.files #search_file_list_clear_filter,
+.feature_sli_file_search #search_results.files #search_file_list_heading,
+.tab_container .file_list_item .star,
+.feature_sli_file_search #search_results .file_list_item,
+.feature_sli_file_search #search_results.all,
+.feature_sli_file_search #search_results.messages {
   background-color: transparent;
   background-image: none;
   box-shadow: none;
@@ -106,7 +115,13 @@ ts-message,
 .pinned_item,
 .app_preview_link_slug,
 .internal_member_link,
-.internal_user_group_link {
+.internal_user_group_link,
+.feature_sli_file_search #search_results_container .heading,
+.feature_sli_file_search #search_results_container #search_options,
+#search_filters .tab,
+.feature_sli_file_search #search_results.all .search_message_result,
+.feature_sli_file_search #search_results.messages .search_message_result,
+.search_result_with_extract {
   background: #313138;
   color: #e0e0e0;
   box-shadow: none;
@@ -129,7 +144,10 @@ ts-message,
 #client-ui .file_list_item.file_list_item--redesign,
 .c-reaction,
 .c-reaction_add,
-.rxn {
+.rxn,
+.feature_sli_file_search #search_results.all .search_message_result,
+.feature_sli_file_search #search_results.messages .search_message_result,
+.search_result_with_extract {
   border: 1px solid rgba(49, 49, 56, 0.8);
 }
 /* message hover */
@@ -211,7 +229,15 @@ h4,
 #flex_contents .heading_text,
 .mention_rxn .mention_rxn_summary .app_preview_link,
 .mention_rxn .mention_rxn_summary .member_preview_link,
-.mention_rxn .mention_rxn_summary .mention_rxn_summary_members {
+.mention_rxn .mention_rxn_summary .mention_rxn_summary_members,
+#search_filters.files #filter_files,
+#search_filters.messages #filter_messages,
+.search_module_header,
+.feature_sli_file_search #search_filters.all #filter_all,
+.tab_container .file_list_item .contents .file_comment_link:focus,
+.tab_container .file_list_item .contents .file_comment_link:focus .ts_icon,
+.tab_container .file_list_item .contents .file_comment_link:hover,
+.tab_container .file_list_item .contents .file_comment_link:hover .ts_icon {
   color: #ffffff;
 }
 .light_theme ts-message .message_content .message_sender,
@@ -225,7 +251,8 @@ h4,
 }
 /* fade on expandable attachments / messages */
 .c-file_container--gradient::after,
-.c-channel_insights__message--truncate::before {
+.c-channel_insights__message--truncate::before,
+.search_result_for_context::after {
   background: linear-gradient(180deg, rgba(255, 255, 255, 0), #0d0d0f);
 }
 /* fix for channel insights messages */
