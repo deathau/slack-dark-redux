@@ -23,7 +23,6 @@ body {
 .texty_legacy.texty_single_line_input,
 .texty_legacy .ql-placeholder,
 .c-file_container,
-pre,
 .c-snippet__code .CodeMirror-code > div::before,
 .c-menu_item__button,
 .c-menu_item__button:link,
@@ -122,7 +121,9 @@ ts-message,
 #search_filters .tab,
 .feature_sli_file_search #search_results.all .search_message_result,
 .feature_sli_file_search #search_results.messages .search_message_result,
-.search_result_with_extract {
+.search_result_with_extract,
+code,
+pre {
   background: #313138;
   color: #e0e0e0;
   box-shadow: none;
@@ -148,7 +149,9 @@ ts-message,
 .rxn,
 .feature_sli_file_search #search_results.all .search_message_result,
 .feature_sli_file_search #search_results.messages .search_message_result,
-.search_result_with_extract {
+.search_result_with_extract,
+code,
+pre {
   border: 1px solid rgba(49, 49, 56, 0.8);
 }
 /* message hover */
