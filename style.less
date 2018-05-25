@@ -81,6 +81,7 @@ ts-message,
 .feature_sli_file_search #search_results .file_list_item,
 .feature_sli_file_search #search_results.all,
 .feature_sli_file_search #search_results.messages,
+.c-input_select_options_list__option,
 {
     background-color: transparent;
     background-image: none;
@@ -243,10 +244,17 @@ input[type="url"],
 input[type="tel"],
 input[type="color"],
 input[type="search"],
-textarea {
+textarea,
+.c-input_select,
+.c-input_select_options_list_container:not(.c-input_select_options_list_container--always-open),
+.c-button--outline,
+{
     background-color: @input-background;
     color: @input-color;
     border-color: @input-border;
+}
+.c-button--outline-danger {
+    background-color: @input-background;
 }
 
 /* titles */

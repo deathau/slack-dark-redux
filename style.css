@@ -56,7 +56,8 @@ ts-message,
 .tab_container .file_list_item .star,
 .feature_sli_file_search #search_results .file_list_item,
 .feature_sli_file_search #search_results.all,
-.feature_sli_file_search #search_results.messages {
+.feature_sli_file_search #search_results.messages,
+.c-input_select_options_list__option {
   background-color: transparent;
   background-image: none;
   box-shadow: none;
@@ -203,10 +204,16 @@ input[type="url"],
 input[type="tel"],
 input[type="color"],
 input[type="search"],
-textarea {
+textarea,
+.c-input_select,
+.c-input_select_options_list_container:not(.c-input_select_options_list_container--always-open),
+.c-button--outline {
   background-color: #313138;
   color: #e0e0e0;
   border-color: #717274;
+}
+.c-button--outline-danger {
+  background-color: #313138;
 }
 /* titles */
 h1,
