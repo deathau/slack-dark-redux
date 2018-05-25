@@ -56,7 +56,9 @@ ts-message,
 .feature_sli_file_search #search_results .file_list_item,
 .feature_sli_file_search #search_results.all,
 .feature_sli_file_search #search_results.messages,
-.c-input_select_options_list__option {
+.c-input_select_options_list__option,
+.sli_expert_search_cta__text,
+.sli_expert_search_cta__text:hover {
   background-color: transparent;
   background-image: none;
   box-shadow: none;
@@ -121,11 +123,15 @@ ts-message,
 .feature_sli_file_search #search_results_container .heading,
 .feature_sli_file_search #search_results_container #search_options,
 #search_filters .tab,
+.sli_expert_search,
 .feature_sli_file_search #search_results.all .search_message_result,
 .feature_sli_file_search #search_results.messages .search_message_result,
 .search_result_with_extract,
+.feature_sli_file_search #search_results.all .top_search_results .search_message_result,
+.feature_sli_file_search #search_results.messages .top_search_results .search_message_result,
 code,
-pre {
+pre,
+.search_segmented_control.active {
   background: #313138;
   color: #e0e0e0;
   box-shadow: none;
@@ -149,11 +155,16 @@ pre {
 .c-reaction,
 .c-reaction_add,
 .rxn,
+.feature_sli_file_search #search_results.all .sli_expert_search_cta,
+.feature_sli_file_search #search_results.messages .sli_expert_search_cta,
 .feature_sli_file_search #search_results.all .search_message_result,
 .feature_sli_file_search #search_results.messages .search_message_result,
 .search_result_with_extract,
-code,
-pre {
+.feature_sli_file_search #search_results.all .top_search_results .search_message_result,
+.feature_sli_file_search #search_results.messages .top_search_results .search_message_result code,
+pre,
+.search_segmented_control.active,
+.search_segmented_control {
   border: 1px solid rgba(49, 49, 56, 0.8);
 }
 /* message hover */
@@ -187,8 +198,20 @@ hr,
   border-radius: 24px;
 }
 /* secondary hr */
-.menu hr {
-  border-color: rgba(85, 85, 97, 0.1);
+.menu hr,
+.feature_sli_file_search #search_results.all .search_result_with_extract.first_extract_message_in_group,
+.feature_sli_file_search #search_results.all .search_result_with_extract.first_extract_message_in_group:hover,
+.feature_sli_file_search #search_results.all .search_result_with_extract:first-child,
+.feature_sli_file_search #search_results.all .search_result_with_extract:first-child:hover,
+.feature_sli_file_search #search_results.messages .search_result_with_extract.first_extract_message_in_group,
+.feature_sli_file_search #search_results.messages .search_result_with_extract.first_extract_message_in_group:hover,
+.feature_sli_file_search #search_results.messages .search_result_with_extract:first-child,
+.feature_sli_file_search #search_results.messages .search_result_with_extract:first-child:hover,
+.feature_sli_file_search #search_results.all .search_result_with_extract.last_extract_message_in_group,
+.feature_sli_file_search #search_results.all .search_result_with_extract.last_extract_message_in_group:hover,
+.feature_sli_file_search #search_results.messages .search_result_with_extract.last_extract_message_in_group,
+.feature_sli_file_search #search_results.messages .search_result_with_extract.last_extract_message_in_group:hover {
+  border-color: rgba(85, 85, 97, 0.8);
 }
 /* message, input boxes */
 #msg_input,
@@ -249,7 +272,10 @@ h4,
 .tab_container .file_list_item .contents .file_comment_link:focus,
 .tab_container .file_list_item .contents .file_comment_link:focus .ts_icon,
 .tab_container .file_list_item .contents .file_comment_link:hover,
-.tab_container .file_list_item .contents .file_comment_link:hover .ts_icon {
+.tab_container .file_list_item .contents .file_comment_link:hover .ts_icon,
+.search_message_result .search_message_result_meta a,
+.feature_sli_file_search #search_results.all .channel_link,
+.feature_sli_file_search #search_results.messages .channel_link {
   color: #ffffff;
 }
 .light_theme ts-message .message_content .message_sender,
@@ -262,10 +288,12 @@ h4,
   border-color: #0d0d0f;
 }
 /* fade on expandable attachments / messages */
-.c-file_container--gradient::after,
+.c-file_container--gradient::after {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0), #0d0d0f);
+}
 .c-channel_insights__message--truncate::before,
 .search_result_for_context::after {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0), #0d0d0f);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0), #313138);
 }
 /* fix for channel insights messages */
 .c-channel_insights__message ts-message.standalone:not(.for_mention_display):not(.for_search_display):not(.for_top_results_search_display):not(.for_star_display) {
@@ -282,12 +310,16 @@ h4,
 .c-message:hover:not(.c-message--highlight):not(.c-message--standalone):not(.c-message--pinned):not(.c-message--ephemeral):not(.c-message--custom_response):not(.c-message--starred):not(.c-message--sli_highlight) .c-file_container--gradient::after {
   background: linear-gradient(180deg, rgba(255, 255, 255, 0), rgba(49, 49, 56, 0.75));
 }
+/* search highlights / mentions */
+span.match {
+  background-color: #ef6fff;
+}
 /* seperators for sidebar menu items */
 #details_tab .channel_page_section {
   border-bottom: 1px solid rgba(49, 49, 56, 0.8);
 }
 #flex_contents .heading {
-  border-bottom: 1px solid rgba(85, 85, 97, 0.1);
+  border-bottom: 1px solid rgba(85, 85, 97, 0.8);
 }
 /* add border to code block margin adter it's removed by the previous fix */
 .c-snippet__code .CodeMirror-code > div::before {

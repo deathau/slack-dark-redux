@@ -13,12 +13,13 @@
 
 @title-color: #ffffff;
 @link-color: #2d9ee0;
+@highlight-background: #ef6fff;
 
 @primary-hover: fade(lighten(@primary-background, 15%), 75%);
 @secondary-hover: fade(lighten(@secondary-background, 15%), 75%);
 
 @primary-hr-color: fade(@primary-hover, 80%);
-@secondary-hr-color: fade(@secondary-hover, 10%);
+@secondary-hr-color: fade(@secondary-hover, 80%);
 
 /* The base of everything */
 body {
@@ -81,6 +82,8 @@ ts-message,
 .feature_sli_file_search #search_results.all,
 .feature_sli_file_search #search_results.messages,
 .c-input_select_options_list__option,
+.sli_expert_search_cta__text,
+.sli_expert_search_cta__text:hover,
 {
     background-color: transparent;
     background-image: none;
@@ -149,11 +152,15 @@ ts-message,
 .feature_sli_file_search #search_results_container .heading,
 .feature_sli_file_search #search_results_container #search_options,
 #search_filters .tab,
+.sli_expert_search,
 .feature_sli_file_search #search_results.all .search_message_result, 
 .feature_sli_file_search #search_results.messages .search_message_result,
 .search_result_with_extract,
+.feature_sli_file_search #search_results.all .top_search_results .search_message_result,
+.feature_sli_file_search #search_results.messages .top_search_results .search_message_result,
 code,
-pre
+pre,
+.search_segmented_control.active,
 {
     background: @secondary-background;
     color: @secondary-color;
@@ -181,11 +188,17 @@ pre
 .c-reaction,
 .c-reaction_add,
 .rxn,
+.feature_sli_file_search #search_results.all .sli_expert_search_cta,
+.feature_sli_file_search #search_results.messages .sli_expert_search_cta,
 .feature_sli_file_search #search_results.all .search_message_result, 
 .feature_sli_file_search #search_results.messages .search_message_result,
 .search_result_with_extract,
+.feature_sli_file_search #search_results.all .top_search_results .search_message_result,
+.feature_sli_file_search #search_results.messages .top_search_results .search_message_result
 code,
 pre,
+.search_segmented_control.active,
+.search_segmented_control
 {
     border: 1px solid @primary-hr-color;
 }
@@ -226,7 +239,20 @@ hr,
 }
 
 /* secondary hr */
-.menu hr {
+.menu hr,
+.feature_sli_file_search #search_results.all .search_result_with_extract.first_extract_message_in_group,
+.feature_sli_file_search #search_results.all .search_result_with_extract.first_extract_message_in_group:hover,
+.feature_sli_file_search #search_results.all .search_result_with_extract:first-child,
+.feature_sli_file_search #search_results.all .search_result_with_extract:first-child:hover,
+.feature_sli_file_search #search_results.messages .search_result_with_extract.first_extract_message_in_group,
+.feature_sli_file_search #search_results.messages .search_result_with_extract.first_extract_message_in_group:hover,
+.feature_sli_file_search #search_results.messages .search_result_with_extract:first-child,
+.feature_sli_file_search #search_results.messages .search_result_with_extract:first-child:hover,
+.feature_sli_file_search #search_results.all .search_result_with_extract.last_extract_message_in_group,
+.feature_sli_file_search #search_results.all .search_result_with_extract.last_extract_message_in_group:hover,
+.feature_sli_file_search #search_results.messages .search_result_with_extract.last_extract_message_in_group, 
+.feature_sli_file_search #search_results.messages .search_result_with_extract.last_extract_message_in_group:hover,
+{
     border-color: @secondary-hr-color;
 }
 
@@ -289,6 +315,9 @@ h1, h2, h3, h4,
 .tab_container .file_list_item .contents .file_comment_link:focus .ts_icon,
 .tab_container .file_list_item .contents .file_comment_link:hover,
 .tab_container .file_list_item .contents .file_comment_link:hover .ts_icon,
+.search_message_result .search_message_result_meta a,
+.feature_sli_file_search #search_results.all .channel_link,
+.feature_sli_file_search #search_results.messages .channel_link,
 {
     color: @title-color;
 }
@@ -306,10 +335,13 @@ h1, h2, h3, h4,
 
 /* fade on expandable attachments / messages */
 .c-file_container--gradient::after,
+{
+    background: linear-gradient(180deg,hsla(0,0%,100%,0),@primary-background);
+}
 .c-channel_insights__message--truncate::before,
 .search_result_for_context::after,
 {
-    background: linear-gradient(180deg,hsla(0,0%,100%,0),@primary-background);
+    background: linear-gradient(180deg,hsla(0,0%,100%,0),@secondary-background);
 }
 
 /* fix for channel insights messages */
@@ -330,6 +362,11 @@ h1, h2, h3, h4,
     background: linear-gradient(180deg,hsla(0,0%,100%,0),@primary-hover);
 }
 
+/* search highlights / mentions */
+span.match {
+    background-color: @highlight-background;
+}
+
 /* seperators for sidebar menu items */
 #details_tab .channel_page_section {
     border-bottom: 1px solid @primary-hr-color;
@@ -340,7 +377,7 @@ h1, h2, h3, h4,
 
 /* add border to code block margin adter it's removed by the previous fix */
 .c-snippet__code .CodeMirror-code > div::before,
- {
+{
     border-color: @primary-hr-color;
 }
 
