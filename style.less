@@ -86,6 +86,11 @@ ts-message,
 .sli_expert_search_cta__text:hover,
 #whats_new_tab p,
 .p-shortcuts_flexpane__shortcut_title,
+#client-ui .searchable_member_list .team_list_item:hover,
+#flex_contents .flexpane_tab_bar li.active .tab,
+#file_list_toggle_users.active,
+#fs_modal.help_modal .help_modal_article_row,
+#fs_modal.help_modal .help_modal_header a,
 {
     background-color: transparent;
     background-image: none;
@@ -104,6 +109,9 @@ ts-message,
 .popover_menu,
 #col_flex,
 .active .tab_container .file_list_item,
+#fs_modal_bg,
+.fs_modal_bg,
+#fs_modal #fs_modal_footer,
 {
     background-color: @primary-background;
     color: @primary-color;
@@ -164,6 +172,8 @@ code,
 pre,
 .search_segmented_control.active,
 .p-flexpane_header,
+#flex_contents .toolbar_container,
+#fs_modal.help_modal .help_modal_header,
 {
     background: @secondary-background;
     color: @secondary-color;
@@ -213,6 +223,8 @@ pre,
 .channel_page_member_row:hover,
 .tab_container .file_list_item:focus,
 .tab_container .file_list_item:hover,
+#fs_modal.help_modal #help_modal_list_container:not(.keyboard_active).not_scrolling .help_modal_article_row:hover,
+#fs_modal.help_modal .help_modal_article_row.highlighted,
 {
     background: @primary-hover;
     border-color:transparent;
@@ -238,6 +250,10 @@ hr,
 .c-channel_insights__date_heading::before {
     background-color: @primary-hr-color;
 }
+#fs_modal.help_modal .help_modal_article_row,
+{
+    border-top-color: @primary-hr-color;
+}
 
 /* fix channel highlights date heading to match other date pills */
 .c-channel_insights__date_heading span {
@@ -260,6 +276,7 @@ hr,
 .feature_sli_file_search #search_results.messages .search_result_with_extract.last_extract_message_in_group, 
 .feature_sli_file_search #search_results.messages .search_result_with_extract.last_extract_message_in_group:hover,
 .p-flexpane_header,
+.toolbar_container,
 {
     border-color: @secondary-hr-color;
 }
@@ -327,6 +344,7 @@ h1, h2, h3, h4,
 .feature_sli_file_search #search_results.all .channel_link,
 .feature_sli_file_search #search_results.messages .channel_link,
 .p-shortcuts_flexpane__title,
+#fs_modal h1, #fs_modal h2, #fs_modal h3, #fs_modal h4, #fs_modal h5,
 {
     color: @title-color;
 }

@@ -60,7 +60,12 @@ ts-message,
 .sli_expert_search_cta__text,
 .sli_expert_search_cta__text:hover,
 #whats_new_tab p,
-.p-shortcuts_flexpane__shortcut_title {
+.p-shortcuts_flexpane__shortcut_title,
+#client-ui .searchable_member_list .team_list_item:hover,
+#flex_contents .flexpane_tab_bar li.active .tab,
+#file_list_toggle_users.active,
+#fs_modal.help_modal .help_modal_article_row,
+#fs_modal.help_modal .help_modal_header a {
   background-color: transparent;
   background-image: none;
   box-shadow: none;
@@ -76,7 +81,10 @@ ts-message,
 .tab_complete_ui,
 .popover_menu,
 #col_flex,
-.active .tab_container .file_list_item {
+.active .tab_container .file_list_item,
+#fs_modal_bg,
+.fs_modal_bg,
+#fs_modal #fs_modal_footer {
   background-color: #0d0d0f;
   color: #e0e0e0;
   border-color: transparent;
@@ -134,7 +142,9 @@ ts-message,
 code,
 pre,
 .search_segmented_control.active,
-.p-flexpane_header {
+.p-flexpane_header,
+#flex_contents .toolbar_container,
+#fs_modal.help_modal .help_modal_header {
   background: #313138;
   color: #e0e0e0;
   box-shadow: none;
@@ -176,7 +186,9 @@ pre,
 .c-message:hover:not(.c-message--highlight):not(.c-message--standalone):not(.c-message--pinned):not(.c-message--ephemeral):not(.c-message--custom_response):not(.c-message--starred):not(.c-message--sli_highlight),
 .channel_page_member_row:hover,
 .tab_container .file_list_item:focus,
-.tab_container .file_list_item:hover {
+.tab_container .file_list_item:hover,
+#fs_modal.help_modal #help_modal_list_container:not(.keyboard_active).not_scrolling .help_modal_article_row:hover,
+#fs_modal.help_modal .help_modal_article_row.highlighted {
   background: rgba(49, 49, 56, 0.75);
   border-color: transparent;
 }
@@ -198,6 +210,9 @@ hr,
 .c-channel_insights__date_heading::before {
   background-color: rgba(49, 49, 56, 0.8);
 }
+#fs_modal.help_modal .help_modal_article_row {
+  border-top-color: rgba(49, 49, 56, 0.8);
+}
 /* fix channel highlights date heading to match other date pills */
 .c-channel_insights__date_heading span {
   padding: .25rem .75rem;
@@ -217,7 +232,8 @@ hr,
 .feature_sli_file_search #search_results.all .search_result_with_extract.last_extract_message_in_group:hover,
 .feature_sli_file_search #search_results.messages .search_result_with_extract.last_extract_message_in_group,
 .feature_sli_file_search #search_results.messages .search_result_with_extract.last_extract_message_in_group:hover,
-.p-flexpane_header {
+.p-flexpane_header,
+.toolbar_container {
   border-color: rgba(85, 85, 97, 0.8);
 }
 /* message, input boxes */
@@ -283,7 +299,12 @@ h4,
 .search_message_result .search_message_result_meta a,
 .feature_sli_file_search #search_results.all .channel_link,
 .feature_sli_file_search #search_results.messages .channel_link,
-.p-shortcuts_flexpane__title {
+.p-shortcuts_flexpane__title,
+#fs_modal h1,
+#fs_modal h2,
+#fs_modal h3,
+#fs_modal h4,
+#fs_modal h5 {
   color: #ffffff;
 }
 .light_theme ts-message .message_content .message_sender,
