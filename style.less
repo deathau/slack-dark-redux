@@ -84,7 +84,8 @@ ts-message,
 .c-input_select_options_list__option,
 .sli_expert_search_cta__text,
 .sli_expert_search_cta__text:hover,
-#whats_new_tab p
+#whats_new_tab p,
+.p-shortcuts_flexpane__shortcut_title,
 {
     background-color: transparent;
     background-image: none;
@@ -162,6 +163,7 @@ ts-message,
 code,
 pre,
 .search_segmented_control.active,
+.p-flexpane_header,
 {
     background: @secondary-background;
     color: @secondary-color;
@@ -227,7 +229,10 @@ pre,
 /* hr, day divider */
 hr,
 .c-message_list__day_divider__line,
-.bottom_border{
+.bottom_border,
+.p-shortcuts_flexpane__shortcut,
+.p-shortcuts_flexpane__shortcut:last-of-type,
+{
     border-color: @primary-hr-color;
 }
 .c-channel_insights__date_heading::before {
@@ -254,6 +259,7 @@ hr,
 .feature_sli_file_search #search_results.all .search_result_with_extract.last_extract_message_in_group:hover,
 .feature_sli_file_search #search_results.messages .search_result_with_extract.last_extract_message_in_group, 
 .feature_sli_file_search #search_results.messages .search_result_with_extract.last_extract_message_in_group:hover,
+.p-flexpane_header,
 {
     border-color: @secondary-hr-color;
 }
@@ -320,6 +326,7 @@ h1, h2, h3, h4,
 .search_message_result .search_message_result_meta a,
 .feature_sli_file_search #search_results.all .channel_link,
 .feature_sli_file_search #search_results.messages .channel_link,
+.p-shortcuts_flexpane__title,
 {
     color: @title-color;
 }
