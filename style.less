@@ -13,7 +13,10 @@
 
 @title-color: #ffffff;
 @link-color: #2d9ee0;
-@highlight-background: #ef6fff;
+@highlight-background: #fff6d1;
+@highlight-foreground: contrast(@highlight-background);
+@search-background: #ef6fff;
+@search-foreground: contrast(@search-background);
 
 @primary-hover: fade(lighten(@primary-background, 15%), 75%);
 @secondary-hover: fade(lighten(@secondary-background, 15%), 75%);
@@ -91,6 +94,8 @@ ts-message,
 #file_list_toggle_users.active,
 #fs_modal.help_modal .help_modal_article_row,
 #fs_modal.help_modal .help_modal_header a,
+.c-dialog__header,
+.c-dialog__footer,
 {
     background-color: transparent;
     background-image: none;
@@ -174,6 +179,8 @@ pre,
 .p-flexpane_header,
 #flex_contents .toolbar_container,
 #fs_modal.help_modal .help_modal_header,
+#at_channel_warning_dialog.fullsize .modal-body,
+.c-dialog__content,
 {
     background: @secondary-background;
     color: @secondary-color;
@@ -345,6 +352,8 @@ h1, h2, h3, h4,
 .feature_sli_file_search #search_results.messages .channel_link,
 .p-shortcuts_flexpane__title,
 #fs_modal h1, #fs_modal h2, #fs_modal h3, #fs_modal h4, #fs_modal h5,
+.c-dialog__title,
+.c-message__sender,
 {
     color: @title-color;
 }
@@ -391,8 +400,22 @@ h1, h2, h3, h4,
 }
 
 /* search highlights / mentions */
-span.match {
-    background-color: @highlight-background;
+span.match,
+{
+    background-color: @search-background;
+    color: @search-foreground;
+}
+.mention,
+.c-mrkdwn__broadcast--mention,
+.c-mrkdwn__broadcast--mention:hover,
+.c-mrkdwn__highlight, .c-mrkdwn__mention,
+.c-mrkdwn__mention:hover,
+.c-mrkdwn__subteam--mention,
+.c-mrkdwn__subteam--mention:hover,
+.mention_yellow_bg,
+{
+    background-color: @highlight-background !important;
+    color: @highlight-foreground;
 }
 
 /* seperators for sidebar menu items */

@@ -65,7 +65,9 @@ ts-message,
 #flex_contents .flexpane_tab_bar li.active .tab,
 #file_list_toggle_users.active,
 #fs_modal.help_modal .help_modal_article_row,
-#fs_modal.help_modal .help_modal_header a {
+#fs_modal.help_modal .help_modal_header a,
+.c-dialog__header,
+.c-dialog__footer {
   background-color: transparent;
   background-image: none;
   box-shadow: none;
@@ -144,7 +146,9 @@ pre,
 .search_segmented_control.active,
 .p-flexpane_header,
 #flex_contents .toolbar_container,
-#fs_modal.help_modal .help_modal_header {
+#fs_modal.help_modal .help_modal_header,
+#at_channel_warning_dialog.fullsize .modal-body,
+.c-dialog__content {
   background: #313138;
   color: #e0e0e0;
   box-shadow: none;
@@ -304,7 +308,9 @@ h4,
 #fs_modal h2,
 #fs_modal h3,
 #fs_modal h4,
-#fs_modal h5 {
+#fs_modal h5,
+.c-dialog__title,
+.c-message__sender {
   color: #ffffff;
 }
 .light_theme ts-message .message_content .message_sender,
@@ -343,6 +349,19 @@ h4,
 /* search highlights / mentions */
 span.match {
   background-color: #ef6fff;
+  color: #ffffff;
+}
+.mention,
+.c-mrkdwn__broadcast--mention,
+.c-mrkdwn__broadcast--mention:hover,
+.c-mrkdwn__highlight,
+.c-mrkdwn__mention,
+.c-mrkdwn__mention:hover,
+.c-mrkdwn__subteam--mention,
+.c-mrkdwn__subteam--mention:hover,
+.mention_yellow_bg {
+  background-color: #fff6d1 !important;
+  color: #000000;
 }
 /* seperators for sidebar menu items */
 #details_tab .channel_page_section {
