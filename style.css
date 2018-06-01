@@ -72,7 +72,7 @@ ts-message,
 a.p-download_item__link--open,
 a.p-download_item__link--retry,
 a.p-download_item__link--show,
-p-downloads_list__shift_hint,
+.p-downloads_list__shift_hint,
 .supports_custom_scrollbar:not(.slim_scrollbar) #messages_container:after {
   background-color: transparent;
   background-image: none;
