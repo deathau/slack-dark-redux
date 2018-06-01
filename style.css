@@ -67,7 +67,13 @@ ts-message,
 #fs_modal.help_modal .help_modal_article_row,
 #fs_modal.help_modal .help_modal_header a,
 .c-dialog__header,
-.c-dialog__footer {
+.c-dialog__footer,
+.p-download_item__actions,
+a.p-download_item__link--open,
+a.p-download_item__link--retry,
+a.p-download_item__link--show,
+p-downloads_list__shift_hint,
+.supports_custom_scrollbar:not(.slim_scrollbar) #messages_container:after {
   background-color: transparent;
   background-image: none;
   box-shadow: none;
@@ -162,6 +168,13 @@ pre,
 .c-unified_member__title--large {
   color: #717274 !important;
 }
+/* links */
+a,
+a.p-download_item__link--open,
+a.p-download_item__link--retry,
+a.p-download_item__link--show {
+  color: #2d9ee0;
+}
 /* borders for popups */
 .menu.p-emoji_picker,
 .tab_complete_ui,
@@ -181,7 +194,8 @@ pre,
 .feature_sli_file_search #search_results.messages .top_search_results .search_message_result code,
 pre,
 .search_segmented_control.active,
-.search_segmented_control {
+.search_segmented_control,
+.p-download_item:hover {
   border: 1px solid rgba(49, 49, 56, 0.8);
 }
 /* message hover */
