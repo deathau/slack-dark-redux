@@ -2,25 +2,25 @@
 // Using less variables so we can do some color transformations //
 
 
-// old colours
-@primary-background:    #0d0d0f;
-@primary-color:         #e0e0e0;
-@secondary-background:  #313138;
-@secondary-color:       #e0e0e0;
-@input-background:      #313138;
-@input-color:           @secondary-color;
-@input-border:          #717274;
-@greigh:                #717274;
-@title-color:           #ffffff;
-@link-color:            #2d9ee0;
-@highlight-background:  #fff6d1;
-@highlight-foreground:  contrast(@highlight-background);
-@search-background:     #ef6fff;
-@search-foreground:     contrast(@search-background);
-@primary-hover:         fade(lighten(@primary-background, 15%), 75%);
-@secondary-hover:       fade(lighten(@secondary-background, 15%), 75%);
-@primary-hr-color:      fade(@primary-hover, 80%);
-@secondary-hr-color:    fade(@secondary-hover, 80%);
+// // old colours
+// @primary-background:    #0d0d0f;
+// @primary-color:         #e0e0e0;
+// @secondary-background:  #313138;
+// @secondary-color:       #e0e0e0;
+// @input-background:      #313138;
+// @input-color:           @secondary-color;
+// @input-border:          #717274;
+// @greigh:                #717274;
+// @title-color:           #ffffff;
+// @link-color:            #2d9ee0;
+// @highlight-background:  #fff6d1;
+// @highlight-foreground:  contrast(@highlight-background);
+// @search-background:     #ef6fff;
+// @search-foreground:     contrast(@search-background);
+// @primary-hover:         fade(lighten(@primary-background, 15%), 75%);
+// @secondary-hover:       fade(lighten(@secondary-background, 15%), 75%);
+// @primary-hr-color:      fade(@primary-hover, 80%);
+// @secondary-hr-color:    fade(@secondary-hover, 80%);
 
 /* Start with sidebar colours */
 // These are my defaults:
@@ -73,26 +73,6 @@
 
 // re-define the colours in css variables for better css //
 :root {
-    --primary-background:   @chat;
-    --primary-color:        @on-chat;
-    --secondary-background: @primary;
-    --secondary-color:      @on-primary;
-    --input-background:     @primary;
-    --input-color:          @on-primary;
-    --input-border:         @primary-light;
-    --greigh:               @primary-light;
-    --title-color:          @on-primary-strong;
-    --link-color:           @secondary;
-    --highlight-background: @highlight;
-    --highlight-foreground: @on-highlight;
-    --search-background:    @highlight;
-    --search-foreground:    @on-highlight;
-    --primary-hover:        @chat-hover;
-    --secondary-hover:      @primary-hover;
-    --primary-hr-color:     @chat-light;
-    --secondary-hr-color:   @primary-light;
-
-    // new colors:
     --primary:          @primary;
     --primary-hover:    @primary-hover;
     --secondary:        @secondary;

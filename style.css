@@ -1,23 +1,6 @@
 /* Color customizations */
 /* Start with sidebar colours */
 :root {
-  --primary-background: #0d0d0f;
-  --primary-color: #e0e0e2;
-  --secondary-background: #4D394B;
-  --secondary-color: #FFFFFF;
-  --input-background: #4D394B;
-  --input-color: #FFFFFF;
-  --input-border: #795a76;
-  --greigh: #795a76;
-  --title-color: #ffffff;
-  --link-color: #4C9689;
-  --highlight-background: #EB4D5C;
-  --highlight-foreground: #FFFFFF;
-  --search-background: #EB4D5C;
-  --search-foreground: #FFFFFF;
-  --secondary-hover: #3E313C;
-  --primary-hr-color: #313138;
-  --secondary-hr-color: #795a76;
   --primary: #4D394B;
   --primary-hover: #3E313C;
   --secondary: #4C9689;
@@ -40,8 +23,8 @@
 }
 /* The base of everything */
 body {
-  background-color: var(--primary-background);
-  color: var(--primary-color);
+  background-color: var(--chat);
+  color: var(--on-chat);
 }
 /* 
  * fixing font and background colours in some places
@@ -415,7 +398,7 @@ h4,
 .c-message--focus:not(.c-message--highlight):not(.c-message--standalone):not(.c-message--pinned):not(.c-message--ephemeral):not(.c-message--custom_response):not(.c-message--starred):not(.c-message--sli_highlight) .c-file_container--gradient::after,
 .c-message--hover:not(.c-message--highlight):not(.c-message--standalone):not(.c-message--pinned):not(.c-message--ephemeral):not(.c-message--custom_response):not(.c-message--starred):not(.c-message--sli_highlight) .c-file_container--gradient::after,
 .c-message:hover:not(.c-message--highlight):not(.c-message--standalone):not(.c-message--pinned):not(.c-message--ephemeral):not(.c-message--custom_response):not(.c-message--starred):not(.c-message--sli_highlight) .c-file_container--gradient::after {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0), var(--primary-hover));
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0), var(--chat-hover));
 }
 /* search highlights / mentions */
 span.match {
