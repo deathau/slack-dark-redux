@@ -1,0 +1,115 @@
+// Defined colours //
+// Using less variables so we can do some color transformations //
+
+
+// old colours
+@primary-background:    #0d0d0f;
+@primary-color:         #e0e0e0;
+@secondary-background:  #313138;
+@secondary-color:       #e0e0e0;
+@input-background:      #313138;
+@input-color:           @secondary-color;
+@input-border:          #717274;
+@greigh:                #717274;
+@title-color:           #ffffff;
+@link-color:            #2d9ee0;
+@highlight-background:  #fff6d1;
+@highlight-foreground:  contrast(@highlight-background);
+@search-background:     #ef6fff;
+@search-foreground:     contrast(@search-background);
+@primary-hover:         fade(lighten(@primary-background, 15%), 75%);
+@secondary-hover:       fade(lighten(@secondary-background, 15%), 75%);
+@primary-hr-color:      fade(@primary-hover, 80%);
+@secondary-hr-color:    fade(@secondary-hover, 80%);
+
+/* Start with sidebar colours */
+// These are my defaults:
+// #303E4D,#2C3849,#6698C8,#FFFFFF,#4A5664,#ffffff,#94E864,#78AF8F
+// This is slack's default
+// #4D394B,#3E313C,#4C9689,#FFFFFF,#3E313C,#FFFFFF,#38978D,#EB4D5C
+@column-bg: #4D394B;
+@menu-bg-hover: #3E313C;
+@active-item: #4C9689;
+@active-item-text: #FFFFFF;
+@hover-item: #3E313C;
+@text-color: #FFFFFF;
+@active-presence: #38978D;
+@mention-badge: #EB4D5C;
+
+
+// I want to try having a better structure, perhaps using something like
+// The Material colour structure or using base16
+// http://chriskempson.com/projects/base16/
+
+// colors (i.e. background colors)
+@primary:           @column-bg;
+@primary-hover:     @hover-item;
+@secondary:         @active-item;
+@highlight:         @mention-badge;
+
+// on colours (i.e. foreground colors)
+@on-primary:        @text-color;
+@on-secondary:      @active-item-text;
+@on-highlight:      @active-item-text;
+
+// can change the colour for the chat area (I prefer to have this darker)
+@chat:              #0d0d0f;
+@chat-hover:        @primary-hover;
+@on-chat:           #e0e0e2;
+
+// variants
+@primary-dark:      darken(@primary, 15%);
+@primary-light:     lighten(@primary, 15%);
+@secondary-dark:    darken(@secondary, 15%);
+@secondary-light:   lighten(@secondary, 15%);
+@chat-dark:         darken(@chat, 15%);
+@chat-light:        lighten(@chat, 15%);
+
+// on variants
+@on-primary-strong:     lighten(@on-primary, 15%);
+@on-secondary-strong:   lighten(@on-secondary, 15%);
+@on-chat-strong:        lighten(@on-chat, 15%);
+
+
+// re-define the colours in css variables for better css //
+:root {
+    --primary-background:   @chat;
+    --primary-color:        @on-chat;
+    --secondary-background: @primary;
+    --secondary-color:      @on-primary;
+    --input-background:     @primary;
+    --input-color:          @on-primary;
+    --input-border:         @primary-light;
+    --greigh:               @primary-light;
+    --title-color:          @on-primary-strong;
+    --link-color:           @secondary;
+    --highlight-background: @highlight;
+    --highlight-foreground: @on-highlight;
+    --search-background:    @highlight;
+    --search-foreground:    @on-highlight;
+    --primary-hover:        @chat-hover;
+    --secondary-hover:      @primary-hover;
+    --primary-hr-color:     @chat-light;
+    --secondary-hr-color:   @primary-light;
+
+    // new colors:
+    --primary:          @primary;
+    --primary-hover:    @primary-hover;
+    --secondary:        @secondary;
+    --highlight:        @highlight;
+    --on-primary:       @on-primary;
+    --on-secondary:     @on-secondary;
+    --on-highlight:     @on-highlight;
+    --chat:             @chat;
+    --chat-hover:       @chat-hover;
+    --on-chat:          @on-chat;
+    --primary-dark:     @primary-dark;
+    --primary-light:    @primary-light;
+    --secondary-dark:   @secondary-dark;
+    --secondary-light:  @secondary-light;
+    --chat-dark:        @chat-dark;
+    --chat-light:       @chat-light;
+    --on-primary-strong:    @on-primary-strong;
+    --on-secondary-strong:  @on-secondary-strong;
+    --on-chat-strong:       @on-chat-strong;
+}
