@@ -18,14 +18,23 @@
         bottom: 0.5rem;
     }
     /* header buttons */
+    #edit_topic_inner:not(.unable_to_post)::before {
+        .reset-all();
+    }
     .channel_header_icon:not(:hover):not(.active) {
         color: var(--primary-light);
+    }
+    .channel_header_info button:not(:hover):not(.active),
+    #edit_topic_inner,
+    .channel_header_info_item:not(:empty)~.channel_header_info_item:not(:first-child)::before {
+        color: var(--on-primary-muted);
     }
     .channel_header .blue_on_hover:hover,
     .channel_actions_toggle.active:focus,
     .details_toggle.active:focus,
     #flex_menu_toggle.active,
-    #flex_menu_toggle.active:focus {
+    #flex_menu_toggle.active:focus,
+    #edit_topic_trigger {
         color: var(--secondary);
     }
     #canvases_toggle.active,

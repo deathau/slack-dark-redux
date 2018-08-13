@@ -1,8 +1,5 @@
 #col_messages {
     .chat-area();
-    .p-message_pane {
-        background-color: var(--chat);
-    }
     /* Chat room styles */
     /* additions to space the content out better and put some seperators */
     .c-message--light:not(.c-message--adjacent) .c-message__content::before {
@@ -21,6 +18,10 @@
     .p-message_pane .c-message_list.c-virtual_list--scrollbar>.c-scrollbar__hider::before,
     .p-message_pane .c-message_list:not(.c-virtual_list--scrollbar)::before {
         .primary-area();
+    }
+    .p-message_pane,
+    #footer {
+        background-color: var(--chat);
     }
     /* Message input box */
     #msg_form .ql-placeholder {

@@ -93,14 +93,30 @@
   border-color: var(--secondary);
   bottom: 0.5rem;
 }
+#client_header #edit_topic_inner:not(.unable_to_post)::before {
+  background-color: transparent;
+  background-image: none;
+  box-shadow: none;
+  border-color: transparent;
+  color: inherit;
+  -webkit-filter: none;
+  filter: none;
+  opacity: 1;
+}
 #client_header .channel_header_icon:not(:hover):not(.active) {
   color: var(--primary-light);
+}
+#client_header .channel_header_info button:not(:hover):not(.active),
+#client_header #edit_topic_inner,
+#client_header .channel_header_info_item:not(:empty) ~ .channel_header_info_item:not(:first-child)::before {
+  color: var(--on-primary-muted);
 }
 #client_header .channel_header .blue_on_hover:hover,
 #client_header .channel_actions_toggle.active:focus,
 #client_header .details_toggle.active:focus,
 #client_header #flex_menu_toggle.active,
-#client_header #flex_menu_toggle.active:focus {
+#client_header #flex_menu_toggle.active:focus,
+#client_header #edit_topic_trigger {
   color: var(--secondary);
 }
 #client_header #canvases_toggle.active,
@@ -203,9 +219,6 @@
   /* Chat room colours */
   /* Message input box */
 }
-#col_messages .p-message_pane {
-  background-color: var(--chat);
-}
 #col_messages .c-message--light:not(.c-message--adjacent) .c-message__content::before {
   border-bottom: 0.5px solid var(--chat-light);
 }
@@ -229,6 +242,10 @@
 #col_messages .p-message_pane .c-message_list:not(.c-virtual_list--scrollbar)::before {
   background-color: var(--primary);
   color: var(--on-primary);
+}
+#col_messages .p-message_pane,
+#col_messages #footer {
+  background-color: var(--chat);
 }
 #col_messages #msg_form .ql-placeholder {
   background-color: transparent;
