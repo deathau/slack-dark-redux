@@ -12,8 +12,21 @@
     .p-message_pane .c-message_list.c-virtual_list--scrollbar>.c-scrollbar__hider,
     .p-message_pane .c-message_list:not(.c-virtual_list--scrollbar),
     .p-degraded_list__loading,
-    #footer {
+    #footer,
+    .c-message__body,
+    .c-message--light .c-message__sender .c-message__sender_link {
         .reset-all()
+    }
+    .c-message--light .c-message__sender .c-message__sender_link {
+        color: var(--on-chat-strong);
+    }
+    .c-timestamp__label {
+        color: var(--on-chat-muted);
+    }
+    .c-message--focus:not(.c-message--highlight):not(.c-message--standalone):not(.c-message--pinned):not(.c-message--ephemeral):not(.c-message--custom_response):not(.c-message--starred):not(.c-message--sli_highlight),
+    .c-message--hover:not(.c-message--highlight):not(.c-message--standalone):not(.c-message--pinned):not(.c-message--ephemeral):not(.c-message--custom_response):not(.c-message--starred):not(.c-message--sli_highlight),
+    .c-message:hover:not(.c-message--highlight):not(.c-message--standalone):not(.c-message--pinned):not(.c-message--ephemeral):not(.c-message--custom_response):not(.c-message--starred):not(.c-message--sli_highlight) {
+        background-color: var(--chat-hover);
     }
     .p-message_pane .c-message_list.c-virtual_list--scrollbar>.c-scrollbar__hider::before,
     .p-message_pane .c-message_list:not(.c-virtual_list--scrollbar)::before {

@@ -228,7 +228,9 @@
 #col_messages .p-message_pane .c-message_list.c-virtual_list--scrollbar > .c-scrollbar__hider,
 #col_messages .p-message_pane .c-message_list:not(.c-virtual_list--scrollbar),
 #col_messages .p-degraded_list__loading,
-#col_messages #footer {
+#col_messages #footer,
+#col_messages .c-message__body,
+#col_messages .c-message--light .c-message__sender .c-message__sender_link {
   background-color: transparent;
   background-image: none;
   box-shadow: none;
@@ -237,6 +239,17 @@
   -webkit-filter: none;
   filter: none;
   opacity: 1;
+}
+#col_messages .c-message--light .c-message__sender .c-message__sender_link {
+  color: var(--on-chat-strong);
+}
+#col_messages .c-timestamp__label {
+  color: var(--on-chat-muted);
+}
+#col_messages .c-message--focus:not(.c-message--highlight):not(.c-message--standalone):not(.c-message--pinned):not(.c-message--ephemeral):not(.c-message--custom_response):not(.c-message--starred):not(.c-message--sli_highlight),
+#col_messages .c-message--hover:not(.c-message--highlight):not(.c-message--standalone):not(.c-message--pinned):not(.c-message--ephemeral):not(.c-message--custom_response):not(.c-message--starred):not(.c-message--sli_highlight),
+#col_messages .c-message:hover:not(.c-message--highlight):not(.c-message--standalone):not(.c-message--pinned):not(.c-message--ephemeral):not(.c-message--custom_response):not(.c-message--starred):not(.c-message--sli_highlight) {
+  background-color: var(--chat-hover);
 }
 #col_messages .p-message_pane .c-message_list.c-virtual_list--scrollbar > .c-scrollbar__hider::before,
 #col_messages .p-message_pane .c-message_list:not(.c-virtual_list--scrollbar)::before {
