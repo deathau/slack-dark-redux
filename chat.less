@@ -20,7 +20,15 @@
     .c-message--light .c-message__sender .c-message__sender_link {
         color: var(--on-chat-strong);
     }
-    .c-timestamp__label {
+    a,
+    a:link,
+    a:visited {
+        color: var(--secondary);
+    } 
+    .c-timestamp__label,
+    .c-message_attachment,
+    .c-message__file_meta.c-message__file_meta--file_threads,
+    .c-message_attachment__pretext {
         color: var(--on-chat-muted);
     }
     .c-message--focus:not(.c-message--highlight):not(.c-message--standalone):not(.c-message--pinned):not(.c-message--ephemeral):not(.c-message--custom_response):not(.c-message--starred):not(.c-message--sli_highlight),

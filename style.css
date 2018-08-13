@@ -243,7 +243,15 @@
 #col_messages .c-message--light .c-message__sender .c-message__sender_link {
   color: var(--on-chat-strong);
 }
-#col_messages .c-timestamp__label {
+#col_messages a,
+#col_messages a:link,
+#col_messages a:visited {
+  color: var(--secondary);
+}
+#col_messages .c-timestamp__label,
+#col_messages .c-message_attachment,
+#col_messages .c-message__file_meta.c-message__file_meta--file_threads,
+#col_messages .c-message_attachment__pretext {
   color: var(--on-chat-muted);
 }
 #col_messages .c-message--focus:not(.c-message--highlight):not(.c-message--standalone):not(.c-message--pinned):not(.c-message--ephemeral):not(.c-message--custom_response):not(.c-message--starred):not(.c-message--sli_highlight),
