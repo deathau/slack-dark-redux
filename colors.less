@@ -58,38 +58,45 @@
 @on-chat:           #e0e0e2;
 
 // variants
-@primary-dark:      darken(@primary, 15%);
+// ? is there any way I can do similar variants with just css?
 @primary-light:     lighten(@primary, 15%);
-@secondary-dark:    darken(@secondary, 15%);
 @secondary-light:   lighten(@secondary, 15%);
-@chat-dark:         darken(@chat, 15%);
 @chat-light:        lighten(@chat, 15%);
+@primary-dark:      darken(@primary, 15%);
+@secondary-dark:    darken(@secondary, 15%);
+@chat-dark:         darken(@chat, 15%);
 
 // on variants
 @on-primary-strong:     lighten(@on-primary, 15%);
 @on-secondary-strong:   lighten(@on-secondary, 15%);
 @on-chat-strong:        lighten(@on-chat, 15%);
+@on-primary-muted:      darken(@on-primary, 25%);
+@on-secondary-muted:    darken(@on-secondary, 25%);
+@on-chat-muted:         darken(@on-chat, 25%);
 
 
 // re-define the colours in css variables for better css //
 :root {
-    --primary:          @primary;
-    --primary-hover:    @primary-hover;
-    --secondary:        @secondary;
-    --highlight:        @highlight;
-    --on-primary:       @on-primary;
-    --on-secondary:     @on-secondary;
-    --on-highlight:     @on-highlight;
-    --chat:             @chat;
-    --chat-hover:       @chat-hover;
-    --on-chat:          @on-chat;
-    --primary-dark:     @primary-dark;
-    --primary-light:    @primary-light;
-    --secondary-dark:   @secondary-dark;
-    --secondary-light:  @secondary-light;
-    --chat-dark:        @chat-dark;
-    --chat-light:       @chat-light;
+    --primary:              @primary;
+    --primary-hover:        @primary-hover;
+    --secondary:            @secondary;
+    --highlight:            @highlight;
+    --on-primary:           @on-primary;
+    --on-secondary:         @on-secondary;
+    --on-highlight:         @on-highlight;
+    --chat:                 @chat;
+    --chat-hover:           @chat-hover;
+    --on-chat:              @on-chat;
+    --primary-dark:         @primary-dark;
+    --primary-light:        @primary-light;
+    --secondary-dark:       @secondary-dark;
+    --secondary-light:      @secondary-light;
+    --chat-dark:            @chat-dark;
+    --chat-light:           @chat-light;
     --on-primary-strong:    @on-primary-strong;
     --on-secondary-strong:  @on-secondary-strong;
     --on-chat-strong:       @on-chat-strong;
+    --on-primary-muted:     @on-primary-muted;
+    --on-secondary-muted:   @on-secondary-muted;
+    --on-chat-muted:        @on-chat-muted;
 }

@@ -1,0 +1,53 @@
+#col_messages {
+    .chat-area();
+    .p-message_pane {
+        background-color: var(--chat);
+    }
+    /* Chat room styles */
+    /* additions to space the content out better and put some seperators */
+    .c-message--light:not(.c-message--adjacent) .c-message__content::before {
+        border-bottom: 0.5px solid var(--chat-light);
+    }
+    .c-message--light:not(.c-message--adjacent) {
+        margin-top: 9px;
+    }
+    /* Chat room colours */
+    .p-message_pane .c-message_list.c-virtual_list--scrollbar>.c-scrollbar__hider,
+    .p-message_pane .c-message_list:not(.c-virtual_list--scrollbar),
+    .p-degraded_list__loading,
+    #footer {
+        .reset-all()
+    }
+    .p-message_pane .c-message_list.c-virtual_list--scrollbar>.c-scrollbar__hider::before,
+    .p-message_pane .c-message_list:not(.c-virtual_list--scrollbar)::before {
+        .primary-area();
+    }
+    /* Message input box */
+    #msg_form .ql-placeholder {
+        .reset-all();
+    }
+    #msg_input,
+    #primary_file_button,
+    #msg_input+#primary_file_button {
+        .primary-area();
+        border-color: var(--primary-light);
+    }
+    #msg_input+#primary_file_button,
+    #msg_form .msg_mentions_button,
+    #msg_form .current_status_empty_emoji,
+    #msg_form .current_status_empty_emoji_cover,
+    #msg_form .emo_menu,
+    #msg_form .ql-placeholder {
+        color: var(--primary-light);
+    }
+    #msg_form .msg_mentions_button:hover {
+        color: var(--secondary);
+    }
+    #msg_input+#primary_file_button.active,
+    #msg_input+#primary_file_button.focus-ring,
+    #msg_input+#primary_file_button:focus,
+    #msg_input+#primary_file_button:hover {
+        .secondary-area();
+        border-color: var(--secondary-light);
+    }
+}

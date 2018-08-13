@@ -1,3 +1,8 @@
+/* 
+ * fixing font and background colours in some places
+ * These are places that have colours defined in slack's css, but really should just inherit
+ */
+
 .c-message__body,
 .c-message_attachment__image,
 #footer,
@@ -66,7 +71,7 @@ a.p-download_item__link--show,
 .p-downloads_list__shift_hint,
 .p-download_item__container .p-download_item__name_row,
 .supports_custom_scrollbar:not(.slim_scrollbar) #messages_container:after,
-{
+    {
     background-color: transparent;
     background-image: none;
     box-shadow: none;
@@ -74,12 +79,11 @@ a.p-download_item__link--show,
     color: inherit;
 }
 
-
-.c-button--outline:link, 
+.c-button--outline:link,
 .c-button--outline:visited,
 .c-button--outline,
 .c-button--outline-danger,
 .c-button--outline-primary,
-{
+    {
     background-color: inherit;
 }
