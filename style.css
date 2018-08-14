@@ -217,7 +217,10 @@
   /* Chat room styles */
   /* additions to space the content out better and put some seperators */
   /* Chat room colours */
+  /* Mentions */
   /* Message input box */
+  /* day dividers */
+  /* file attatchments */
 }
 #col_messages .c-message--light:not(.c-message--adjacent) .c-message__content::before {
   border-bottom: 0.5px solid var(--chat-light);
@@ -249,10 +252,13 @@
   color: var(--secondary);
 }
 #col_messages .c-timestamp__label,
-#col_messages .c-message_attachment,
 #col_messages .c-message__file_meta.c-message__file_meta--file_threads,
 #col_messages .c-message_attachment__pretext {
   color: var(--on-chat-muted);
+}
+#col_messages .c-message_attachment,
+#col_messages .c-message_attachment__author {
+  color: var(--on-chat);
 }
 #col_messages .c-message--focus:not(.c-message--highlight):not(.c-message--standalone):not(.c-message--pinned):not(.c-message--ephemeral):not(.c-message--custom_response):not(.c-message--starred):not(.c-message--sli_highlight),
 #col_messages .c-message--hover:not(.c-message--highlight):not(.c-message--standalone):not(.c-message--pinned):not(.c-message--ephemeral):not(.c-message--custom_response):not(.c-message--starred):not(.c-message--sli_highlight),
@@ -268,6 +274,32 @@
 #col_messages #footer {
   background-color: var(--chat);
 }
+#col_messages code,
+#col_messages pre,
+#col_messages .c-reaction,
+#col_messages .c-reaction_add {
+  background-color: var(--chat-dark);
+  color: var(--on-chat-muted);
+  border-color: var(--chat-light);
+}
+#col_messages .c-reaction_add:focus,
+#col_messages .c-reaction_add:hover {
+  border-color: var(--secondary);
+}
+#col_messages a.c-member_slug--link {
+  background-color: var(--secondary);
+  color: var(--on-secondary);
+}
+#col_messages a.c-member_slug--mention,
+#col_messages a.c-member_slug--mention:hover {
+  background-color: var(--highlight);
+  color: var(--on-highlight);
+}
+#col_messages .c-app_badge,
+#col_messages .c-app_label {
+  background-color: var(--chat-dark);
+  color: var(--on-chat-muted);
+}
 #col_messages #msg_form .ql-placeholder {
   background-color: transparent;
   background-image: none;
@@ -281,17 +313,20 @@
 #col_messages #msg_input,
 #col_messages #primary_file_button,
 #col_messages #msg_input + #primary_file_button {
-  background-color: var(--primary);
+  background-color: var(--primary-dark);
   color: var(--on-primary);
-  border-color: var(--primary-light);
+  border-color: var(--primary);
 }
 #col_messages #msg_input + #primary_file_button,
 #col_messages #msg_form .msg_mentions_button,
 #col_messages #msg_form .current_status_empty_emoji,
 #col_messages #msg_form .current_status_empty_emoji_cover,
 #col_messages #msg_form .emo_menu,
-#col_messages #msg_form .ql-placeholder {
-  color: var(--primary-light);
+#col_messages #msg_form .ql-placeholder,
+#col_messages #msg_form #msg_input.focus ~ #primary_file_button:not(:hover):not(.active),
+#col_messages #msg_form #msg_input.focus ~ .emo_menu,
+#col_messages #msg_form #msg_input.focus ~ .msg_mentions_button:not(:hover) {
+  color: var(--primary);
 }
 #col_messages #msg_form .msg_mentions_button:hover {
   color: var(--secondary);
@@ -303,4 +338,41 @@
   background-color: var(--secondary);
   color: var(--on-secondary);
   border-color: var(--secondary-light);
+}
+#col_messages .c-message_list__day_divider__label__pill {
+  background-color: var(--primary);
+  color: var(--on-primary);
+}
+#col_messages .c-message_list__day_divider__line {
+  border-color: var(--chat-light);
+}
+#col_messages .c-file_container {
+  background-color: var(--chat);
+  border-color: var(--chat-light);
+  color: var(--on-chat);
+}
+#col_messages .c-file_container:hover {
+  border-color: var(--secondary);
+  box-shadow: none;
+}
+#col_messages .c-file__title {
+  color: var(--on-chat-strong);
+}
+#col_messages .c-file__meta {
+  color: var(--on-chat-muted);
+}
+#col_messages .c-file__slide--meta {
+  background-color: var(--chat);
+}
+#col_messages .c-file_container--has_thumb .c-file__actions::before {
+  background-image: linear-gradient(90deg, rgba(255, 255, 255, 0), var(--chat) 20px);
+}
+#col_messages .c-file__action_button {
+  background-color: var(--chat-dark);
+  color: var(--on-chat);
+}
+#col_messages .c-file__action_button:active,
+#col_messages .c-file__action_button:focus,
+#col_messages .c-file__action_button:hover {
+  color: var(--secondary);
 }
