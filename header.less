@@ -10,6 +10,9 @@
     .channel_header .channel_header__tabs .channel_header__tab {
         color: var(--on-primary-muted);
     }
+    a,
+    a:link,
+    a:visited,
     .channel_header .channel_header__tabs .channel_header__tab.--active {
         color: var(--secondary);
     }
@@ -26,8 +29,13 @@
     }
     .channel_header_info button:not(:hover):not(.active),
     #edit_topic_inner,
-    .channel_header_info_item:not(:empty)~.channel_header_info_item:not(:first-child)::before {
+    .channel_header_info_item:not(:empty)~.channel_header_info_item:not(:first-child)::before,
+    .messages_header,
+    #im_title.away {
         color: var(--on-primary-muted);
+    }
+    .subtle_silver {
+        color: var(--on-primary-muted) !important;
     }
     .channel_header .blue_on_hover:hover,
     .channel_actions_toggle.active:focus,
@@ -46,6 +54,11 @@
     #stars_toggle.active,
     #stars_toggle.active:hover {
         .secondary-area();
+    }
+    .app_preview_link_slug,
+    .internal_member_link,
+    .internal_user_group_link{
+        background-color: var(--primary-dark);
     }
     /* search form */
     .search_form {
