@@ -332,7 +332,14 @@
   color: var(--on-secondary);
 }
 #col_messages a.c-member_slug--mention,
-#col_messages a.c-member_slug--mention:hover {
+#col_messages a.c-member_slug--mention:hover,
+#col_messages .c-mrkdwn__broadcast--mention,
+#col_messages .c-mrkdwn__broadcast--mention:hover,
+#col_messages .c-mrkdwn__highlight,
+#col_messages .c-mrkdwn__mention,
+#col_messages .c-mrkdwn__mention:hover,
+#col_messages .c-mrkdwn__user_group--mention,
+#col_messages .c-mrkdwn__user_group--mention:hover {
   background-color: var(--highlight);
   color: var(--on-highlight);
 }
@@ -471,4 +478,225 @@
 #col_messages .p-message_pane__unread_banner__close--detached {
   background-color: var(--secondary);
   border-color: var(--secondary-dark);
+}
+.c-snippet__code .CodeMirror-code > div::before {
+  background-color: var(--chat);
+}
+.c-file_container--gradient::after {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0), var(--chat));
+  margin: -1px;
+  border-radius: 0;
+}
+.c-file_container__collapse,
+.c-file_container__expand,
+.c-file_container__spinner {
+  background-color: var(--primary);
+  color: var(--on-primary);
+}
+/* Code syntax highlighting */
+:root {
+  --code-background: #1E1E1E;
+  --code-border: #282a2e;
+  --code-color: #D4D4D4;
+  --code-gutter: #81a2be;
+  --code-focus: #969896;
+  --code-negative: #bf360c;
+  --code-positive: #0c95bf;
+  --code-keyword: #569cd6;
+  --code-atom: #9fa8da;
+  --code-number: #b5cea8;
+  --code-def: #569cd6;
+  --code-variable: #9cdcfe;
+  --code-variable-2: #4ec9b0;
+  --code-variable-3: #d7ba7d;
+  --code-operator: #c586c0;
+  --code-property: #9cdcfe;
+  --code-comment: #505050;
+  --code-string: #ce9178;
+  --code-string-2: #ce9178;
+  --code-meta: #e0e0e0;
+  --code-qualifier: #e0e0e0;
+  --code-builtin: #e0e0e0;
+  --code-bracket: #e0e0e0;
+  --code-tag: #569cd6;
+  --code-attribute: #4ec9b0;
+  --code-header: #569cd6;
+  --code-quote: #608b4e;
+  --code-hr: #e0e0e0;
+  --code-link: #569cd6;
+}
+code {
+  background-color: var(--code-background);
+  border: 1px solid var(--code-border);
+  color: var(--code-color);
+}
+.file_list_item.snippet .snippet_preview {
+  background: var(--code-background);
+}
+.snippet_preview,
+.snippet_body {
+  background: var(--code-background);
+}
+.snippet_preview pre,
+.snippet_body pre {
+  color: var(--code-color) !important;
+}
+.file_container .CodeMirror .CodeMirror-code > div::before,
+.file_container .CodeMirror .sssh-line::before,
+.file_container .sssh-code .CodeMirror-code > div::before,
+.file_container .sssh-code .sssh-line::before {
+  background-color: var(--code-border);
+  border-right: 1px solid var(--code-border);
+  color: var(--code-gutter);
+}
+.c-snippet__code .CodeMirror {
+  background: var(--code-background);
+  color: var(--code-color);
+}
+.c-snippet__code .CodeMirror pre {
+  background: transparent !important;
+}
+.c-snippet__code .CodeMirror div.CodeMirror-cursor {
+  border-left: 1px solid var(--code-color);
+}
+.c-snippet__code .CodeMirror.cm-fat-cursor div.CodeMirror-cursor {
+  background: var(--code-color);
+}
+.c-snippet__code .CodeMirror .CodeMirror-gutters {
+  background-color: var(--code-border);
+  border-right: 1px solid var(--code-border);
+}
+.CodeMirror-gutter-filler,
+.CodeMirror-scrollbar-filler {
+  background-color: var(--code-border);
+}
+.CodeMirror-linenumber {
+  color: var(--code-gutter) !important;
+}
+.CodeMirror-guttermarker {
+  color: var(--code-gutter);
+}
+.CodeMirror-guttermarker-subtle {
+  color: var(--code-gutter);
+}
+.CodeMirror-ruler {
+  border-left: 1px solid var(--code-focus);
+}
+.cm-s-default .cm-keyword,
+.sssh-keyword {
+  color: var(--code-keyword);
+}
+.cm-s-default .cm-atom,
+.sssh-atom {
+  color: var(--code-atom);
+}
+.cm-s-default .cm-number,
+.sssh-number {
+  color: var(--code-number);
+}
+.cm-s-default .cm-def,
+.sssh-def {
+  color: var(--code-def);
+}
+.cm-s-default .cm-variable,
+.sssh-variable {
+  color: var(--code-variable);
+}
+.cm-s-default .cm-variable-2,
+.sssh-variable-2 {
+  color: var(--code-variable-2);
+}
+.cm-s-default .cm-variable-3,
+.sssh-variable-3 {
+  color: var(--code-variable-3);
+}
+.sssh-operator {
+  color: var(--code-operator);
+}
+.sssh-property {
+  color: var(--code-property);
+}
+.cm-s-default .cm-comment,
+.sssh-comment {
+  color: var(--code-comment);
+}
+.cm-s-default .cm-string,
+.sssh-string {
+  color: var(--code-string);
+}
+.cm-s-default .cm-string-2,
+.sssh-string-2 {
+  color: var(--code-string-2);
+}
+.cm-s-default .cm-meta,
+.sssh-meta {
+  color: var(--code-meta);
+}
+.cm-s-default .cm-qualifier,
+.sssh-qualifier {
+  color: var(--code-qualifier);
+}
+.cm-s-default .cm-builtin,
+.sssh-builtin {
+  color: var(--code-builtin);
+}
+.cm-s-default .cm-bracket,
+.sssh-bracket {
+  color: var(--code-bracket);
+}
+.cm-s-default .cm-tag,
+.sssh-tag {
+  color: var(--code-tag);
+}
+.cm-s-default .cm-attribute,
+.sssh-attribute {
+  color: var(--code-attribute);
+}
+.cm-s-default .cm-header,
+.sssh-header {
+  color: var(--code-header);
+}
+.cm-s-default .cm-quote,
+.sssh-quote {
+  color: var(--code-quote);
+}
+.cm-s-default .cm-hr,
+.sssh-hr {
+  color: var(--code-hr);
+}
+.cm-s-default .cm-link,
+.sssh-link {
+  color: var(--code-link);
+}
+.cm-negative {
+  color: var(--code-negative);
+}
+.cm-positive {
+  color: var(--code-positive);
+}
+.cm-invalidchar,
+.cm-s-default .cm-error,
+.sssh-error {
+  color: var(--code-negative);
+}
+.c-snippet__code div.CodeMirror span.CodeMirror-matchingbracket {
+  color: var(--code-positive);
+}
+.c-snippet__code div.CodeMirror span.CodeMirror-nonmatchingbracket {
+  color: var(--code-negative);
+}
+.CodeMirror-matchingtag {
+  background: var(--code-background);
+}
+.CodeMirror-activeline-background {
+  background: var(--code-focus);
+}
+.CodeMirror-selected {
+  background: var(--code-focus);
+}
+.CodeMirror-focused .CodeMirror-selected {
+  background: var(--code-focus);
+}
+.cm-searching {
+  background: var(--code-focus);
 }
