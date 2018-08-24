@@ -327,6 +327,16 @@
 #col_messages .p-notification_bar__section {
   color: var(--on-chat-muted);
 }
+#col_messages .c-message__reply_bar--focus,
+#col_messages .c-message__reply_bar:hover,
+#col_messages .c-message__reply_bar--focus .c-message__reply_bar_view_thread,
+#col_messages .c-message__reply_bar:hover .c-message__reply_bar_view_thread {
+  background-color: transparent;
+}
+#col_messages .c-message__reply_bar--focus,
+#col_messages .c-message__reply_bar:hover {
+  border-color: var(--secondary);
+}
 #col_messages a.c-member_slug--link {
   background-color: var(--secondary);
   color: var(--on-secondary);

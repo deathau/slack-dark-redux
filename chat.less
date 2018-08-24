@@ -82,6 +82,16 @@
     .p-notification_bar__section {
         color: var(--on-chat-muted);
     }
+    .c-message__reply_bar--focus,
+    .c-message__reply_bar:hover,
+    .c-message__reply_bar--focus .c-message__reply_bar_view_thread,
+    .c-message__reply_bar:hover .c-message__reply_bar_view_thread {
+        background-color: transparent;
+    }
+    .c-message__reply_bar--focus,
+    .c-message__reply_bar:hover {
+        border-color: var(--secondary);
+    }
     /* Mentions */
     a.c-member_slug--link {
         background-color: var(--secondary);
