@@ -9,6 +9,10 @@
         margin-top: 9px;
     }
     /* Chat room colours */
+    .p-message_pane .p-message_pane__top_banners:not(:empty)+div .c-message_list.c-virtual_list--scrollbar>.c-scrollbar__hider::before,
+    .p-message_pane .p-message_pane__top_banners:not(:empty)+div .c-message_list:not(.c-virtual_list--scrollbar)::before {
+        .reset-all();
+    }
     .p-message_pane .c-message_list.c-virtual_list--scrollbar>.c-scrollbar__hider,
     .p-message_pane .c-message_list:not(.c-virtual_list--scrollbar),
     .p-degraded_list__loading,
@@ -91,6 +95,13 @@
     .c-message__reply_bar--focus,
     .c-message__reply_bar:hover {
         border-color: var(--secondary);
+    }
+    .supports_custom_scrollbar:not(.slim_scrollbar) #messages_container:after {
+        background: none;
+    }
+    .p-message_pane .c-message_list.c-virtual_list--scrollbar>.c-scrollbar__hider,
+    .p-message_pane .c-message_list:not(.c-virtual_list--scrollbar) {
+        background-color: transparent;
     }
     /* Mentions */
     a.c-member_slug--link {

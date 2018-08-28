@@ -248,6 +248,17 @@
 #col_messages .c-message--light:not(.c-message--adjacent) {
   margin-top: 9px;
 }
+#col_messages .p-message_pane .p-message_pane__top_banners:not(:empty) + div .c-message_list.c-virtual_list--scrollbar > .c-scrollbar__hider::before,
+#col_messages .p-message_pane .p-message_pane__top_banners:not(:empty) + div .c-message_list:not(.c-virtual_list--scrollbar)::before {
+  background-color: transparent;
+  background-image: none;
+  box-shadow: none;
+  border-color: transparent;
+  color: inherit;
+  -webkit-filter: none;
+  filter: none;
+  opacity: 1;
+}
 #col_messages .p-message_pane .c-message_list.c-virtual_list--scrollbar > .c-scrollbar__hider,
 #col_messages .p-message_pane .c-message_list:not(.c-virtual_list--scrollbar),
 #col_messages .p-degraded_list__loading,
@@ -336,6 +347,13 @@
 #col_messages .c-message__reply_bar--focus,
 #col_messages .c-message__reply_bar:hover {
   border-color: var(--secondary);
+}
+#col_messages .supports_custom_scrollbar:not(.slim_scrollbar) #messages_container:after {
+  background: none;
+}
+#col_messages .p-message_pane .c-message_list.c-virtual_list--scrollbar > .c-scrollbar__hider,
+#col_messages .p-message_pane .c-message_list:not(.c-virtual_list--scrollbar) {
+  background-color: transparent;
 }
 #col_messages a.c-member_slug--link {
   background-color: var(--secondary);
