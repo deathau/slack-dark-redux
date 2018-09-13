@@ -34,7 +34,8 @@
     border-color: transparent;
 }
 
-#client_body:not(.onboarding)::before {
+#client_body:not(.onboarding)::before,
+#client_body:not(.onboarding):not(.feature_global_nav_layout):before {
     .reset-all();
     .primary-area();
 }
