@@ -284,6 +284,10 @@
   filter: none;
   opacity: 1;
 }
+#col_messages .p-message_pane .c-message_list.c-virtual_list--scrollbar > .c-scrollbar__hider {
+  background-color: var(--chat);
+  color: var(--on-chat);
+}
 #col_messages h1,
 #col_messages h2,
 #col_messages h3,
