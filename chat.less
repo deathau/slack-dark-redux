@@ -21,9 +21,6 @@
     .c-message--light .c-message__sender .c-message__sender_link {
         .reset-all()
     }
-    .p-message_pane .c-message_list.c-virtual_list--scrollbar>.c-scrollbar__hider {
-        .chat-area();
-    }
     h1,
     h2,
     h3,
@@ -104,7 +101,7 @@
     }
     .p-message_pane .c-message_list.c-virtual_list--scrollbar>.c-scrollbar__hider,
     .p-message_pane .c-message_list:not(.c-virtual_list--scrollbar) {
-        background-color: transparent;
+        .chat-area();
     }
     /* Mentions */
     a.c-member_slug--link {

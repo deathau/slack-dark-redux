@@ -284,10 +284,6 @@
   filter: none;
   opacity: 1;
 }
-#col_messages .p-message_pane .c-message_list.c-virtual_list--scrollbar > .c-scrollbar__hider {
-  background-color: var(--chat);
-  color: var(--on-chat);
-}
 #col_messages h1,
 #col_messages h2,
 #col_messages h3,
@@ -367,7 +363,8 @@
 }
 #col_messages .p-message_pane .c-message_list.c-virtual_list--scrollbar > .c-scrollbar__hider,
 #col_messages .p-message_pane .c-message_list:not(.c-virtual_list--scrollbar) {
-  background-color: transparent;
+  background-color: var(--chat);
+  color: var(--on-chat);
 }
 #col_messages a.c-member_slug--link {
   background-color: var(--secondary);
