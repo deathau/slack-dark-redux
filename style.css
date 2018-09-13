@@ -51,6 +51,7 @@
   color: var(--on-primary);
   border-color: transparent;
 }
+/* fixes that fall outside any of the other includes */
 #client_body:not(.onboarding)::before,
 #client_body:not(.onboarding):not(.feature_global_nav_layout):before {
   background-color: transparent;
@@ -63,6 +64,14 @@
   opacity: 1;
   background-color: var(--primary);
   color: var(--on-primary);
+}
+/* (optional) larger emoji */
+.c-reaction .emoji-sizer {
+  font-size: 24px;
+}
+.light_theme .emoji-only {
+  line-height: 96px;
+  font-size: 96px;
 }
 #client_header {
   background-color: var(--primary);

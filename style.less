@@ -34,18 +34,31 @@
     border-color: transparent;
 }
 
+/* fixes that fall outside any of the other includes */
+
 #client_body:not(.onboarding)::before,
 #client_body:not(.onboarding):not(.feature_global_nav_layout):before {
     .reset-all();
     .primary-area();
 }
 
+/* (optional) larger emoji */
+
+.c-reaction .emoji-sizer {
+    font-size: 24px; // 16px is normal. IMO 32px is too big. I split the difference
+}
+
+.light_theme .emoji-only {
+    line-height: 96px; // 32px is normal. I prefer mine a little bigger than 64px
+    font-size: 96px;
+} 
+
 // // styles to reset certain elements
 // @import "reset.less";
 // //import all the old crap for now
 // @import "old.less";
 // styles related to the header
-@import "header.less";
+@import "header.less"; 
 // styles related to the emoji picker
 @import "emoji.less";
 // styles related to the main chat area
