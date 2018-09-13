@@ -181,13 +181,13 @@
 #client_header .c-react_search_input:hover .ts_icon_times_small {
   color: var(--secondary) !important;
 }
-.menu.p-emoji_picker {
+.c-menu.p-emoji_picker {
   background-color: var(--primary-dark);
   color: var(--on-primary);
   border: 1px solid var(--primary-dark);
 }
-.menu.p-emoji_picker .p-emoji_picker__footer,
-.menu.p-emoji_picker .p-emoji_picker__preview_text {
+.c-menu.p-emoji_picker .p-emoji_picker__footer,
+.c-menu.p-emoji_picker .p-emoji_picker__preview_text {
   background-color: transparent;
   background-image: none;
   box-shadow: none;
@@ -197,36 +197,36 @@
   filter: none;
   opacity: 1;
 }
-.menu.p-emoji_picker .p-emoji_picker__emoji_deluxe_label,
-.menu.p-emoji_picker .p-emoji_picker__group_tab {
+.c-menu.p-emoji_picker .p-emoji_picker__emoji_deluxe_label,
+.c-menu.p-emoji_picker .p-emoji_picker__group_tab {
   color: var(--on-primary-muted);
 }
-.menu.p-emoji_picker .p-emoji_picker__group_tab:hover {
+.c-menu.p-emoji_picker .p-emoji_picker__group_tab:hover {
   background-color: var(--primary-light);
 }
-.menu.p-emoji_picker .p-emoji_picker__input_container,
-.menu.p-emoji_picker .p-emoji_picker__list_container,
-.menu.p-emoji_picker .p-emoji_picker__group_tab--active,
-.menu.p-emoji_picker .p-emoji_picker__skintone_options,
-.menu.p-emoji_picker .p-emoji_picker__content:hover .p-emoji_picker__skintone_btn_container,
-.menu.p-emoji_picker .p-emoji_picker__sticky_header .p-emoji_picker__heading {
+.c-menu.p-emoji_picker .p-emoji_picker__input_container,
+.c-menu.p-emoji_picker .p-emoji_picker__list_container,
+.c-menu.p-emoji_picker .p-emoji_picker__group_tab--active,
+.c-menu.p-emoji_picker .p-emoji_picker__skintone_options,
+.c-menu.p-emoji_picker .p-emoji_picker__content:hover .p-emoji_picker__skintone_btn_container,
+.c-menu.p-emoji_picker .p-emoji_picker__sticky_header .p-emoji_picker__heading {
   background-color: var(--primary);
   color: var(--on-primary);
   border-color: transparent;
 }
-.menu.p-emoji_picker .p-emoji_picker__heading {
+.c-menu.p-emoji_picker .p-emoji_picker__heading {
   background-color: transparent;
   color: var(--on-primary);
 }
-.menu.p-emoji_picker input[type="text"] {
+.c-menu.p-emoji_picker input[type="text"] {
   background-color: var(--primary-light);
   color: var(--on-primary);
   border-color: transparent;
 }
-.menu.p-emoji_picker input[type="text"]:placeholder {
+.c-menu.p-emoji_picker input[type="text"]:placeholder {
   color: var(--on-primary-muted);
 }
-.menu.p-emoji_picker .p-emoji_picker__icon_search {
+.c-menu.p-emoji_picker .p-emoji_picker__icon_search {
   color: var(--on-primary);
 }
 #col_messages {
