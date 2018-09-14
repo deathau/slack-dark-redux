@@ -24,37 +24,6 @@
   --on-secondary-muted: #bfbfbf;
   --on-chat-muted: #9e9ea4;
 }
-.reset-all {
-  background-color: transparent;
-  background-image: none;
-  box-shadow: none;
-  border-color: transparent;
-  color: inherit;
-  -webkit-filter: none;
-  filter: none;
-  opacity: 1;
-}
-.primary-area {
-  background-color: var(--primary);
-  color: var(--on-primary);
-}
-.secondary-area {
-  background-color: var(--secondary);
-  color: var(--on-secondary);
-}
-.chat-area {
-  background-color: var(--chat);
-  color: var(--on-chat);
-}
-.highlight-area {
-  background-color: var(--highlight);
-  color: var(--on-highlight);
-}
-.input {
-  background-color: var(--primary-light);
-  color: var(--on-primary);
-  border-color: transparent;
-}
 /* some of the basic stuff */
 a,
 a:hover,

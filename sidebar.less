@@ -127,17 +127,10 @@
         color: var(--on-primary) !important;
         background-color: var(--primary-light);
         border-color: var(--primary-dark);
-    }
-    .tab_container .file_comment_item .actions .btn_icon:hover,
-    .tab_container .file_comment_item .actions .star_jump:hover,
-    .tab_container .file_list_item .actions .btn_icon:hover,
-    .tab_container .file_list_item .actions .star_jump:hover,
-    .tab_container .star_item .message .actions .btn_icon:hover,
-    .tab_container .star_item .message .actions .star_jump:hover,
-    .tab_container .star_item ts-message .actions .btn_icon:hover,
-    .tab_container .star_item ts-message .actions .star_jump:hover {
-        color: var(--secondary) !important;
-        background-color: var(--primary);
-        border-color: var(--primary-dark);
+        &:hover {
+            color: var(--secondary) !important;
+            background-color: var(--primary);
+            border-color: var(--primary-dark);
+        }
     }
 }

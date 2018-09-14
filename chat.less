@@ -52,10 +52,14 @@
     blockquote.c-mrkdwn__quote::before {
         background-color: var(--chat-light);
     }
-    .c-message--focus:not(.c-message--highlight):not(.c-message--standalone):not(.c-message--pinned):not(.c-message--ephemeral):not(.c-message--custom_response):not(.c-message--starred):not(.c-message--sli_highlight),
-    .c-message--hover:not(.c-message--highlight):not(.c-message--standalone):not(.c-message--pinned):not(.c-message--ephemeral):not(.c-message--custom_response):not(.c-message--starred):not(.c-message--sli_highlight),
-    .c-message:hover:not(.c-message--highlight):not(.c-message--standalone):not(.c-message--pinned):not(.c-message--ephemeral):not(.c-message--custom_response):not(.c-message--starred):not(.c-message--sli_highlight) {
-        background-color: var(--chat-hover);
+    .c-message {
+        &--focus,
+        &--hover,
+        &:hover {
+            &:not(.c-message--highlight):not(.c-message--standalone):not(.c-message--pinned):not(.c-message--ephemeral):not(.c-message--custom_response):not(.c-message--starred):not(.c-message--sli_highlight) {
+                background-color: var(--chat-hover);
+            } 
+        }
     }
     .p-message_pane .c-message_list.c-virtual_list--scrollbar>.c-scrollbar__hider::before,
     .p-message_pane .c-message_list:not(.c-virtual_list--scrollbar)::before {
@@ -79,22 +83,23 @@
         color: var(--on-chat-muted);
         border-color: var(--chat-light);
     }
-    .c-reaction_add:focus,
-    .c-reaction_add:hover {
-        border-color: var(--secondary);
+    .c-reaction_add {
+        &:focus,
+        &:hover {
+            border-color: var(--secondary);
+        }
     }
     .p-notification_bar__section {
         color: var(--on-chat-muted);
     }
-    .c-message__reply_bar--focus,
-    .c-message__reply_bar:hover,
-    .c-message__reply_bar--focus .c-message__reply_bar_view_thread,
-    .c-message__reply_bar:hover .c-message__reply_bar_view_thread {
-        background-color: transparent;
-    }
-    .c-message__reply_bar--focus,
-    .c-message__reply_bar:hover {
-        border-color: var(--secondary);
+    .c-message__reply_bar {
+        &--focus,
+        &:hover {
+            border-color: var(--secondary);
+            .c-message__reply_bar_view_thread {
+                background-color: transparent;
+            }
+        }
     }
     .supports_custom_scrollbar:not(.slim_scrollbar) #messages_container:after {
         background: none;
@@ -109,16 +114,16 @@
         color: var(--on-secondary);
     }
     a.c-member_slug--mention,
-    a.c-member_slug--mention:hover,
     .c-mrkdwn__broadcast--mention,
-    .c-mrkdwn__broadcast--mention:hover,
     .c-mrkdwn__highlight,
     .c-mrkdwn__mention,
-    .c-mrkdwn__mention:hover,
-    .c-mrkdwn__user_group--mention,
-    .c-mrkdwn__user_group--mention:hover {
+    .c-mrkdwn__user_group--mention {
         background-color: var(--highlight);
         color: var(--on-highlight);
+        &:hover {
+            background-color: var(--highlight);
+            color: var(--on-highlight);
+        }
     }
     .c-app_badge,
     .c-app_label {
@@ -150,12 +155,14 @@
     #msg_form .msg_mentions_button:hover {
         color: var(--secondary);
     }
-    #msg_input+#primary_file_button.active,
-    #msg_input+#primary_file_button.focus-ring,
-    #msg_input+#primary_file_button:focus,
-    #msg_input+#primary_file_button:hover {
-        .secondary-area();
-        border-color: var(--secondary-light);
+    #msg_input+#primary_file_button {
+        &.active,
+        &.focus-ring,
+        &:focus,
+        &:hover {
+            .secondary-area();
+            border-color: var(--secondary-light);
+        }
     }
     /* day dividers */
     .c-message_list__day_divider__label__pill {
@@ -177,10 +184,10 @@
         background-color: var(--chat);
         border-color: var(--chat-light);
         color: var(--on-chat);
-    }
-    .c-file_container:hover {
-        border-color: var(--secondary);
-        box-shadow: none;
+        &:hover {
+            border-color: var(--secondary);
+            box-shadow: none;
+        }
     }
     .c-file__title {
         color: var(--on-chat-strong);
@@ -197,11 +204,11 @@
     .c-file__action_button {
         background-color: var(--chat-dark);
         color: var(--on-chat);
-    }
-    .c-file__action_button:active,
-    .c-file__action_button:focus,
-    .c-file__action_button:hover {
-        color: var(--secondary);
+        &:active,
+        &:focus,
+        &:hover {
+            color: var(--secondary);
+        }
     }
     .c-message__image_container {
         background-color: transparent;

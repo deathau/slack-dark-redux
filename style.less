@@ -2,7 +2,7 @@
 
 @import "colors.less";
 // basic mixins used elsewhere
-.reset-all {
+.reset-all() {
     background-color: transparent;
     background-image: none;
     box-shadow: none;
@@ -13,27 +13,27 @@
     opacity: 1;
 }
 
-.primary-area {
+.primary-area() {
     background-color: var(--primary);
     color: var(--on-primary);
 }
 
-.secondary-area {
+.secondary-area() {
     background-color: var(--secondary);
     color: var(--on-secondary);
 }
 
-.chat-area {
+.chat-area() {
     background-color: var(--chat);
     color: var(--on-chat);
 }
 
-.highlight-area {
+.highlight-area() {
     background-color: var(--highlight);
     color: var(--on-highlight);
 }
 
-.input {
+.input() {
     background-color: var(--primary-light);
     color: var(--on-primary);
     border-color: transparent;
@@ -42,14 +42,14 @@
 /* some of the basic stuff */
 
 a,
-a:hover,
-a:link,
-a:visited,
-.btn_link,
-.btn_link:focus,
-.btn_link:hover,
 .blue_link {
     color: var(--secondary);
+    &:hover,
+    &:link,
+    &:visited,
+    &:focus {
+        color: var(--secondary);
+    }
 }
 
 /* fixes that fall outside any of the other includes */
