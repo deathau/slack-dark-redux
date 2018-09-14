@@ -15,48 +15,37 @@
 @active-presence: #38978D;
 @mention-badge: #EB4D5C;
 
+// Now choose a theme for the chat itself (dark, light or sidebar) //
+@chat-theme: dark;
+
 
 // I want to try having a better structure, perhaps using something like
 // The Material colour structure or using base16
 // http://chriskempson.com/projects/base16/
 
 // colors (i.e. background colors)
-@primary:           column-bg;
-@primary-hover:     hover-item;
-@secondary:         active-item;
-@highlight:         mention-badge;
+@primary:           @column-bg;
+@primary-hover:     @hover-item;
+@secondary:         @active-item;
+@highlight:         @mention-badge;
 
 // on colours (i.e. foreground colors)
-@on-primary:        text-color;
-@on-secondary:      active-item-text;
-@on-highlight:      active-item-text;
+@on-primary:        @text-color;
+@on-secondary:      @active-item-text;
+@on-highlight:      @active-item-text;
 
-// can change the colour for the chat area
-@chat:              primary;
-@chat-hover:        primary-hover;
-@on-chat:           on-primary;
-//  (I prefer to have this darker)
-@chat:              #0d0d0f;
-@chat-hover:        primary-hover;
-@on-chat:           #e0e0e2;
-
-// variants
-// ? is there any way I can do similar variants with just css?
-@primary-light:     lighten(@primary, 15%);
-@secondary-light:   lighten(@secondary, 15%);
-@chat-light:        lighten(@chat, 15%);
-@primary-dark:      darken(@primary, 15%);
-@secondary-dark:    darken(@secondary, 15%);
-@chat-dark:         darken(@chat, 15%);
-
-// on variants
-@on-primary-strong:     lighten(@on-primary, 15%);
-@on-secondary-strong:   lighten(@on-secondary, 15%);
-@on-chat-strong:        lighten(@on-chat, 15%);
-@on-primary-muted:      darken(@on-primary, 25%);
-@on-secondary-muted:    darken(@on-secondary, 25%);
-@on-chat-muted:         darken(@on-chat, 25%);
-
+// chat colours
+@chat:              @primary;
+@chat-hover:        @primary-hover;
+@on-chat:           @on-primary;
+// for dark theme
+@chat-dark:              #0d0d0f;
+@chat-dark-hover:        @primary-hover;
+@on-chat-dark:           #e0e0e2;
+// for light theme
+@chat-light:              #e0e0e2;
+@chat-light-hover:        @primary-hover;
+@on-chat-light:           #0d0d0f;
 
 // re-define the colours in css variables for better css //
 :root {
@@ -67,19 +56,46 @@
     --on-primary:           @on-primary;
     --on-secondary:         @on-secondary;
     --on-highlight:         @on-highlight;
+
+    // variants
+    // ? is there any way I can do similar variants with just css?
+    --primary-dark:         darken(@primary, 15%);
+    --primary-light:        lighten(@primary, 15%);
+    --secondary-dark:       darken(@secondary, 15%);
+    --secondary-light:      lighten(@secondary, 15%);
+
+    // on variants
+    --on-primary-strong:    lighten(@on-primary, 15%);
+    --on-secondary-strong:  lighten(@on-secondary, 15%);
+    --on-primary-muted:     darken(@on-primary, 25%);
+    --on-secondary-muted:   darken(@on-secondary, 25%);
+
+    // chat
     --chat:                 @chat;
     --chat-hover:           @chat-hover;
     --on-chat:              @on-chat;
-    --primary-dark:         @primary-dark;
-    --primary-light:        @primary-light;
-    --secondary-dark:       @secondary-dark;
-    --secondary-light:      @secondary-light;
-    --chat-dark:            @chat-dark;
-    --chat-light:           @chat-light;
-    --on-primary-strong:    @on-primary-strong;
-    --on-secondary-strong:  @on-secondary-strong;
-    --on-chat-strong:       @on-chat-strong;
-    --on-primary-muted:     @on-primary-muted;
-    --on-secondary-muted:   @on-secondary-muted;
-    --on-chat-muted:        @on-chat-muted;
+    --chat-dark:            darken(@chat, 15%);
+    --chat-light:           lighten(@chat, 15%);
+    --on-chat-strong:       lighten(@on-chat, 15%);
+    --on-chat-muted:        darken(@on-chat, 25%);
+
+    // here is where the chat theme is applied
+    & when (@chat-theme = dark) {
+        --chat:                 @chat-dark;
+        --chat-hover:           @chat-dark-hover;
+        --on-chat:              @on-chat-dark;
+        --chat-dark:            darken(@chat-dark, 15%);
+        --chat-light:           lighten(@chat-dark, 15%);
+        --on-chat-strong:       lighten(@on-chat-dark, 15%);
+        --on-chat-muted:        darken(@on-chat-dark, 25%);
+    }
+    & when (@chat-theme = light) {
+        --chat:                 @chat-light;
+        --chat-hover:           @chat-light-hover;
+        --on-chat:              @on-chat-light;
+        --chat-dark:            darken(@chat-light, 15%);
+        --chat-light:           lighten(@chat-light, 15%);
+        --on-chat-strong:       lighten(@on-chat-light, 15%);
+        --on-chat-muted:        darken(@on-chat-light, 25%);
+    }
 }

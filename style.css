@@ -8,31 +8,40 @@
   --on-primary: #FFFFFF;
   --on-secondary: #FFFFFF;
   --on-highlight: #FFFFFF;
-  --chat: #0d0d0f;
-  --chat-hover: #3E313C;
-  --on-chat: #e0e0e2;
   --primary-dark: #211820;
   --primary-light: #795a76;
   --secondary-dark: #32635b;
   --secondary-light: #75b9ad;
-  --chat-dark: #000000;
-  --chat-light: #313138;
   --on-primary-strong: #ffffff;
   --on-secondary-strong: #ffffff;
-  --on-chat-strong: #ffffff;
   --on-primary-muted: #bfbfbf;
   --on-secondary-muted: #bfbfbf;
+  --chat: #4D394B;
+  --on-chat: #FFFFFF;
+  --chat-dark: #211820;
+  --chat-light: #795a76;
+  --on-chat-muted: #bfbfbf;
+  --chat: #0d0d0f;
+  --chat-hover: #3E313C;
+  --on-chat: #e0e0e2;
+  --chat-dark: #000000;
+  --chat-light: #313138;
+  --on-chat-strong: #ffffff;
   --on-chat-muted: #9e9ea4;
 }
 /* some of the basic stuff */
 a,
-a:hover,
-a:link,
-a:visited,
-.btn_link,
-.btn_link:focus,
-.btn_link:hover,
 .blue_link {
+  color: var(--secondary);
+}
+a:hover,
+.blue_link:hover,
+a:link,
+.blue_link:link,
+a:visited,
+.blue_link:visited,
+a:focus,
+.blue_link:focus {
   color: var(--secondary);
 }
 /* fixes that fall outside any of the other includes */
@@ -181,13 +190,13 @@ a:visited,
   color: var(--on-primary);
 }
 #client_header .c-react_search_input:active .icon_search_wrapper *,
-#client_header .c-react_search_input:active .search_input_wrapper *,
-#client_header .c-react_search_input:active .ts_icon_times_small,
 #client_header .c-react_search_input:focus .icon_search_wrapper *,
-#client_header .c-react_search_input:focus .search_input_wrapper *,
-#client_header .c-react_search_input:focus .ts_icon_times_small,
 #client_header .c-react_search_input:hover .icon_search_wrapper *,
+#client_header .c-react_search_input:active .search_input_wrapper *,
+#client_header .c-react_search_input:focus .search_input_wrapper *,
 #client_header .c-react_search_input:hover .search_input_wrapper *,
+#client_header .c-react_search_input:active .ts_icon_times_small,
+#client_header .c-react_search_input:focus .ts_icon_times_small,
 #client_header .c-react_search_input:hover .ts_icon_times_small {
   color: var(--secondary) !important;
 }
@@ -350,14 +359,12 @@ a:visited,
   color: var(--on-chat-muted);
 }
 #col_messages .c-message__reply_bar--focus,
-#col_messages .c-message__reply_bar:hover,
+#col_messages .c-message__reply_bar:hover {
+  border-color: var(--secondary);
+}
 #col_messages .c-message__reply_bar--focus .c-message__reply_bar_view_thread,
 #col_messages .c-message__reply_bar:hover .c-message__reply_bar_view_thread {
   background-color: transparent;
-}
-#col_messages .c-message__reply_bar--focus,
-#col_messages .c-message__reply_bar:hover {
-  border-color: var(--secondary);
 }
 #col_messages .supports_custom_scrollbar:not(.slim_scrollbar) #messages_container:after {
   background: none;
@@ -372,13 +379,17 @@ a:visited,
   color: var(--on-secondary);
 }
 #col_messages a.c-member_slug--mention,
-#col_messages a.c-member_slug--mention:hover,
 #col_messages .c-mrkdwn__broadcast--mention,
-#col_messages .c-mrkdwn__broadcast--mention:hover,
 #col_messages .c-mrkdwn__highlight,
 #col_messages .c-mrkdwn__mention,
+#col_messages .c-mrkdwn__user_group--mention {
+  background-color: var(--highlight);
+  color: var(--on-highlight);
+}
+#col_messages a.c-member_slug--mention:hover,
+#col_messages .c-mrkdwn__broadcast--mention:hover,
+#col_messages .c-mrkdwn__highlight:hover,
 #col_messages .c-mrkdwn__mention:hover,
-#col_messages .c-mrkdwn__user_group--mention,
 #col_messages .c-mrkdwn__user_group--mention:hover {
   background-color: var(--highlight);
   color: var(--on-highlight);
@@ -460,7 +471,7 @@ a:visited,
   background-color: var(--chat);
 }
 #col_messages .c-file_container--has_thumb .c-file__actions::before {
-  background-image: linear-gradient(90deg, rgba(255, 255, 255, 0), var(--chat) 20px);
+  background-image: linear-gradient(90deg, hsla(0, 0%, 100%, 0), var(--chat) 20px);
 }
 #col_messages .c-file__action_button {
   background-color: var(--chat-dark);
@@ -816,7 +827,7 @@ code {
   background-color: var(--primary-light);
   color: var(--on-primary);
   border-radius: 24px;
-  padding: .25rem .75rem;
+  padding: 0.25rem 0.75rem;
   font-weight: 700;
 }
 .flex_pane_showing #col_flex .p-channel_insights__date_heading::before {
