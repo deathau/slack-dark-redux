@@ -16,13 +16,13 @@
   --on-secondary-strong: #ffffff;
   --on-primary-muted: #bfbfbf;
   --on-secondary-muted: #bfbfbf;
-  --chat: #ffffff;
-  --chat-hover: #bfafbd;
-  --on-chat: #0d0d0f;
-  --chat-dark: #d9d9d9;
-  --chat-light: #ffffff;
-  --on-chat-strong: #313138;
-  --on-chat-muted: #000000;
+  --chat: #0d0d0f;
+  --chat-hover: #3E313C;
+  --on-chat: #e0e0e2;
+  --chat-dark: #000000;
+  --chat-light: #313138;
+  --on-chat-strong: #ffffff;
+  --on-chat-muted: #9e9ea4;
 }
 /* some of the basic stuff */
 a,
@@ -869,25 +869,28 @@ code {
 .flex_pane_showing #col_flex .tab_container .file_list_item:hover {
   background-color: var(--primary-dark);
 }
+.flex_pane_showing #col_flex .file_list_item {
+  color: var(--on-primary);
+}
 .flex_pane_showing #col_flex .tab_container .file_comment_item .actions .btn_icon,
-.flex_pane_showing #col_flex .tab_container .file_comment_item .actions .star_jump,
 .flex_pane_showing #col_flex .tab_container .file_list_item .actions .btn_icon,
-.flex_pane_showing #col_flex .tab_container .file_list_item .actions .star_jump,
 .flex_pane_showing #col_flex .tab_container .star_item .message .actions .btn_icon,
-.flex_pane_showing #col_flex .tab_container .star_item .message .actions .star_jump,
 .flex_pane_showing #col_flex .tab_container .star_item ts-message .actions .btn_icon,
+.flex_pane_showing #col_flex .tab_container .file_comment_item .actions .star_jump,
+.flex_pane_showing #col_flex .tab_container .file_list_item .actions .star_jump,
+.flex_pane_showing #col_flex .tab_container .star_item .message .actions .star_jump,
 .flex_pane_showing #col_flex .tab_container .star_item ts-message .actions .star_jump {
   color: var(--on-primary) !important;
   background-color: var(--primary-light);
   border-color: var(--primary-dark);
 }
 .flex_pane_showing #col_flex .tab_container .file_comment_item .actions .btn_icon:hover,
-.flex_pane_showing #col_flex .tab_container .file_comment_item .actions .star_jump:hover,
 .flex_pane_showing #col_flex .tab_container .file_list_item .actions .btn_icon:hover,
-.flex_pane_showing #col_flex .tab_container .file_list_item .actions .star_jump:hover,
 .flex_pane_showing #col_flex .tab_container .star_item .message .actions .btn_icon:hover,
-.flex_pane_showing #col_flex .tab_container .star_item .message .actions .star_jump:hover,
 .flex_pane_showing #col_flex .tab_container .star_item ts-message .actions .btn_icon:hover,
+.flex_pane_showing #col_flex .tab_container .file_comment_item .actions .star_jump:hover,
+.flex_pane_showing #col_flex .tab_container .file_list_item .actions .star_jump:hover,
+.flex_pane_showing #col_flex .tab_container .star_item .message .actions .star_jump:hover,
 .flex_pane_showing #col_flex .tab_container .star_item ts-message .actions .star_jump:hover {
   color: var(--secondary) !important;
   background-color: var(--primary);

@@ -116,21 +116,23 @@
     .tab_container .file_list_item:hover {
         background-color: @primary-dark;
     }
-    .tab_container .file_comment_item .actions .btn_icon,
-    .tab_container .file_comment_item .actions .star_jump,
-    .tab_container .file_list_item .actions .btn_icon,
-    .tab_container .file_list_item .actions .star_jump,
-    .tab_container .star_item .message .actions .btn_icon,
-    .tab_container .star_item .message .actions .star_jump,
-    .tab_container .star_item ts-message .actions .btn_icon,
-    .tab_container .star_item ts-message .actions .star_jump {
-        color: @on-primary !important;
-        background-color: @primary-light;
-        border-color: @primary-dark;
-        &:hover {
-            color: @secondary !important;
-            background-color: @primary;
+    .file_list_item {
+        color: @on-primary;
+    }
+    .tab_container .file_comment_item,
+    .tab_container .file_list_item,
+    .tab_container .star_item .message,
+    .tab_container .star_item ts-message {
+        & .actions .btn_icon,
+        & .actions .star_jump {
+            color: @on-primary !important;
+            background-color: @primary-light;
             border-color: @primary-dark;
+            &:hover {
+                color: @secondary !important;
+                background-color: @primary;
+                border-color: @primary-dark;
+            }
         }
     }
 }
