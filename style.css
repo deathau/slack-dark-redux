@@ -250,7 +250,7 @@
   /* file attatchments */
   /* buttons and forms */
   /* message actions */
-  /* unread banner */
+  /* unread / archives banner */
 }
 #col_messages .c-message--light:not(.c-message--adjacent) .c-message__content::before {
   border-bottom: 0.5px solid var(--chat-light);
@@ -510,7 +510,9 @@
   background-color: var(--primary);
   border-color: var(--primary-dark);
 }
-#col_messages .p-message_pane__unread_banner {
+#col_messages .p-message_pane__unread_banner,
+#col_messages .p-archives_banner,
+#col_messages .p-archives_banner__jump {
   background-color: var(--secondary);
   color: var(--on-secondary);
 }
