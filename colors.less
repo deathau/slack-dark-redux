@@ -16,8 +16,7 @@
 @mention-badge: #EB4D5C;
 
 // Now choose a theme for the chat itself (dark, light or sidebar) //
-@chat-theme: dark;
-
+@chat-theme: light;
 
 // I want to try having a better structure, perhaps using something like
 // The Material colour structure or using base16
@@ -43,8 +42,8 @@
 @chat-dark-hover:        @primary-hover;
 @on-chat-dark:           #e0e0e2;
 // for light theme
-@chat-light:              #e0e0e2;
-@chat-light-hover:        @primary-hover;
+@chat-light:              #ffffff;
+@chat-light-hover:        lighten(@primary-hover, 50%);
 @on-chat-light:           #0d0d0f;
 
 // re-define the colours in css variables for better css //
@@ -70,16 +69,8 @@
     --on-primary-muted:     darken(@on-primary, 25%);
     --on-secondary-muted:   darken(@on-secondary, 25%);
 
-    // chat
-    --chat:                 @chat;
-    --chat-hover:           @chat-hover;
-    --on-chat:              @on-chat;
-    --chat-dark:            darken(@chat, 15%);
-    --chat-light:           lighten(@chat, 15%);
-    --on-chat-strong:       lighten(@on-chat, 15%);
-    --on-chat-muted:        darken(@on-chat, 25%);
-
     // here is where the chat theme is applied
+    // dark:
     & when (@chat-theme = dark) {
         --chat:                 @chat-dark;
         --chat-hover:           @chat-dark-hover;
@@ -89,6 +80,7 @@
         --on-chat-strong:       lighten(@on-chat-dark, 15%);
         --on-chat-muted:        darken(@on-chat-dark, 25%);
     }
+    // light:
     & when (@chat-theme = light) {
         --chat:                 @chat-light;
         --chat-hover:           @chat-light-hover;
@@ -97,5 +89,16 @@
         --chat-light:           lighten(@chat-light, 15%);
         --on-chat-strong:       lighten(@on-chat-light, 15%);
         --on-chat-muted:        darken(@on-chat-light, 25%);
+    }
+    // neither:
+    // Note: for some reason VS Code doesn't like this syntax, but it compiles fine
+    & when not (@chat-theme = dark) and not (@chat-theme = light) {
+        --chat:                 @chat;
+        --chat-hover:           @chat-hover;
+        --on-chat:              @on-chat;
+        --chat-dark:            darken(@chat, 15%);
+        --chat-light:           lighten(@chat, 15%);
+        --on-chat-strong:       lighten(@on-chat, 15%);
+        --on-chat-muted:        darken(@on-chat, 25%);
     }
 }

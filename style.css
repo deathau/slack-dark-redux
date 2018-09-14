@@ -16,18 +16,13 @@
   --on-secondary-strong: #ffffff;
   --on-primary-muted: #bfbfbf;
   --on-secondary-muted: #bfbfbf;
-  --chat: #4D394B;
-  --on-chat: #FFFFFF;
-  --chat-dark: #211820;
-  --chat-light: #795a76;
-  --on-chat-muted: #bfbfbf;
-  --chat: #0d0d0f;
-  --chat-hover: #3E313C;
-  --on-chat: #e0e0e2;
-  --chat-dark: #000000;
-  --chat-light: #313138;
-  --on-chat-strong: #ffffff;
-  --on-chat-muted: #9e9ea4;
+  --chat: #ffffff;
+  --chat-hover: #bfafbd;
+  --on-chat: #0d0d0f;
+  --chat-dark: #d9d9d9;
+  --chat-light: #ffffff;
+  --on-chat-strong: #313138;
+  --on-chat-muted: #000000;
 }
 /* some of the basic stuff */
 a,
