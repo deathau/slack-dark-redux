@@ -3,7 +3,7 @@
     /* Chat room styles */
     /* additions to space the content out better and put some seperators */
     .c-message--light:not(.c-message--adjacent) .c-message__content::before {
-        border-bottom: 0.5px solid var(--chat-light);
+        border-bottom: 0.5px solid @chat-light;
     }
     .c-message--light:not(.c-message--adjacent) {
         margin-top: 9px;
@@ -28,36 +28,36 @@
     .c-message--light .c-message__sender .c-message__sender_link,
     .c-unified_member__display-name--large,
     .c-unified_member__title--large {
-        color: var(--on-chat-strong);
+        color: @on-chat-strong;
     }
     a,
     a:link,
     a:visited,
     .c-deprecated_button--link {
-        color: var(--secondary);
+        color: @secondary;
     }
     .c-timestamp__label,
     .c-message__file_meta.c-message__file_meta--file_threads,
     .c-message_attachment__pretext,
     .c-unified_member__other-names--large {
-        color: var(--on-chat-muted);
+        color: @on-chat-muted;
     }
     .c-message_attachment,
     .c-message_attachment__author,
     .p-message_pane__foreword__description,
     .p-message_pane__limited_history_alert {
-        color: var(--on-chat);
+        color: @on-chat;
     }
     .c-message_attachment__border,
     blockquote.c-mrkdwn__quote::before {
-        background-color: var(--chat-light);
+        background-color: @chat-light;
     }
     .c-message {
         &--focus,
         &--hover,
         &:hover {
             &:not(.c-message--highlight):not(.c-message--standalone):not(.c-message--pinned):not(.c-message--ephemeral):not(.c-message--custom_response):not(.c-message--starred):not(.c-message--sli_highlight) {
-                background-color: var(--chat-hover);
+                background-color: @chat-hover;
             } 
         }
     }
@@ -67,35 +67,35 @@
     }
     .p-message_pane,
     #footer {
-        background-color: var(--chat);
+        background-color: @chat;
     } // .c-message--custom_response {
-    //     background-color: var(--secondary) //! but with alpha of 0.05;
+    //     background-color: @secondary //! but with alpha of 0.05;
     // }
     .c-message--ephemeral,
     .c-message--sli_highlight_negative {
-        background-color: var(--chat-light);
+        background-color: @chat-light;
     }
     code,
     pre,
     .c-reaction,
     .c-reaction_add {
-        background-color: var(--chat-dark);
-        color: var(--on-chat-muted);
-        border-color: var(--chat-light);
+        background-color: @chat-dark;
+        color: @on-chat-muted;
+        border-color: @chat-light;
     }
     .c-reaction_add {
         &:focus,
         &:hover {
-            border-color: var(--secondary);
+            border-color: @secondary;
         }
     }
     .p-notification_bar__section {
-        color: var(--on-chat-muted);
+        color: @on-chat-muted;
     }
     .c-message__reply_bar {
         &--focus,
         &:hover {
-            border-color: var(--secondary);
+            border-color: @secondary;
             .c-message__reply_bar_view_thread {
                 background-color: transparent;
             }
@@ -110,25 +110,25 @@
     }
     /* Mentions */
     a.c-member_slug--link {
-        background-color: var(--secondary);
-        color: var(--on-secondary);
+        background-color: @secondary;
+        color: @on-secondary;
     }
     a.c-member_slug--mention,
     .c-mrkdwn__broadcast--mention,
     .c-mrkdwn__highlight,
     .c-mrkdwn__mention,
     .c-mrkdwn__user_group--mention {
-        background-color: var(--highlight);
-        color: var(--on-highlight);
+        background-color: @highlight;
+        color: @on-highlight;
         &:hover {
-            background-color: var(--highlight);
-            color: var(--on-highlight);
+            background-color: @highlight;
+            color: @on-highlight;
         }
     }
     .c-app_badge,
     .c-app_label {
-        background-color: var(--chat-dark);
-        color: var(--on-chat-muted);
+        background-color: @chat-dark;
+        color: @on-chat-muted;
     }
     /* Message input box */
     #msg_form .ql-placeholder {
@@ -137,9 +137,9 @@
     #msg_input,
     #primary_file_button,
     #msg_input+#primary_file_button {
-        background-color: var(--primary-dark);
-        color: var(--on-primary);
-        border-color: var(--primary);
+        background-color: @primary-dark;
+        color: @on-primary;
+        border-color: @primary;
     }
     #msg_input+#primary_file_button,
     #msg_form .msg_mentions_button,
@@ -150,10 +150,10 @@
     #msg_form #msg_input.focus~#primary_file_button:not(:hover):not(.active),
     #msg_form #msg_input.focus~.emo_menu,
     #msg_form #msg_input.focus~.msg_mentions_button:not(:hover) {
-        color: var(--primary);
+        color: @primary;
     }
     #msg_form .msg_mentions_button:hover {
-        color: var(--secondary);
+        color: @secondary;
     }
     #msg_input+#primary_file_button {
         &.active,
@@ -161,53 +161,53 @@
         &:focus,
         &:hover {
             .secondary-area();
-            border-color: var(--secondary-light);
+            border-color: @secondary-light;
         }
     }
     /* day dividers */
     .c-message_list__day_divider__label__pill {
-        background-color: var(--primary);
-        color: var(--on-primary);
+        background-color: @primary;
+        color: @on-primary;
     }
     .c-message_list__day_divider__line {
-        border-color: var(--chat-light);
+        border-color: @chat-light;
     }
     .c-message_list__unread_divider__separator {
-        border-color: var(--secondary)
+        border-color: @secondary
     }
     .c-message_list__unread_divider__label {
-        background-color: var(--secondary);
-        color: var(--on-secondary);
+        background-color: @secondary;
+        color: @on-secondary;
     }
     /* file attatchments */
     .c-file_container {
-        background-color: var(--chat);
-        border-color: var(--chat-light);
-        color: var(--on-chat);
+        background-color: @chat;
+        border-color: @chat-light;
+        color: @on-chat;
         &:hover {
-            border-color: var(--secondary);
+            border-color: @secondary;
             box-shadow: none;
         }
     }
     .c-file__title {
-        color: var(--on-chat-strong);
+        color: @on-chat-strong;
     }
     .c-file__meta {
-        color: var(--on-chat-muted);
+        color: @on-chat-muted;
     }
     .c-file__slide--meta {
-        background-color: var(--chat);
+        background-color: @chat;
     }
     .c-file_container--has_thumb .c-file__actions::before {
-        background-image: linear-gradient(90deg, hsla(0, 0%, 100%, 0), var(--chat) 20px);
+        background-image: linear-gradient(90deg, hsla(0, 0%, 100%, 0), @chat 20px);
     }
     .c-file__action_button {
-        background-color: var(--chat-dark);
-        color: var(--on-chat);
+        background-color: @chat-dark;
+        color: @on-chat;
         &:active,
         &:focus,
         &:hover {
-            color: var(--secondary);
+            color: @secondary;
         }
     }
     .c-message__image_container {
@@ -216,7 +216,7 @@
     /* buttons and forms */
     .c-button--outline {
         .reset-all();
-        border: 1px solid var(--secondary);
+        border: 1px solid @secondary;
     }
     .c-button--outline-danger,
     .c-button--outline-primary {
@@ -225,35 +225,35 @@
     .c-input_select,
     .c-message_attachment__select,
     input[type="text"] {
-        background-color: var(--chat-dark);
-        color: var(--on-chat);
+        background-color: @chat-dark;
+        color: @on-chat;
     }
     .c-input_select,
     .c-message_attachment__select {
-        border-color: var(--chat-light);
+        border-color: @chat-light;
     }
     /* message actions */
     .c-message_actions__container,
     .c-message_actions__button {
-        background-color: var(--primary-light);
-        border-color: var(--primary-dark);
-        color: var(--on-primary-muted);
+        background-color: @primary-light;
+        border-color: @primary-dark;
+        color: @on-primary-muted;
     }
     .c-message_actions__button:hover,
     .c-message_actions__button.active {
-        color: var(--secondary);
-        background-color: var(--primary);
-        border-color: var(--primary-dark);
+        color: @secondary;
+        background-color: @primary;
+        border-color: @primary-dark;
     }
     /* unread / archives banner */
     .p-message_pane__unread_banner,
     .p-archives_banner,
     .p-archives_banner__jump {
-        background-color: var(--secondary);
-        color: var(--on-secondary);
+        background-color: @secondary;
+        color: @on-secondary;
     }
     .p-message_pane__unread_banner__close--detached {
-        background-color: var(--secondary);
-        border-color: var(--secondary-dark);
+        background-color: @secondary;
+        border-color: @secondary-dark;
     }
 }

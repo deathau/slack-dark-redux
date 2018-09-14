@@ -5,19 +5,19 @@
         .reset-all();
     }
     .channel_title .channel_name {
-        color: var(--on-primary-strong);
+        color: @on-primary-strong;
     }
     .channel_header .channel_header__tabs .channel_header__tab {
-        color: var(--on-primary-muted);
+        color: @on-primary-muted;
     }
     a,
     a:link,
     a:visited,
     .channel_header .channel_header__tabs .channel_header__tab.--active {
-        color: var(--secondary);
+        color: @secondary;
     }
     .channel_header .channel_header__tabs .channel_header__tab.--active::after {
-        border-color: var(--secondary);
+        border-color: @secondary;
         bottom: 0.5rem;
     }
     /* header buttons */
@@ -25,17 +25,17 @@
         .reset-all();
     }
     .channel_header_icon:not(:hover):not(.active) {
-        color: var(--primary-light);
+        color: @primary-light;
     }
     .channel_header_info button:not(:hover):not(.active),
     #edit_topic_inner,
     .channel_header_info_item:not(:empty)~.channel_header_info_item:not(:first-child)::before,
     .messages_header,
     #im_title.away {
-        color: var(--on-primary-muted);
+        color: @on-primary-muted;
     }
     .subtle_silver {
-        color: var(--on-primary-muted) !important;
+        color: @on-primary-muted !important;
     }
     .channel_header .blue_on_hover:hover,
     .channel_actions_toggle.active:focus,
@@ -43,7 +43,7 @@
     #flex_menu_toggle.active,
     #flex_menu_toggle.active:focus,
     #edit_topic_trigger {
-        color: var(--secondary);
+        color: @secondary;
     }
     #canvases_toggle.active,
     #canvases_toggle.active:hover #details_toggle.active:hover,
@@ -58,7 +58,7 @@
     .app_preview_link_slug,
     .internal_member_link,
     .internal_user_group_link {
-        background-color: var(--primary-dark);
+        background-color: @primary-dark;
     }
     /* search form */
     .search_form {
@@ -71,12 +71,12 @@
     #search_container .search_input_wrapper .ql-placeholder,
     #search_container .icon_search,
     .c-react_search_input .ts_icon_times_small {
-        color: var(--primary);
+        color: @primary;
     }
     #search_container .active .icon_search,
     .c-react_search_input .active .ts_icon_times_small,
     .texty_legacy.texty_single_line_input {
-        color: var(--on-primary);
+        color: @on-primary;
     }
     .c-react_search_input:active,
     .c-react_search_input:focus,
@@ -84,7 +84,7 @@
         & .icon_search_wrapper *,
         & .search_input_wrapper *,
         & .ts_icon_times_small {
-            color: var(--secondary) !important;
+            color: @secondary !important;
         }
     }
 }

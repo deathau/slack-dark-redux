@@ -14,28 +14,28 @@
 }
 
 .primary-area() {
-    background-color: var(--primary);
-    color: var(--on-primary);
+    background-color: @primary;
+    color: @on-primary;
 }
 
 .secondary-area() {
-    background-color: var(--secondary);
-    color: var(--on-secondary);
+    background-color: @secondary;
+    color: @on-secondary;
 }
 
 .chat-area() {
-    background-color: var(--chat);
-    color: var(--on-chat);
+    background-color: @chat;
+    color: @on-chat;
 }
 
 .highlight-area() {
-    background-color: var(--highlight);
-    color: var(--on-highlight);
+    background-color: @highlight;
+    color: @on-highlight;
 }
 
 .input() {
-    background-color: var(--primary-light);
-    color: var(--on-primary);
+    background-color: @primary-light;
+    color: @on-primary;
     border-color: transparent;
 }
 
@@ -43,12 +43,12 @@
 
 a,
 .blue_link {
-    color: var(--secondary);
+    color: @secondary;
     &:hover,
     &:link,
     &:visited,
     &:focus {
-        color: var(--secondary);
+        color: @secondary;
     }
 }
 
@@ -74,13 +74,13 @@ a,
 /* some styles that weren't working in their specified containers */
 
 .light_theme ts-message .message_content .message_sender {
-    color: var(--on-chat-strong) !important;
+    color: @on-chat-strong !important;
 }
 
 .highlight_yellow_bg {
     .reset-all();
     .highlight-area();
-    background-color: var(--highlight) !important;
+    background-color: @highlight !important;
 }
 
 // // styles to reset certain elements
