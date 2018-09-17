@@ -26,7 +26,7 @@
     }
     .greigh {
         // WHY DOES THIS CLASS EXIST?!
-        color: @on-primary !important;
+        color: @on-primary  !important;
     }
     /* details tab */
     #details_tab .channel_page_section {
@@ -65,7 +65,8 @@
         color: @on-primary-muted;
     }
     /* highlights */
-    .p-channel_insights__date_heading span {
+    .p-channel_insights__date_heading span,
+    .day_divider .day_divider_label {
         background-color: @primary-light;
         color: @on-primary;
         border-radius: 24px;
@@ -74,6 +75,10 @@
     }
     .p-channel_insights__date_heading::before {
         background-color: @primary-light;
+    }
+    .mention_day_container_div .day_divider::before {
+        background-color: transparent;
+        border-color: @primary-light;
     }
     .p-channel_insights__message--truncate::before,
     .pinned_item .pinned_message_text .pin_truncate_fade {
@@ -89,7 +94,7 @@
         color: @on-chat-strong;
     }
     .pinned_item .pin_member_name a {
-        color: @on-chat-strong !important;
+        color: @on-chat-strong  !important;
     }
     ts-message .timestamp,
     ts-message a.timestamp,
@@ -97,7 +102,7 @@
         color: @on-chat-muted;
     }
     .attachment_group .attachment_source span {
-        color: @on-chat !important;
+        color: @on-chat  !important;
     }
     .msg_inline_attachment_column.column_border {
         background-color: @chat-light;
@@ -125,14 +130,59 @@
     .tab_container .star_item ts-message {
         & .actions .btn_icon,
         & .actions .star_jump {
-            color: @on-primary !important;
+            color: @on-primary  !important;
             background-color: @primary-light;
             border-color: @primary-dark;
             &:hover {
-                color: @secondary !important;
+                color: @secondary  !important;
                 background-color: @primary;
                 border-color: @primary-dark;
             }
+        }
+    }
+    /* activity sidebar fixes */
+    #flex_contents .subheading:not(:empty)#mentions_options {
+        background-color: @primary-light;
+        color: @on-primary-strong;
+        border: none;
+    }
+    #member_mentions h3 a {
+        color: @on-primary-strong;
+    }
+    ts-message.for_mention_display {
+        color: @on-primary;
+    }
+    .comment .mention,
+    .ql-editor .mention,
+    ts-message .mention {
+        background-color: @highlight;
+        color: @on-highlight;
+    }
+    .app_preview_link_slug,
+    .internal_member_link,
+    .internal_user_group_link {
+        background-color: @secondary;
+        color: @on-secondary;
+    }
+    .mention_rxn .mention_rxn_summary {
+        color: @on-primary;
+        .app_preview_link,
+        .member_preview_link,
+        .mention_rxn_summary_members {
+            color: @on-primary-strong;
+        }
+    }
+    .rxn {
+        background-color: @chat-dark;
+        color: @on-chat-muted;
+        border-color: @chat-light;
+    }
+    .rxn.user_reacted {
+        background-color: @chat-dark;
+        color: @secondary;
+        border-color: @secondary  !important;
+        .emoji_rxn_count {
+            color: @secondary;
         }
     }
 }

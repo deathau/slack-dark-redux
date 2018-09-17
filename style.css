@@ -755,6 +755,7 @@ code {
   /* details tab */
   /* highlights */
   /* shared files */
+  /* activity sidebar fixes */
 }
 .flex_pane_showing #col_flex #flex_contents .heading {
   background-color: var(--primary-dark);
@@ -818,7 +819,8 @@ code {
 .flex_pane_showing #col_flex .tab_container .file_list_item .contents .time {
   color: var(--on-primary-muted);
 }
-.flex_pane_showing #col_flex .p-channel_insights__date_heading span {
+.flex_pane_showing #col_flex .p-channel_insights__date_heading span,
+.flex_pane_showing #col_flex .day_divider .day_divider_label {
   background-color: var(--primary-light);
   color: var(--on-primary);
   border-radius: 24px;
@@ -827,6 +829,10 @@ code {
 }
 .flex_pane_showing #col_flex .p-channel_insights__date_heading::before {
   background-color: var(--primary-light);
+}
+.flex_pane_showing #col_flex .mention_day_container_div .day_divider::before {
+  background-color: transparent;
+  border-color: var(--primary-light);
 }
 .flex_pane_showing #col_flex .p-channel_insights__message--truncate::before,
 .flex_pane_showing #col_flex .pinned_item .pinned_message_text .pin_truncate_fade {
@@ -895,4 +901,48 @@ code {
   color: var(--secondary) !important;
   background-color: var(--primary);
   border-color: var(--primary-dark);
+}
+.flex_pane_showing #col_flex #flex_contents .subheading:not(:empty)#mentions_options {
+  background-color: var(--primary-light);
+  color: var(--on-primary-strong);
+  border: none;
+}
+.flex_pane_showing #col_flex #member_mentions h3 a {
+  color: var(--on-primary-strong);
+}
+.flex_pane_showing #col_flex ts-message.for_mention_display {
+  color: var(--on-primary);
+}
+.flex_pane_showing #col_flex .comment .mention,
+.flex_pane_showing #col_flex .ql-editor .mention,
+.flex_pane_showing #col_flex ts-message .mention {
+  background-color: var(--highlight);
+  color: var(--on-highlight);
+}
+.flex_pane_showing #col_flex .app_preview_link_slug,
+.flex_pane_showing #col_flex .internal_member_link,
+.flex_pane_showing #col_flex .internal_user_group_link {
+  background-color: var(--secondary);
+  color: var(--on-secondary);
+}
+.flex_pane_showing #col_flex .mention_rxn .mention_rxn_summary {
+  color: var(--on-primary);
+}
+.flex_pane_showing #col_flex .mention_rxn .mention_rxn_summary .app_preview_link,
+.flex_pane_showing #col_flex .mention_rxn .mention_rxn_summary .member_preview_link,
+.flex_pane_showing #col_flex .mention_rxn .mention_rxn_summary .mention_rxn_summary_members {
+  color: var(--on-primary-strong);
+}
+.flex_pane_showing #col_flex .rxn {
+  background-color: var(--chat-dark);
+  color: var(--on-chat-muted);
+  border-color: var(--chat-light);
+}
+.flex_pane_showing #col_flex .rxn.user_reacted {
+  background-color: var(--chat-dark);
+  color: var(--secondary);
+  border-color: var(--secondary) !important;
+}
+.flex_pane_showing #col_flex .rxn.user_reacted .emoji_rxn_count {
+  color: var(--secondary);
 }
