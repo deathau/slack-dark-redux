@@ -756,6 +756,11 @@ code {
   /* highlights */
   /* shared files */
   /* activity sidebar fixes */
+  /* workspace directory fixes */
+  /* user groups fixes */
+  /* what's new fixes */
+  /* keyboard shortcut fixes */
+  /* file list */
 }
 .flex_pane_showing #col_flex #flex_contents .heading {
   background-color: var(--primary-dark);
@@ -910,7 +915,8 @@ code {
 .flex_pane_showing #col_flex #member_mentions h3 a {
   color: var(--on-primary-strong);
 }
-.flex_pane_showing #col_flex ts-message.for_mention_display {
+.flex_pane_showing #col_flex ts-message.for_mention_display,
+.flex_pane_showing #col_flex ts-message.for_star_display {
   color: var(--on-primary);
 }
 .flex_pane_showing #col_flex .comment .mention,
@@ -945,4 +951,223 @@ code {
 }
 .flex_pane_showing #col_flex .rxn.user_reacted .emoji_rxn_count {
   color: var(--secondary);
+}
+.flex_pane_showing #col_flex #flex_contents .heading a {
+  color: var(--on-primary);
+}
+.flex_pane_showing #col_flex #flex_contents .heading a:hover {
+  color: var(--secondary);
+}
+.flex_pane_showing #col_flex #team_list_container .searchable_member_list_search {
+  border-color: var(--primary-dark);
+}
+.flex_pane_showing #col_flex #team_list_container .searchable_member_list_input {
+  background-color: var(--primary-light);
+  color: var(--on-primary);
+}
+.flex_pane_showing #col_flex .searchable_member_list_filter {
+  border-color: var(--primary-light);
+}
+.flex_pane_showing #col_flex .searchable_member_list_filter .faux_input {
+  background-color: var(--primary-light);
+  border-color: var(--primary-dark);
+  color: var(--on-primary);
+}
+.flex_pane_showing #col_flex .searchable_member_list .team_list_item {
+  border-color: var(--primary-light);
+}
+.flex_pane_showing #col_flex .searchable_member_list .team_list_item:hover {
+  background-color: var(--primary-light);
+}
+.flex_pane_showing #col_flex #member_preview_scroller,
+.flex_pane_showing #col_flex #member_preview_web_container,
+.flex_pane_showing #col_flex .menu_member_header {
+  background-color: var(--primary);
+  color: var(--on-primary);
+}
+.flex_pane_showing #col_flex #team_tab #member_preview_scroller .feature_custom_status_expiry.member_details .member_name {
+  color: var(--on-primary-strong);
+}
+.flex_pane_showing #col_flex .old_petunia_grey {
+  color: var(--on-primary-muted) !important;
+}
+.flex_pane_showing #col_flex #team_tab #member_preview_scroller .feature_custom_status_expiry.member_details .member_title:not(:empty) {
+  color: var(--on-primary-muted);
+}
+.flex_pane_showing #col_flex #member_preview_scroller .member_data_table a:not(.current_status_preset_option):not(.current_status_presets_edit_link):not(.member_details_manage_link),
+.flex_pane_showing #col_flex #member_preview_web_container .member_data_table a:not(.current_status_preset_option):not(.current_status_presets_edit_link):not(.member_details_manage_link),
+.flex_pane_showing #col_flex #team_list .member_data_table a:not(.current_status_preset_option):not(.current_status_presets_edit_link):not(.member_details_manage_link),
+.flex_pane_showing #col_flex .menu_member_header .member_data_table a:not(.current_status_preset_option):not(.current_status_presets_edit_link):not(.member_details_manage_link),
+.flex_pane_showing #col_flex #member_preview_scroller .member_data_table tr,
+.flex_pane_showing #col_flex #member_preview_web_container .member_data_table tr,
+.flex_pane_showing #col_flex #team_list .member_data_table tr,
+.flex_pane_showing #col_flex .menu_member_header .member_data_table tr,
+.flex_pane_showing #col_flex #member_preview_scroller a:not(.member_name):not(.current_status_preset_option):not(.member_details_manage_link):not(.current_status_presets_edit_link),
+.flex_pane_showing #col_flex .team_list_item a:not(.member_name):not(.current_status_preset_option):not(.member_details_manage_link):not(.current_status_presets_edit_link) {
+  color: var(--on-primary);
+}
+.flex_pane_showing #col_flex #member_preview_scroller .member_data_table a:not(.current_status_preset_option):not(.current_status_presets_edit_link):not(.member_details_manage_link):hover,
+.flex_pane_showing #col_flex #member_preview_web_container .member_data_table a:not(.current_status_preset_option):not(.current_status_presets_edit_link):not(.member_details_manage_link):hover,
+.flex_pane_showing #col_flex #team_list .member_data_table a:not(.current_status_preset_option):not(.current_status_presets_edit_link):not(.member_details_manage_link):hover,
+.flex_pane_showing #col_flex .menu_member_header .member_data_table a:not(.current_status_preset_option):not(.current_status_presets_edit_link):not(.member_details_manage_link):hover,
+.flex_pane_showing #col_flex .btn_basic:focus,
+.flex_pane_showing #col_flex .btn_basic:hover,
+.flex_pane_showing #col_flex .btn_link,
+.flex_pane_showing #col_flex .btn_link:focus,
+.flex_pane_showing #col_flex .btn_link:hover {
+  color: var(--secondary);
+}
+.flex_pane_showing #col_flex .c-button--outline {
+  background-color: var(--primary-dark);
+  border-color: var(--primary-light);
+  color: var(--on-primary);
+}
+.flex_pane_showing #col_flex #flex_contents .flexpane_tab_toolbar #user_group_edit.user_group_edit--flexpane .tab_action_button {
+  color: var(--secondary);
+}
+.flex_pane_showing #col_flex input[type="text"] {
+  background-color: var(--primary-light);
+  border: 1px solid var(--primary-dark);
+  color: var(--on-primary);
+}
+.flex_pane_showing #col_flex .bottom_border {
+  border-color: var(--primary-light);
+}
+.flex_pane_showing #col_flex .dull_grey {
+  color: var(--on-primary-muted);
+}
+.flex_pane_showing #col_flex #user_groups_container .mention {
+  background-color: var(--secondary) !important;
+  color: var(--on-secondary);
+}
+.flex_pane_showing #col_flex #whats_new_tab .flex_heading_controls label {
+  color: var(--on-primary);
+}
+.flex_pane_showing #col_flex .subtle_silver {
+  color: var(--on-primary-muted) !important;
+}
+.flex_pane_showing #col_flex .indifferent_grey,
+.flex_pane_showing #col_flex #whats_new_tab p {
+  color: var(--on-primary) !important;
+}
+.flex_pane_showing #col_flex h1,
+.flex_pane_showing #col_flex h2,
+.flex_pane_showing #col_flex h3,
+.flex_pane_showing #col_flex h4 {
+  color: var(--on-primary-strong) !important;
+}
+.flex_pane_showing #col_flex .p-flexpane_header {
+  background-color: var(--primary-dark);
+  color: var(--on-primary);
+  border-color: var(--primary-light);
+}
+.flex_pane_showing #col_flex .p-shortcuts_flexpane__sub_heading {
+  color: var(--on-primary-muted);
+}
+.flex_pane_showing #col_flex .p-shortcuts_flexpane__shortcut {
+  border-color: var(--primary-light);
+}
+.flex_pane_showing #col_flex .p-shortcuts_flexpane__shortcut_title {
+  color: var(--on-primary);
+}
+.flex_pane_showing #col_flex .p-shortcuts_flexpane__shortcut_title.btn_link {
+  color: var(--secondary);
+}
+.flex_pane_showing #col_flex .c-keyboard_key {
+  background-color: var(--primary-dark);
+  border-color: var(--primary-light);
+  color: var(--on-primary);
+  box-shadow: 0 1px 0 var(--primary-light);
+}
+.flex_pane_showing #col_flex .p-file_flexpane--list {
+  background-color: var(--primary);
+}
+.flex_pane_showing #col_flex .p-file_list__filters {
+  background-color: var(--primary-light);
+  border-color: var(--primary-dark);
+  padding-top: 16px;
+}
+.flex_pane_showing #col_flex .p-file_list__filters input[type="text"] {
+  background-color: var(--primary-dark);
+  border: none;
+}
+.flex_pane_showing #col_flex .c-input_select {
+  background-color: var(--primary-dark);
+  border-color: var(--primary-light);
+  color: var(--on-primary);
+}
+.flex_pane_showing #col_flex .p-file_list__file_type_select .c-input_select__selected_value--placeholder {
+  color: var(--on-primary-muted);
+}
+.flex_pane_showing #col_flex .c-pillow_file_container {
+  background-color: var(--primary);
+  color: var(--on-primary);
+}
+.flex_pane_showing #col_flex .p-file_list__file.c-pillow_file_container--full_width,
+.flex_pane_showing #col_flex .p-file_details__share_divider hr {
+  border-color: var(--primary-light);
+}
+.flex_pane_showing #col_flex .c-pillow_file__description,
+.flex_pane_showing #col_flex .p-file_details__user_meta,
+.flex_pane_showing #col_flex .p-file_details__share_divider span,
+.flex_pane_showing #col_flex .p-file_details__share_metadata,
+.flex_pane_showing #col_flex .c-timestamp__label,
+.flex_pane_showing #col_flex .c-file__meta {
+  color: var(--on-primary-muted);
+}
+.flex_pane_showing #col_flex .c-pillow_file__title,
+.flex_pane_showing #col_flex .p-file_details__name,
+.flex_pane_showing #col_flex .p-file_details__share_channel,
+.flex_pane_showing #col_flex .c-file__title {
+  color: var(--on-primary-strong);
+}
+.flex_pane_showing #col_flex .c-file__action_button {
+  background-color: var(--primary-light);
+  border-color: var(--primary-dark);
+  color: var(--on-primary);
+}
+.flex_pane_showing #col_flex .c-file__action_button:link,
+.flex_pane_showing #col_flex .c-file__action_button:visited {
+  color: var(--on-primary);
+}
+.flex_pane_showing #col_flex .c-file__action_button:hover,
+.flex_pane_showing #col_flex .c-file__action_button:active {
+  color: var(--secondary);
+  background-color: var(--primary-dark);
+  border-color: var(--primary-light);
+}
+.flex_pane_showing #col_flex .c-file_container {
+  background-color: var(--primary);
+  color: var(--on-primary);
+  border-color: var(--primary-light);
+}
+.flex_pane_showing #col_flex .p-file_details__user_link {
+  color: var(--on-primary-strong);
+}
+.flex_pane_showing #col_flex .p-file_details__user_link:link,
+.flex_pane_showing #col_flex .p-file_details__user_link:visited {
+  color: var(--on-primary-strong);
+}
+.flex_pane_showing #col_flex .c-file__slide--meta {
+  background-color: var(--primary);
+}
+.flex_pane_showing #col_flex .c-input_select_options_list_container:not(.c-input_select_options_list_container--always-open) {
+  background-color: var(--primary-light);
+  border-color: var(--primary-dark);
+  color: var(--on-primary);
+}
+.flex_pane_showing #col_flex .c-input_select_options_list__option,
+.flex_pane_showing #col_flex .p-file_list__option .c-icon {
+  color: var(--on-primary);
+}
+.flex_pane_showing #col_flex .p-file_list__select_wrapper .c-input_select_options_list__option--active,
+.flex_pane_showing #col_flex .c-input_select_options_list__option--active {
+  background-color: var(--secondary);
+  border: none;
+  color: var(--on-secondary);
+}
+.flex_pane_showing #col_flex .c-input_select--active {
+  border-color: var(--secondary);
+  border-radius: 4px;
+  box-shadow: none;
 }

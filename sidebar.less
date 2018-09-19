@@ -149,7 +149,8 @@
     #member_mentions h3 a {
         color: @on-primary-strong;
     }
-    ts-message.for_mention_display {
+    ts-message.for_mention_display,
+    ts-message.for_star_display {
         color: @on-primary;
     }
     .comment .mention,
@@ -184,5 +185,226 @@
         .emoji_rxn_count {
             color: @secondary;
         }
+    }
+    /* workspace directory fixes */
+    #flex_contents .heading a {
+        color: @on-primary;
+        &:hover {
+            color: @secondary;
+        }
+    }
+    #team_list_container .searchable_member_list_search {
+        border-color: @primary-dark;
+    }
+    #team_list_container .searchable_member_list_input {
+        background-color: @primary-light;
+        color: @on-primary;
+    }
+    .searchable_member_list_filter {
+        border-color: @primary-light;
+    }
+    .searchable_member_list_filter .faux_input {
+        background-color: @primary-light;
+        border-color: @primary-dark;
+        color: @on-primary;
+    }
+    .searchable_member_list .team_list_item {
+        border-color: @primary-light;
+        &:hover {
+            background-color: @primary-light;
+        }
+    }
+    #member_preview_scroller,
+    #member_preview_web_container,
+    .menu_member_header {
+        .primary-area();
+    }
+    #team_tab #member_preview_scroller .feature_custom_status_expiry.member_details .member_name {
+        color: @on-primary-strong;
+    }
+    .old_petunia_grey {
+        color: @on-primary-muted  !important;
+    }
+    #team_tab #member_preview_scroller .feature_custom_status_expiry.member_details .member_title:not(:empty) {
+        color: @on-primary-muted;
+    }
+    #member_preview_scroller .member_data_table a:not(.current_status_preset_option):not(.current_status_presets_edit_link):not(.member_details_manage_link),
+    #member_preview_web_container .member_data_table a:not(.current_status_preset_option):not(.current_status_presets_edit_link):not(.member_details_manage_link),
+    #team_list .member_data_table a:not(.current_status_preset_option):not(.current_status_presets_edit_link):not(.member_details_manage_link),
+    .menu_member_header .member_data_table a:not(.current_status_preset_option):not(.current_status_presets_edit_link):not(.member_details_manage_link),
+    #member_preview_scroller .member_data_table tr,
+    #member_preview_web_container .member_data_table tr,
+    #team_list .member_data_table tr,
+    .menu_member_header .member_data_table tr,
+    #member_preview_scroller a:not(.member_name):not(.current_status_preset_option):not(.member_details_manage_link):not(.current_status_presets_edit_link),
+    .team_list_item a:not(.member_name):not(.current_status_preset_option):not(.member_details_manage_link):not(.current_status_presets_edit_link) {
+        color: @on-primary;
+    }
+    #member_preview_scroller .member_data_table a:not(.current_status_preset_option):not(.current_status_presets_edit_link):not(.member_details_manage_link):hover,
+    #member_preview_web_container .member_data_table a:not(.current_status_preset_option):not(.current_status_presets_edit_link):not(.member_details_manage_link):hover,
+    #team_list .member_data_table a:not(.current_status_preset_option):not(.current_status_presets_edit_link):not(.member_details_manage_link):hover,
+    .menu_member_header .member_data_table a:not(.current_status_preset_option):not(.current_status_presets_edit_link):not(.member_details_manage_link):hover,
+    .btn_basic:focus,
+    .btn_basic:hover,
+    .btn_link,
+    .btn_link:focus,
+    .btn_link:hover {
+        color: @secondary;
+    }
+    .c-button--outline {
+        background-color: @primary-dark;
+        border-color: @primary-light;
+        color: @on-primary;
+    }
+    /* user groups fixes */
+    #flex_contents .flexpane_tab_toolbar #user_group_edit.user_group_edit--flexpane .tab_action_button {
+        color: @secondary;
+    }
+    input[type="text"] {
+        background-color: @primary-light;
+        border: 1px solid @primary-dark;
+        color: @on-primary;
+    }
+    .bottom_border {
+        border-color: @primary-light;
+    }
+    .dull_grey {
+        color: @on-primary-muted;
+    }
+    #user_groups_container .mention {
+        background-color: @secondary  !important;
+        color: @on-secondary;
+    }
+    /* what's new fixes */
+    #whats_new_tab .flex_heading_controls label {
+        color: @on-primary;
+    }
+    .subtle_silver {
+        color: @on-primary-muted  !important;
+    }
+    .indifferent_grey,
+    #whats_new_tab p {
+        color: @on-primary  !important;
+    }
+    h1,
+    h2,
+    h3,
+    h4 {
+        color: @on-primary-strong  !important;
+    }
+    /* keyboard shortcut fixes */
+    .p-flexpane_header {
+        background-color: @primary-dark;
+        color: @on-primary;
+        border-color: @primary-light;
+    }
+    .p-shortcuts_flexpane__sub_heading {
+        color: @on-primary-muted;
+    }
+    .p-shortcuts_flexpane__shortcut {
+        border-color: @primary-light;
+    }
+    .p-shortcuts_flexpane__shortcut_title {
+        color: @on-primary;
+        &.btn_link {
+            color: @secondary;
+        }
+    }
+    .c-keyboard_key {
+        background-color: @primary-dark;
+        border-color: @primary-light;
+        color: @on-primary;
+        box-shadow: 0 1px 0 @primary-light;
+    }
+    /* file list */
+    .p-file_flexpane--list {
+        background-color: @primary;
+    }
+    .p-file_list__filters {
+        background-color: @primary-light;
+        border-color: @primary-dark;
+        padding-top: 16px;
+        input[type="text"] {
+            background-color: @primary-dark;
+            border: none;
+        }
+    }
+    .c-input_select {
+        background-color: @primary-dark;
+        border-color: @primary-light;
+        color: @on-primary;
+    }
+    .p-file_list__file_type_select .c-input_select__selected_value--placeholder {
+        color: @on-primary-muted;
+    }
+    .c-pillow_file_container {
+        .primary-area();
+    }
+    .p-file_list__file.c-pillow_file_container--full_width,
+    .p-file_details__share_divider hr {
+        border-color: @primary-light;
+    }
+    .c-pillow_file__description,
+    .p-file_details__user_meta,
+    .p-file_details__share_divider span,
+    .p-file_details__share_metadata,
+    .c-timestamp__label,
+    .c-file__meta {
+        color: @on-primary-muted;
+    }
+    .c-pillow_file__title,
+    .p-file_details__name,
+    .p-file_details__share_channel,
+    .c-file__title {
+        color: @on-primary-strong;
+    }
+    .c-file__action_button {
+        background-color: @primary-light;
+        border-color: @primary-dark;
+        color: @on-primary;
+        &:link,
+        &:visited {
+            color: @on-primary;
+        }
+        &:hover,
+        &:active {
+            color: @secondary;
+            background-color: @primary-dark;
+            border-color: @primary-light;
+        }
+    }
+    .c-file_container {
+        .primary-area();
+        border-color: @primary-light;
+    }
+    .p-file_details__user_link {
+        color: @on-primary-strong;
+        &:link,
+        &:visited {
+            color: @on-primary-strong;
+        }
+    }
+    .c-file__slide--meta {
+        background-color: @primary;
+    }
+    .c-input_select_options_list_container:not(.c-input_select_options_list_container--always-open) {
+        background-color: @primary-light;
+        border-color: @primary-dark;
+        color: @on-primary;
+    }
+    .c-input_select_options_list__option,
+    .p-file_list__option .c-icon {
+        color: @on-primary;
+    }
+    .p-file_list__select_wrapper .c-input_select_options_list__option--active,
+    .c-input_select_options_list__option--active {
+        background-color: @secondary;
+        border: none;
+        color: @on-secondary;
+    }
+    .c-input_select--active {
+        border-color: @secondary;
+        border-radius: 4px;
+        box-shadow: none;
     }
 }
