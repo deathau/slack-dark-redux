@@ -407,4 +407,28 @@
         border-radius: 4px;
         box-shadow: none;
     }
+    /* downloads (desktop) */
+    .p-download_item__container .p-download_item__name_row {
+        color: @on-primary;
+    }
+    .p-download_item__image {
+        border: none;
+    }
+    .p-download_item:hover {
+        border-color: @secondary
+    }
+    .p-download_item__actions {
+        background: none;
+    }
+    a.p-download_item__link {
+        &--open,
+        &--retry,
+        &--show {
+            color: @secondary;
+        }
+    }
+    .p-downloads_list__shift_hint {
+        background: none;
+        color: @on-primary;
+    }
 }

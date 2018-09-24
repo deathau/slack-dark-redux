@@ -761,6 +761,7 @@ code {
   /* what's new fixes */
   /* keyboard shortcut fixes */
   /* file list */
+  /* downloads (desktop) */
 }
 .flex_pane_showing #col_flex #flex_contents .heading {
   background-color: var(--primary-dark);
@@ -1170,4 +1171,25 @@ code {
   border-color: var(--secondary);
   border-radius: 4px;
   box-shadow: none;
+}
+.flex_pane_showing #col_flex .p-download_item__container .p-download_item__name_row {
+  color: var(--on-primary);
+}
+.flex_pane_showing #col_flex .p-download_item__image {
+  border: none;
+}
+.flex_pane_showing #col_flex .p-download_item:hover {
+  border-color: var(--secondary);
+}
+.flex_pane_showing #col_flex .p-download_item__actions {
+  background: none;
+}
+.flex_pane_showing #col_flex a.p-download_item__link--open,
+.flex_pane_showing #col_flex a.p-download_item__link--retry,
+.flex_pane_showing #col_flex a.p-download_item__link--show {
+  color: var(--secondary);
+}
+.flex_pane_showing #col_flex .p-downloads_list__shift_hint {
+  background: none;
+  color: var(--on-primary);
 }
