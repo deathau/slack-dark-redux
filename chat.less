@@ -58,7 +58,7 @@
         &:hover {
             &:not(.c-message--highlight):not(.c-message--standalone):not(.c-message--pinned):not(.c-message--ephemeral):not(.c-message--custom_response):not(.c-message--starred):not(.c-message--sli_highlight) {
                 background-color: @chat-hover;
-            } 
+            }
         }
     }
     .p-message_pane .c-message_list.c-virtual_list--scrollbar>.c-scrollbar__hider::before,
@@ -96,6 +96,7 @@
         &--focus,
         &:hover {
             border-color: @secondary;
+            background-color: transparent;
             .c-message__reply_bar_view_thread {
                 background-color: transparent;
             }
@@ -255,5 +256,27 @@
     .p-message_pane__unread_banner__close--detached {
         background-color: @secondary;
         border-color: @secondary-dark;
+    }
+    /* threads view */
+    #threads_msgs_scroller_div,
+    ts-thread {
+        .chat-area();
+    }
+    ts-thread .thread_messages {
+        .chat-area();
+        border-color: @chat-light;
+    }
+    ts-message.active:not(.standalone):not(.multi_delete_mode):not(.highlight):not(.new_reply):not(.show_broadcast_indicator),
+    ts-message.message--focus:not(.standalone):not(.multi_delete_mode):not(.highlight):not(.new_reply):not(.show_broadcast_indicator),
+    ts-message:hover:not(.standalone):not(.multi_delete_mode):not(.highlight):not(.new_reply):not(.show_broadcast_indicator) {
+        background-color: @chat-hover;
+    }
+    ts-message {
+        color: @on-chat;
+    }
+    .inline_message_input_container {
+        background-color: @primary-dark;
+        color: @on-primary;
+        border-color: @primary;
     }
 }

@@ -256,6 +256,7 @@ a:focus,
   /* buttons and forms */
   /* message actions */
   /* unread / archives banner */
+  /* threads view */
 }
 #col_messages .c-message--light:not(.c-message--adjacent) .c-message__content::before {
   border-bottom: 0.5px solid var(--chat-light);
@@ -356,6 +357,7 @@ a:focus,
 #col_messages .c-message__reply_bar--focus,
 #col_messages .c-message__reply_bar:hover {
   border-color: var(--secondary);
+  background-color: transparent;
 }
 #col_messages .c-message__reply_bar--focus .c-message__reply_bar_view_thread,
 #col_messages .c-message__reply_bar:hover .c-message__reply_bar_view_thread {
@@ -526,6 +528,29 @@ a:focus,
 #col_messages .p-message_pane__unread_banner__close--detached {
   background-color: var(--secondary);
   border-color: var(--secondary-dark);
+}
+#col_messages #threads_msgs_scroller_div,
+#col_messages ts-thread {
+  background-color: var(--chat);
+  color: var(--on-chat);
+}
+#col_messages ts-thread .thread_messages {
+  background-color: var(--chat);
+  color: var(--on-chat);
+  border-color: var(--chat-light);
+}
+#col_messages ts-message.active:not(.standalone):not(.multi_delete_mode):not(.highlight):not(.new_reply):not(.show_broadcast_indicator),
+#col_messages ts-message.message--focus:not(.standalone):not(.multi_delete_mode):not(.highlight):not(.new_reply):not(.show_broadcast_indicator),
+#col_messages ts-message:hover:not(.standalone):not(.multi_delete_mode):not(.highlight):not(.new_reply):not(.show_broadcast_indicator) {
+  background-color: var(--chat-hover);
+}
+#col_messages ts-message {
+  color: var(--on-chat);
+}
+#col_messages .inline_message_input_container {
+  background-color: var(--primary-dark);
+  color: var(--on-primary);
+  border-color: var(--primary);
 }
 .c-snippet__code .CodeMirror-code > div::before {
   background-color: var(--chat);
@@ -762,6 +787,7 @@ code {
   /* keyboard shortcut fixes */
   /* file list */
   /* downloads (desktop) */
+  /* threads */
 }
 .flex_pane_showing #col_flex #flex_contents .heading {
   background-color: var(--primary-dark);
@@ -1192,4 +1218,23 @@ code {
 .flex_pane_showing #col_flex .p-downloads_list__shift_hint {
   background: none;
   color: var(--on-primary);
+}
+.flex_pane_showing #col_flex #convo_scroller {
+  background-color: var(--chat);
+  color: var(--on-chat);
+}
+.flex_pane_showing #col_flex #convo_scroller ts-message.active:not(.standalone):not(.multi_delete_mode):not(.highlight):not(.new_reply):not(.show_broadcast_indicator),
+.flex_pane_showing #col_flex #convo_scroller ts-message.message--focus:not(.standalone):not(.multi_delete_mode):not(.highlight):not(.new_reply):not(.show_broadcast_indicator),
+.flex_pane_showing #col_flex #convo_scroller ts-message:hover:not(.standalone):not(.multi_delete_mode):not(.highlight):not(.new_reply):not(.show_broadcast_indicator) {
+  background-color: transparent;
+  background-image: none;
+  box-shadow: none;
+  border-color: transparent;
+  color: inherit;
+  -webkit-filter: none;
+  filter: none;
+  opacity: 1;
+}
+.flex_pane_showing #col_flex #convo_scroller ts-message.selected:not(.delete_mode) {
+  background-color: transparent;
 }

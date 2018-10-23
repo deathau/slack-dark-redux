@@ -1,6 +1,6 @@
 .flex_pane_showing #col_flex {
     .primary-area();
-    border: none;
+    border-color: @chat-light;
     #flex_contents .heading {
         background-color: @primary-dark;
         color: @on-primary-strong;
@@ -430,5 +430,17 @@
     .p-downloads_list__shift_hint {
         background: none;
         color: @on-primary;
+    }
+    /* threads */
+    #convo_scroller {
+        .chat-area();
+        ts-message.active:not(.standalone):not(.multi_delete_mode):not(.highlight):not(.new_reply):not(.show_broadcast_indicator),
+        ts-message.message--focus:not(.standalone):not(.multi_delete_mode):not(.highlight):not(.new_reply):not(.show_broadcast_indicator),
+        ts-message:hover:not(.standalone):not(.multi_delete_mode):not(.highlight):not(.new_reply):not(.show_broadcast_indicator) {
+            .reset-all();
+        }
+        ts-message.selected:not(.delete_mode) {
+            background-color: transparent;
+        }
     }
 }
