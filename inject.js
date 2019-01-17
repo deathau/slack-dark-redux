@@ -1,17 +1,3 @@
-
-// Load up dark theme
-document.addEventListener('DOMContentLoaded', function () {
-  $.ajax({
-    url: 'https://raw.githubusercontent.com/deathau/slack-dark-redux/master/style.css',
-    success: function (css) {
-      $("<style></style>").appendTo('head').html(css);
-      // chat theme. Options are 'light' and 'dark', anything else attempts to use sidebar colors
-      // alternately, you can pass in two css colors to specify the chat background and foreground, respectively.
-      applyTheme('dark');
-    }
-  });
-});
-
 let retryCounter = 3;
 function applyTheme(chatTheme, onChatTheme) {
   // for dark theme
