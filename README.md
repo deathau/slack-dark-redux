@@ -32,13 +32,30 @@ Open up the most recent version (e.g. `app-2.5.1`) then open
 At the very bottom, add
 
 ```js
-document.addEventListener('DOMContentLoaded', function() {
-  $.ajax({
-    url: 'https://raw.githubusercontent.com/deathau/slack-dark-redux/master/style.css',
-    success: function(css) {
-      $("<style></style>").appendTo('head').html(css);
-    }
-  });
+function onThemeLoaded() {
+  if (themeCssLoaded === true && themeJsLoaded === true) {
+    // chat theme. Options are applyTheme('light') and applyTheme('dark'), anything else attempts to use sidebar colors
+    // alternately, you can pass in two css colors to specify the chat background and foreground, respectively
+    applyTheme();
+  }
+}
+
+// load up the required css and js
+const cssUrl = 'https://raw.githubusercontent.com/deathau/slack-dark-redux/master/style.css';
+const jsUrl = 'https://raw.githubusercontent.com/deathau/slack-dark-redux/master/inject.js';
+let themeJsLoaded = false;
+let themeCssLoaded = false;
+document.addEventListener('DOMContentLoaded', function () {
+  $.ajax({ url: cssUrl, success: function (css) {
+      $("<style></style>").appendTo('head').html(css); // append the css
+      console.log(`[CUSTOM-THEME] Loaded CSS successfully`);
+      themeCssLoaded = true; onThemeLoaded();
+    }});
+  $.ajax({ url: jsUrl, success: function (rawData) {
+      require('vm').runInThisContext(rawData, jsUrl); // load up the javascript
+      console.log(`[CUSTOM-THEME] Loaded JavaScript successfully`);
+      themeJsLoaded = true; onThemeLoaded();
+    }});
 });
 ```
 
