@@ -1,0 +1,282 @@
+#col_messages {
+    .chat-area();
+    /* Chat room styles */
+    /* additions to space the content out better and put some seperators */
+    .c-message--light:not(.c-message--adjacent) .c-message__content::before {
+        border-bottom: 0.5px solid @chat-light;
+    }
+    .c-message--light:not(.c-message--adjacent) {
+        margin-top: 9px;
+    }
+    /* Chat room colours */
+    .p-message_pane .p-message_pane__top_banners:not(:empty)+div .c-message_list.c-virtual_list--scrollbar>.c-scrollbar__hider::before,
+    .p-message_pane .p-message_pane__top_banners:not(:empty)+div .c-message_list:not(.c-virtual_list--scrollbar)::before {
+        .reset-all();
+    }
+    .p-message_pane .c-message_list.c-virtual_list--scrollbar>.c-scrollbar__hider,
+    .p-message_pane .c-message_list:not(.c-virtual_list--scrollbar),
+    .p-degraded_list__loading,
+    #footer,
+    .c-message__body,
+    .c-message--light .c-message__sender .c-message__sender_link {
+        .reset-all()
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    .c-message--light .c-message__sender .c-message__sender_link,
+    .c-unified_member__display-name--large,
+    .c-unified_member__title--large {
+        color: @on-chat-strong;
+    }
+    a,
+    a:link,
+    a:visited,
+    .c-deprecated_button--link {
+        color: @secondary;
+    }
+    .c-timestamp__label,
+    .c-message__file_meta.c-message__file_meta--file_threads,
+    .c-message_attachment__pretext,
+    .c-unified_member__other-names--large {
+        color: @on-chat-muted;
+    }
+    .c-message_attachment,
+    .c-message_attachment__author,
+    .p-message_pane__foreword__description,
+    .p-message_pane__limited_history_alert {
+        color: @on-chat;
+    }
+    .c-message_attachment__border,
+    blockquote.c-mrkdwn__quote::before {
+        background-color: @chat-light;
+    }
+    .c-message {
+        &--focus,
+        &--hover,
+        &:hover {
+            &:not(.c-message--highlight):not(.c-message--standalone):not(.c-message--pinned):not(.c-message--ephemeral):not(.c-message--custom_response):not(.c-message--starred):not(.c-message--sli_highlight) {
+                background-color: @chat-hover;
+            }
+        }
+    }
+    .p-message_pane .c-message_list.c-virtual_list--scrollbar>.c-scrollbar__hider::before,
+    .p-message_pane .c-message_list:not(.c-virtual_list--scrollbar)::before {
+        .primary-area();
+    }
+    .p-message_pane,
+    #footer {
+        background-color: @chat;
+    } // .c-message--custom_response {
+    //     background-color: @secondary //! but with alpha of 0.05;
+    // }
+    .c-message--ephemeral,
+    .c-message--sli_highlight_negative {
+        background-color: @chat-light;
+    }
+    code,
+    pre,
+    .c-reaction,
+    .c-reaction_add {
+        background-color: @chat-dark;
+        color: @on-chat-muted;
+        border-color: @chat-light;
+    }
+    .c-reaction_add {
+        &:focus,
+        &:hover {
+            border-color: @secondary;
+        }
+    }
+    .p-notification_bar__section {
+        color: @on-chat-muted;
+    }
+    .c-message__reply_bar {
+        &--focus,
+        &:hover {
+            border-color: @secondary;
+            background-color: transparent;
+            .c-message__reply_bar_view_thread {
+                background-color: transparent;
+            }
+        }
+    }
+    .supports_custom_scrollbar:not(.slim_scrollbar) #messages_container:after {
+        background: none;
+    }
+    .p-message_pane .c-message_list.c-virtual_list--scrollbar>.c-scrollbar__hider,
+    .p-message_pane .c-message_list:not(.c-virtual_list--scrollbar) {
+        .chat-area();
+    }
+    /* Mentions */
+    a.c-member_slug--link {
+        background-color: @secondary;
+        color: @on-secondary;
+    }
+    a.c-member_slug--mention,
+    .c-mrkdwn__broadcast--mention,
+    .c-mrkdwn__highlight,
+    .c-mrkdwn__mention,
+    .c-mrkdwn__user_group--mention {
+        background-color: @highlight;
+        color: @on-highlight;
+        &:hover {
+            background-color: @highlight;
+            color: @on-highlight;
+        }
+    }
+    .c-app_badge,
+    .c-app_label {
+        background-color: @chat-dark;
+        color: @on-chat-muted;
+    }
+    /* Message input box */
+    #msg_form .ql-placeholder {
+        .reset-all();
+    }
+    #msg_input,
+    #primary_file_button,
+    #msg_input+#primary_file_button {
+        background-color: @primary-dark;
+        color: @on-primary;
+        border-color: @primary;
+    }
+    #msg_input+#primary_file_button,
+    #msg_form .msg_mentions_button,
+    #msg_form .current_status_empty_emoji,
+    #msg_form .current_status_empty_emoji_cover,
+    #msg_form .emo_menu,
+    #msg_form .ql-placeholder,
+    #msg_form #msg_input.focus~#primary_file_button:not(:hover):not(.active),
+    #msg_form #msg_input.focus~.emo_menu,
+    #msg_form #msg_input.focus~.msg_mentions_button:not(:hover) {
+        color: @primary;
+    }
+    #msg_form .msg_mentions_button:hover {
+        color: @secondary;
+    }
+    #msg_input+#primary_file_button {
+        &.active,
+        &.focus-ring,
+        &:focus,
+        &:hover {
+            .secondary-area();
+            border-color: @secondary-light;
+        }
+    }
+    /* day dividers */
+    .c-message_list__day_divider__label__pill {
+        background-color: @primary;
+        color: @on-primary;
+    }
+    .c-message_list__day_divider__line {
+        border-color: @chat-light;
+    }
+    .c-message_list__unread_divider__separator {
+        border-color: @secondary
+    }
+    .c-message_list__unread_divider__label {
+        background-color: @secondary;
+        color: @on-secondary;
+    }
+    /* file attatchments */
+    .c-file_container {
+        background-color: @chat;
+        border-color: @chat-light;
+        color: @on-chat;
+        &:hover {
+            border-color: @secondary;
+            box-shadow: none;
+        }
+    }
+    .c-file__title {
+        color: @on-chat-strong;
+    }
+    .c-file__meta {
+        color: @on-chat-muted;
+    }
+    .c-file__slide--meta {
+        background-color: @chat;
+    }
+    .c-file_container--has_thumb .c-file__actions::before {
+        background-image: linear-gradient(90deg, hsla(0, 0%, 100%, 0), @chat 20px);
+    }
+    .c-file__action_button {
+        background-color: @chat-dark;
+        color: @on-chat;
+        &:active,
+        &:focus,
+        &:hover {
+            color: @secondary;
+        }
+    }
+    .c-message__image_container {
+        background-color: transparent;
+    }
+    /* buttons and forms */
+    .c-button--outline {
+        .reset-all();
+        border: 1px solid @secondary;
+    }
+    .c-button--outline-danger,
+    .c-button--outline-primary {
+        background-color: transparent;
+    }
+    .c-input_select,
+    .c-message_attachment__select,
+    input[type="text"] {
+        background-color: @chat-dark;
+        color: @on-chat;
+    }
+    .c-input_select,
+    .c-message_attachment__select {
+        border-color: @chat-light;
+    }
+    /* message actions */
+    .c-message_actions__container,
+    .c-message_actions__button {
+        background-color: @primary-light;
+        border-color: @primary-dark;
+        color: @on-primary-muted;
+    }
+    .c-message_actions__button:hover,
+    .c-message_actions__button.active {
+        color: @secondary;
+        background-color: @primary;
+        border-color: @primary-dark;
+    }
+    /* unread / archives banner */
+    .p-message_pane__unread_banner,
+    .p-archives_banner,
+    .p-archives_banner__jump {
+        background-color: @secondary;
+        color: @on-secondary;
+    }
+    .p-message_pane__unread_banner__close--detached {
+        background-color: @secondary;
+        border-color: @secondary-dark;
+    }
+    /* threads view */
+    #threads_msgs_scroller_div,
+    ts-thread {
+        .chat-area();
+    }
+    ts-thread .thread_messages {
+        .chat-area();
+        border-color: @chat-light;
+    }
+    ts-message.active:not(.standalone):not(.multi_delete_mode):not(.highlight):not(.new_reply):not(.show_broadcast_indicator),
+    ts-message.message--focus:not(.standalone):not(.multi_delete_mode):not(.highlight):not(.new_reply):not(.show_broadcast_indicator),
+    ts-message:hover:not(.standalone):not(.multi_delete_mode):not(.highlight):not(.new_reply):not(.show_broadcast_indicator) {
+        background-color: @chat-hover;
+    }
+    ts-message {
+        color: @on-chat;
+    }
+    .inline_message_input_container {
+        background-color: @primary-dark;
+        color: @on-primary;
+        border-color: @primary;
+    }
+}

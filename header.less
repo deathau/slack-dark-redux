@@ -1,0 +1,90 @@
+#client_header {
+    .primary-area();
+    /* channel header */
+    .channel_header {
+        .reset-all();
+    }
+    .channel_title .channel_name {
+        color: @on-primary-strong;
+    }
+    .channel_header .channel_header__tabs .channel_header__tab {
+        color: @on-primary-muted;
+    }
+    a,
+    a:link,
+    a:visited,
+    .channel_header .channel_header__tabs .channel_header__tab.--active {
+        color: @secondary;
+    }
+    .channel_header .channel_header__tabs .channel_header__tab.--active::after {
+        border-color: @secondary;
+        bottom: 0.5rem;
+    }
+    /* header buttons */
+    #edit_topic_inner:not(.unable_to_post)::before {
+        .reset-all();
+    }
+    .channel_header_icon:not(:hover):not(.active) {
+        color: @primary-light;
+    }
+    .channel_header_info button:not(:hover):not(.active),
+    #edit_topic_inner,
+    .channel_header_info_item:not(:empty)~.channel_header_info_item:not(:first-child)::before,
+    .messages_header,
+    #im_title.away {
+        color: @on-primary-muted;
+    }
+    .subtle_silver {
+        color: @on-primary-muted !important;
+    }
+    .channel_header .blue_on_hover:hover,
+    .channel_actions_toggle.active:focus,
+    .details_toggle.active:focus,
+    #flex_menu_toggle.active,
+    #flex_menu_toggle.active:focus,
+    #edit_topic_trigger {
+        color: @secondary;
+    }
+    #canvases_toggle.active,
+    #canvases_toggle.active:hover #details_toggle.active:hover,
+    #details_toggle.active,
+    #recent_mentions_toggle.active,
+    #recent_mentions_toggle.active:hover,
+    #sli_recap_toggle.active,
+    #stars_toggle.active,
+    #stars_toggle.active:hover {
+        .secondary-area();
+    }
+    .app_preview_link_slug,
+    .internal_member_link,
+    .internal_user_group_link {
+        background-color: @primary-dark;
+    }
+    /* search form */
+    .search_form {
+        .input();
+    }
+    #search_container .search_input_wrapper .ql-placeholder,
+    .texty_legacy.texty_single_line_input {
+        .reset-all();
+    }
+    #search_container .search_input_wrapper .ql-placeholder,
+    #search_container .icon_search,
+    .c-react_search_input .ts_icon_times_small {
+        color: @primary;
+    }
+    #search_container .active .icon_search,
+    .c-react_search_input .active .ts_icon_times_small,
+    .texty_legacy.texty_single_line_input {
+        color: @on-primary;
+    }
+    .c-react_search_input:active,
+    .c-react_search_input:focus,
+    .c-react_search_input:hover {
+        & .icon_search_wrapper *,
+        & .search_input_wrapper *,
+        & .ts_icon_times_small {
+            color: @secondary !important;
+        }
+    }
+}

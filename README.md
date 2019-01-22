@@ -1,18 +1,19 @@
 # slack-dark-redux
 Yet another dark theme for Slack.
 
-I found a dark theme I kinda liked on userstyles.org and modified it to my liking. Then I kept noticing things that had to be fixed or changed and I started to realize how little I could follow the css in that theme and how big and bloated I was making it, so I decided to start my own dark theme from scratch.
-
-I also decided to use LESS so I can tweak colours to my liking without having to change it in multiple places. I'm using the Easy LESS plugin for Visual Studio Code which compiles the LESS into css on every save, so the CSS should match to the LESS file every commit.
-
 # Applying the theme
-## Using Stylish for Slack on the web
+## Using Stylus for Slack on the web
 
-If you haven't installed Stylish in your browser, you can do so by following the links here: https://userstyles.org/
+> **Note:** A previous version of this guide recommending installing *Stylish*,
+but due to privacy concerns, *Stylus* is now recommended.
 
-Create a new style in Stylish and copy-paste the css from this repository.
+If you haven't installed Stylus in your browser, you can do so by following the
+links here: https://add0n.com/stylus.html
 
-At the bottom of the page, specify the css to apply to URLs on the domain `slack.com`.
+Create a new style in Stylus and copy-paste the css from this repository.
+
+At the bottom of the page, specify the css to apply to URLs on the domain
+`slack.com`.
 
 Give it a name, save it, then reload your slack tab.
 
@@ -44,3 +45,27 @@ document.addEventListener('DOMContentLoaded', function() {
 That's it! Restart Slack and see how well it works.
 
 NB: You'll have to do this every time Slack updates.
+
+# Philosophy
+
+I found a dark theme I kinda liked on userstyles.org and modified it to my
+liking. Then I kept noticing things that had to be fixed or changed and I
+started to realize how little I could follow the css in that theme and how big
+and bloated I was making it, so I decided to start my own dark theme from
+scratch.
+
+I also decided to use LESS so I can tweak colours to my liking without having to
+change it in multiple places (I later discovered CSS has built-in support for
+variables, but I'm still using LESS for colour transforms and logical
+seperation). I'm using the Easy LESS plugin for Visual Studio Code which
+compiles the LESS into css on every save, so the CSS should match to the LESS
+file every commit.
+
+I'm a fan of structure, which is not easy given the convoluted mess required to
+style all the elements of Slack, so I've decided to try and add some more
+structure to the repo by splitting concerns across different less files, with
+the main `style.less` pulling them all together.
+
+I also want to make a structured and easily modifyable colour theme, preferably
+in a way that can make it easily tie in with your sidebar theme. I'm still
+working on that...

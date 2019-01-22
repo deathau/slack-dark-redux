@@ -1,0 +1,129 @@
+// Defined colours //
+// Using less variables so we can do some color transformations //
+
+/* Start with sidebar colours */
+// These are my defaults:
+// #303E4D,#2C3849,#6698C8,#FFFFFF,#4A5664,#ffffff,#94E864,#78AF8F
+// This is slack's default
+// #4D394B,#3E313C,#4C9689,#FFFFFF,#3E313C,#FFFFFF,#38978D,#EB4D5C
+@column-bg: #4D394B;
+@menu-bg-hover: #3E313C;
+@active-item: #4C9689;
+@active-item-text: #FFFFFF;
+@hover-item: #3E313C;
+@text-color: #FFFFFF;
+@active-presence: #38978D;
+@mention-badge: #EB4D5C;
+
+// Now choose a theme for the chat itself (dark, light or sidebar) //
+@chat-theme: dark;
+
+// I want to try having a better structure, perhaps using something like
+// The Material colour structure or using base16
+// http://chriskempson.com/projects/base16/
+
+// colors (i.e. background colors)
+@c-primary:           @column-bg;
+@c-primary-hover:     @hover-item;
+@c-secondary:         @active-item;
+@c-highlight:         @mention-badge;
+
+// on colours (i.e. foreground colors)
+@c-on-primary:        @text-color;
+@c-on-secondary:      @active-item-text;
+@c-on-highlight:      @active-item-text;
+
+// chat colours
+@c-chat:              @c-primary;
+@c-chat-hover:        @c-primary-hover;
+@c-on-chat:           @c-on-primary;
+// for dark theme
+@c-chat-dark:              #0d0d0f;
+@c-chat-dark-hover:        @c-primary-hover;
+@c-on-chat-dark:           #e0e0e2;
+// for light theme
+@c-chat-light:              #ffffff;
+@c-chat-light-hover:        lighten(@c-primary-hover, 50%);
+@c-on-chat-light:           #0d0d0f;
+
+// re-define the colours in css variables for better css //
+:root {
+    --primary:              @c-primary;
+    --primary-hover:        @c-primary-hover;
+    --secondary:            @c-secondary;
+    --highlight:            @c-highlight;
+    --on-primary:           @c-on-primary;
+    --on-secondary:         @c-on-secondary;
+    --on-highlight:         @c-on-highlight;
+
+    // variants
+    // ? is there any way I can do similar variants with just css?
+    --primary-dark:         darken(@c-primary, 15%);
+    --primary-light:        lighten(@c-primary, 15%);
+    --secondary-dark:       darken(@c-secondary, 15%);
+    --secondary-light:      lighten(@c-secondary, 15%);
+
+    // on variants
+    --on-primary-strong:    lighten(@c-on-primary, 15%);
+    --on-secondary-strong:  lighten(@c-on-secondary, 15%);
+    --on-primary-muted:     darken(@c-on-primary, 25%);
+    --on-secondary-muted:   darken(@c-on-secondary, 25%);
+
+    // here is where the chat theme is applied
+    // dark:
+    & when (@chat-theme = dark) {
+        --chat:                 @c-chat-dark;
+        --chat-hover:           @c-chat-dark-hover;
+        --on-chat:              @c-on-chat-dark;
+        --chat-dark:            darken(@c-chat-dark, 15%);
+        --chat-light:           lighten(@c-chat-dark, 15%);
+        --on-chat-strong:       lighten(@c-on-chat-dark, 15%);
+        --on-chat-muted:        darken(@c-on-chat-dark, 25%);
+    }
+    // light:
+    & when (@chat-theme = light) {
+        --chat:                 @c-chat-light;
+        --chat-hover:           @c-chat-light-hover;
+        --on-chat:              @c-on-chat-light;
+        --chat-dark:            darken(@c-chat-light, 15%);
+        --chat-light:           lighten(@c-chat-light, 15%);
+        --on-chat-strong:       lighten(@c-on-chat-light, 15%);
+        --on-chat-muted:        darken(@c-on-chat-light, 25%);
+    }
+    // neither:
+    // Note: for some reason VS Code doesn't like this syntax, but it compiles fine
+    & when not (@chat-theme = dark) and not (@chat-theme = light) {
+        --chat:                 @c-chat;
+        --chat-hover:           @c-chat-hover;
+        --on-chat:              @c-on-chat;
+        --chat-dark:            darken(@c-chat, 15%);
+        --chat-light:           lighten(@c-chat, 15%);
+        --on-chat-strong:       lighten(@c-on-chat, 15%);
+        --on-chat-muted:        darken(@c-on-chat, 25%);
+    }
+}
+
+// finally, all the css variables go back into less variables
+// so I don't have to keep typing var(--) all the time
+@primary:             var(--primary);
+@primary-hover:       var(--primary-hover);
+@secondary:           var(--secondary);
+@highlight:           var(--highlight);
+@on-primary:          var(--on-primary);
+@on-secondary:        var(--on-secondary);
+@on-highlight:        var(--on-highlight);
+@primary-dark:        var(--primary-dark);
+@primary-light:       var(--primary-light);
+@secondary-dark:      var(--secondary-dark);
+@secondary-light:     var(--secondary-light);
+@on-primary-strong:   var(--on-primary-strong);
+@on-secondary-strong: var(--on-secondary-stron);
+@on-primary-muted:    var(--on-primary-muted);
+@on-secondary-muted:  var(--on-secondary-muted);
+@chat:                var(--chat);
+@chat-hover:          var(--chat-hover);
+@on-chat:             var(--on-chat);
+@chat-dark:           var(--chat-dark);
+@chat-light:          var(--chat-light);
+@on-chat-strong:      var(--on-chat-strong);
+@on-chat-muted:       var(--on-chat-muted);
