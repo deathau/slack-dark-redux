@@ -138,9 +138,9 @@
     #msg_input,
     #primary_file_button,
     #msg_input+#primary_file_button {
-        background-color: @primary-dark;
+        background-color: @primary;
         color: @on-primary;
-        border-color: @primary;
+        border-color: @primary-light;
     }
     #msg_input+#primary_file_button,
     #msg_form .msg_mentions_button,
@@ -151,7 +151,7 @@
     #msg_form #msg_input.focus~#primary_file_button:not(:hover):not(.active),
     #msg_form #msg_input.focus~.emo_menu,
     #msg_form #msg_input.focus~.msg_mentions_button:not(:hover) {
-        color: @primary;
+        color: @primary-light;
     }
     #msg_form .msg_mentions_button:hover {
         color: @secondary;
@@ -201,6 +201,9 @@
     }
     .c-file_container--has_thumb .c-file__actions::before {
         background-image: linear-gradient(90deg, hsla(0, 0%, 100%, 0), @chat 20px);
+    }
+    .c-pillow_file__content--collapsed:after {
+        background-image: linear-gradient(0deg, @chat, hsla(0, 0%, 100%, 0) 40px);
     }
     .c-file__action_button {
         background-color: @chat-dark;
@@ -278,5 +281,8 @@
         background-color: @primary-dark;
         color: @on-primary;
         border-color: @primary;
+    }
+    .c-pillow_file_container {
+        .chat-area();
     }
 }

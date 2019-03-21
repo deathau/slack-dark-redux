@@ -409,9 +409,9 @@ a:focus,
 #col_messages #msg_input,
 #col_messages #primary_file_button,
 #col_messages #msg_input + #primary_file_button {
-  background-color: var(--primary-dark);
+  background-color: var(--primary);
   color: var(--on-primary);
-  border-color: var(--primary);
+  border-color: var(--primary-light);
 }
 #col_messages #msg_input + #primary_file_button,
 #col_messages #msg_form .msg_mentions_button,
@@ -422,7 +422,7 @@ a:focus,
 #col_messages #msg_form #msg_input.focus ~ #primary_file_button:not(:hover):not(.active),
 #col_messages #msg_form #msg_input.focus ~ .emo_menu,
 #col_messages #msg_form #msg_input.focus ~ .msg_mentions_button:not(:hover) {
-  color: var(--primary);
+  color: var(--primary-light);
 }
 #col_messages #msg_form .msg_mentions_button:hover {
   color: var(--secondary);
@@ -468,7 +468,10 @@ a:focus,
   background-color: var(--chat);
 }
 #col_messages .c-file_container--has_thumb .c-file__actions::before {
-  background-image: linear-gradient(90deg, rgba(255, 255, 255, 0), var(--chat) 20px);
+  background-image: linear-gradient(90deg, hsla(0, 0%, 100%, 0), var(--chat) 20px);
+}
+#col_messages .c-pillow_file__content--collapsed:after {
+  background-image: linear-gradient(0deg, var(--chat), hsla(0, 0%, 100%, 0) 40px);
 }
 #col_messages .c-file__action_button {
   background-color: var(--chat-dark);
@@ -551,6 +554,10 @@ a:focus,
   background-color: var(--primary-dark);
   color: var(--on-primary);
   border-color: var(--primary);
+}
+#col_messages .c-pillow_file_container {
+  background-color: var(--chat);
+  color: var(--on-chat);
 }
 .c-snippet__code .CodeMirror-code > div::before {
   background-color: var(--chat);
@@ -776,7 +783,7 @@ code {
 .flex_pane_showing #col_flex {
   background-color: var(--primary);
   color: var(--on-primary);
-  border: none;
+  border-color: var(--chat-light);
   /* details tab */
   /* highlights */
   /* shared files */
@@ -856,7 +863,7 @@ code {
   background-color: var(--primary-light);
   color: var(--on-primary);
   border-radius: 24px;
-  padding: .25rem .75rem;
+  padding: 0.25rem 0.75rem;
   font-weight: 700;
 }
 .flex_pane_showing #col_flex .p-channel_insights__date_heading::before {
@@ -1219,13 +1226,13 @@ code {
   background: none;
   color: var(--on-primary);
 }
-.flex_pane_showing #col_flex #convo_scroller {
+.flex_pane_showing #col_flex #convo_tab {
   background-color: var(--chat);
   color: var(--on-chat);
 }
-.flex_pane_showing #col_flex #convo_scroller ts-message.active:not(.standalone):not(.multi_delete_mode):not(.highlight):not(.new_reply):not(.show_broadcast_indicator),
-.flex_pane_showing #col_flex #convo_scroller ts-message.message--focus:not(.standalone):not(.multi_delete_mode):not(.highlight):not(.new_reply):not(.show_broadcast_indicator),
-.flex_pane_showing #col_flex #convo_scroller ts-message:hover:not(.standalone):not(.multi_delete_mode):not(.highlight):not(.new_reply):not(.show_broadcast_indicator) {
+.flex_pane_showing #col_flex #convo_tab ts-message.active:not(.standalone):not(.multi_delete_mode):not(.highlight):not(.new_reply):not(.show_broadcast_indicator),
+.flex_pane_showing #col_flex #convo_tab ts-message.message--focus:not(.standalone):not(.multi_delete_mode):not(.highlight):not(.new_reply):not(.show_broadcast_indicator),
+.flex_pane_showing #col_flex #convo_tab ts-message:hover:not(.standalone):not(.multi_delete_mode):not(.highlight):not(.new_reply):not(.show_broadcast_indicator) {
   background-color: transparent;
   background-image: none;
   box-shadow: none;
@@ -1235,6 +1242,16 @@ code {
   filter: none;
   opacity: 1;
 }
-.flex_pane_showing #col_flex #convo_scroller ts-message.selected:not(.delete_mode) {
+.flex_pane_showing #col_flex #convo_tab ts-message.selected:not(.delete_mode) {
   background-color: transparent;
+}
+.flex_pane_showing #col_flex #convo_tab .p-threads_footer__input--legacy .p-message_input_field,
+.flex_pane_showing #col_flex #convo_tab .p-threads_footer__input--legacy .p-message_input_file_button {
+  background-color: var(--primary);
+  color: var(--on-primary);
+  border-color: var(--primary-light);
+}
+.flex_pane_showing #col_flex #convo_tab .p-threads_footer__input--legacy .p-message_input_file_button,
+.flex_pane_showing #col_flex #convo_tab .c-texty_input.focus .c-texty_input__button {
+  color: var(--primary-light);
 }
