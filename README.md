@@ -32,30 +32,15 @@ Open up the most recent version (e.g. `app-2.5.1`) then open
 At the very bottom, add
 
 ```js
-function onThemeLoaded() {
-  if (themeCssLoaded === true && themeJsLoaded === true) {
-    // chat theme. Options are applyTheme('light') and applyTheme('dark'), anything else attempts to use sidebar colors
-    // alternately, you can pass in two css colors to specify the chat background and foreground, respectively
-    applyTheme();
-  }
-}
-
+// chat theme. Options are 'light' and 'dark', anything else attempts to use sidebar colors
+// alternately, you can pass in two css colors to specify the chat background and foreground, respectively
+const chatTheme = 'dark';
 // load up the required css and js
-const cssUrl = 'https://raw.githubusercontent.com/deathau/slack-dark-redux/master/style.css';
-const jsUrl = 'https://raw.githubusercontent.com/deathau/slack-dark-redux/master/inject.js';
-let themeJsLoaded = false;
-let themeCssLoaded = false;
+const cssUrl = 'https://cdn.jsdelivr.net/gh/deathau/slack-dark-redux/style.min.css';
+const jsUrl = 'https://cdn.jsdelivr.net/gh/deathau/slack-dark-redux/inject.min.js';
 document.addEventListener('DOMContentLoaded', function () {
-  $.ajax({ url: cssUrl, success: function (css) {
-      $("<style></style>").appendTo('head').html(css); // append the css
-      console.log(`[CUSTOM-THEME] Loaded CSS successfully`);
-      themeCssLoaded = true; onThemeLoaded();
-    }});
-  $.ajax({ url: jsUrl, success: function (rawData) {
-      require('vm').runInThisContext(rawData, jsUrl); // load up the javascript
-      console.log(`[CUSTOM-THEME] Loaded JavaScript successfully`);
-      themeJsLoaded = true; onThemeLoaded();
-    }});
+  !function($){$.getStylesheet=function(e){return $.Deferred().resolve($("<link/>",{rel:"stylesheet",type:"text/css",href:e}).appendTo("head")).promise()}}(jQuery);
+  $.when($.getStylesheet(cssUrl), $.getScript(jsUrl)).then(function () {applyTheme(chatTheme);}, function () {console.log('[CUSTOM-THEME] an error occurred somewhere')});
 });
 ```
 
