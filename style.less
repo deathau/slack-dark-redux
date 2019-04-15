@@ -1,6 +1,7 @@
 /* Color customizations */
 
 @import "colors.less";
+
 // basic mixins used elsewhere
 .reset-all() {
     background-color: transparent;
@@ -44,6 +45,7 @@
 a,
 .blue_link {
     color: @secondary;
+
     &:hover,
     &:link,
     &:visited,
@@ -60,6 +62,15 @@ a,
     .primary-area();
 }
 
+/* (optional) additions to space the content out better and put some seperators */
+.c-message--light:not(.c-message--adjacent) .c-message__content::before {
+    border-bottom: 0.5px solid @chat-light;
+}
+
+.c-message--light:not(.c-message--adjacent) {
+    margin-top: 9px;
+}
+
 /* (optional) larger emoji */
 
 .c-reaction .emoji-sizer {
@@ -74,13 +85,13 @@ a,
 /* some styles that weren't working in their specified containers */
 
 .light_theme ts-message .message_content .message_sender {
-    color: @on-chat-strong !important;
+    color: @on-chat-strong  !important;
 }
 
 .highlight_yellow_bg {
     .reset-all();
     .highlight-area();
-    background-color: @highlight !important;
+    background-color: @highlight  !important;
 }
 
 // // styles to reset certain elements

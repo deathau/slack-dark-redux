@@ -53,6 +53,13 @@ a:focus,
   background-color: var(--primary);
   color: var(--on-primary);
 }
+/* (optional) additions to space the content out better and put some seperators */
+.c-message--light:not(.c-message--adjacent) .c-message__content::before {
+  border-bottom: 0.5px solid var(--chat-light);
+}
+.c-message--light:not(.c-message--adjacent) {
+  margin-top: 9px;
+}
 /* (optional) larger emoji */
 .c-reaction .emoji-sizer {
   font-size: 24px;
@@ -247,7 +254,6 @@ a:focus,
   background-color: var(--chat);
   color: var(--on-chat);
   /* Chat room styles */
-  /* additions to space the content out better and put some seperators */
   /* Chat room colours */
   /* Mentions */
   /* Message input box */
@@ -257,12 +263,6 @@ a:focus,
   /* message actions */
   /* unread / archives banner */
   /* threads view */
-}
-#col_messages .c-message--light:not(.c-message--adjacent) .c-message__content::before {
-  border-bottom: 0.5px solid var(--chat-light);
-}
-#col_messages .c-message--light:not(.c-message--adjacent) {
-  margin-top: 9px;
 }
 #col_messages .p-message_pane .p-message_pane__top_banners:not(:empty) + div .c-message_list.c-virtual_list--scrollbar > .c-scrollbar__hider::before,
 #col_messages .p-message_pane .p-message_pane__top_banners:not(:empty) + div .c-message_list:not(.c-virtual_list--scrollbar)::before {
@@ -468,10 +468,10 @@ a:focus,
   background-color: var(--chat);
 }
 #col_messages .c-file_container--has_thumb .c-file__actions::before {
-  background-image: linear-gradient(90deg, hsla(0, 0%, 100%, 0), var(--chat) 20px);
+  background-image: linear-gradient(90deg, rgba(255, 255, 255, 0), var(--chat) 20px);
 }
 #col_messages .c-pillow_file__content--collapsed:after {
-  background-image: linear-gradient(0deg, var(--chat), hsla(0, 0%, 100%, 0) 40px);
+  background-image: linear-gradient(0deg, var(--chat), rgba(255, 255, 255, 0) 40px);
 }
 #col_messages .c-file__action_button {
   background-color: var(--chat-dark);
@@ -863,7 +863,7 @@ code {
   background-color: var(--primary-light);
   color: var(--on-primary);
   border-radius: 24px;
-  padding: 0.25rem 0.75rem;
+  padding: .25rem .75rem;
   font-weight: 700;
 }
 .flex_pane_showing #col_flex .p-channel_insights__date_heading::before {
